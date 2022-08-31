@@ -1,0 +1,28 @@
+<h3>Стручен штаб</h3>
+<div class="alert alert-success" ng-show="alert_success">Успешно ги внесовте податоците!</div>
+<div class="alert alert-danger" ng-show="error_alert">Ве молиме пополнете го правилно формуларот!</div>
+<form name="myForm">
+  <div class="mb-3">
+    <label for="dres_id" class="form-label">dres_id</label>
+    <span class="alert alert-danger" ng-show="myForm.dres_id.$invalid">Внесете име со најмалце 1 бројка!!!</span>
+    <select class="form-control" id="dres_id" name="dres_id" ng-model="dres_id">
+      <option  value="">Изберете опции</option>
+      <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+          {{igrac.pozicija}} || {{igrac.ime}} || {{igrac.prezime}} || {{igrac.godini}}
+      </option>
+  </select>
+  </div>
+    <div class="mb-3">
+      <label for="zalaganje" class="form-label">zalaganje</label>
+      <span class="alert alert-danger" ng-show="myForm.zalaganje.$invalid">Внесете го залагањето со најмалце 7 карактери!!!</span>
+      <input type="text" class="form-control"  placeholder="Внесете го залагањето на управата во клубот" id="zalaganje" name="zalaganje" ng-minlength="7" ng-model="zalaganje">
+    </div>
+    <div class="mb-3">
+        <label for="rabotna_ocenka" class="form-label">rabotna_ocenka</label>
+        <span class="alert alert-danger" ng-show="myForm.rabotna_ocenka.$invalid">Внесете ја работната оценка со најмалце 3 карактери!!!</span>
+        <input type="number" class="form-control"  placeholder="Внесете ја работната оценка на управата во клубот" id="rabotna_ocenka" name="rabotna_ocenka" ng-minlength="1" ng-model="rabotna_ocenka">
+    </div>
+    <button type="button" class="btn btn-primary" ng-click="
+    (myForm.dres_id.$valid && myForm.zalaganje.$valid && myForm.rabotna_ocenka.$valid) ? function_uprava(dres_id,zalaganje,rabotna_ocenka) : erorr()">Save</button>
+  </form>
+

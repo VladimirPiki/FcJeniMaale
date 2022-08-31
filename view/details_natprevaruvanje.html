@@ -1,0 +1,94 @@
+<h3>Натпреварување</h3>
+
+<div class="alert alert-success" ng-show="alert_success">Успешно ги внесовте податоците!</div>
+<div class="alert alert-danger" ng-show="error_alert">Ве молиме пополнете го правилно формуларот!</div>
+
+<form name="myForm">
+    <div class="mb-3 mt-3">
+        <label for="kolo_id" class="form-label">kolo_id</label>
+        <span class="alert alert-danger" ng-show="myForm.kolo_id.$invalid">Внесете го колото со најмалце 1 бројка!!!</span>
+        <input type="number" class="form-control" placeholder="Внесете го колото"  id="kolo_id" name="kolo_id" ng-minlength="1" ng-model="kolo_id">
+    </div>
+
+    <div class="mb-3">
+      <label for="datum" class="form-label">datum</label>
+      <span class="alert alert-danger" ng-show="myForm.datum.$invalid">Внесете го точниот датум и време!!!</span>
+      <input type="datetime-local" class="form-control" id="datum" name="datum" ng-model="datum.value" placeholder="yyyy-MM-ddTHH:mm:ss" min="2001-01-01T00:00:00" max="2222-12-31T00:00:00" required >
+    </div>
+
+    <div class="mb-3">
+      <label for="protivnik" class="form-label">protivnik</label>
+      <span class="alert alert-danger" ng-show="myForm.protivnik.$invalid">Внесете име на противникот со најмалку 2 карактери!!!</span>
+      <input type="text" class="form-control"  placeholder="Внесете го името на противникот"  id="protivnik" name="protivnik" ng-minlength="2" ng-model="protivnik">
+    </div>
+    <div class="mb-3">
+        <label for="rezultat" class="form-label">rezultat</label>
+        <span class="alert alert-danger" ng-show="myForm.rezultat.$invalid">Внесете резултат најмалку со 2 карактери!!!</span>
+        <input type="text" class="form-control"  placeholder="Внесете го резултатот од натпреварот"  id="rezultat" name="rezultat" ng-minlength="2" ng-model="rezultat">
+    </div>
+    <div class="mb-3">
+        <label for="mesto" class="form-label">mesto</label>
+        <span class="alert alert-danger" ng-show="myForm.mesto.$invalid">Внесете име на место(стадионот) со најмалку 4 карактери!!!</span>
+        <input type="text" class="form-control"  placeholder="Внесете место(стадионот)"  id="mesto" name="mesto" ng-minlength="4" ng-model="mesto">
+    </div>
+    <div class="mb-3">
+        <label for="sostav_id" class="form-label">sostav_id</label>
+            <select class="form-control" id="sostav_id" name="sostav_id" ng-model="sostav_id">
+                <option  value="">Изберете опции</option>
+                <option ng-repeat="sostavi in sostav" value="{{sostavi.sostav_id}}" >
+                 {{sostavi.sostav_id}} коло || {{sostavi.datum}}
+                </option>
+            </select>
+    </div>
+    <div class="mb-3">
+        <label for="stadion_id" class="form-label">stadion_id</label>
+            <select class="form-control" id="stadion_id" name="stadion_id" ng-model="stadion_id">
+                <option  value="">Изберете опции</option>
+                <option ng-repeat="stadioni in stadion" value="{{stadioni.stadion_id}}" >
+                    {{stadioni.ime}} || {{stadioni.adresa}} ||  {{stadioni.kapacitet}}  капацитет
+                </option>
+            </select>
+    </div>
+    <div class="mb-3">
+        <label for="datum_id" class="form-label">datum_id</label>
+            <select class="form-control" id="datum_id" name="datum_id" ng-model="datum_id" >
+                <option  value="">Изберете опции</option>
+                <option ng-repeat="publiki in publika" value="{{publiki.datum_id}}" >
+                  {{publiki.datum_id}}    ||  {{publiki.domashna}}  домашна публика   ||  {{publiki.gostinska}}  гостинска публика    ||  {{publiki.karti_rasprodadeni}}  распродадени карти
+                </option>
+            </select>
+    </div>
+    <button type="button" class="btn btn-primary"  ng-click="
+    (myForm.kolo_id.$valid && myForm.datum.$valid && myForm.protivnik.$valid && myForm.rezultat.$valid && myForm.mesto.$valid) ? function_natprevaruvanje(kolo_id,datum.value,protivnik,rezultat,mesto,sostav_id,stadion_id,datum_id) : erorr()">Save</button>
+  </form>
+
+
+
+<!--
+    <form action="myForm">
+        <div class="mb-3">
+            <label for="datum" class="form-label">datum</label>
+            <span class="alert alert-danger" ng-show="myForm.datum.$invalid">Внесете го точниот датум и време!!!</span>
+            <input type="date" class="form-control" placeholder="Внесете го датумот и времето на натпреварот"  id="datum" name="datum" ng-non-bindable="MM/dd/yyyy 'at' h:mma" ng-model="datum">
+        </div>
+    </form>
+
+    <form name="myForm" ng-controller="DateController as dateCtrl">
+            <label class="form-label" for="exampleInput">Pick a date between in 2013:</label>
+            <input class="form-control" type="datetime-local" id="exampleInput" name="input" ng-model="example.value"
+                placeholder="yyyy-MM-ddTHH:mm:ss" min="2001-01-01T00:00:00" max="2013-12-31T00:00:00" required />
+        <div role="alert">
+            <span class="error" ng-show="myForm.input.$error.required">
+                Required!
+                </span>
+            <span class="error" ng-show="myForm.input.$error.datetimelocal">
+                Not a valid date!
+            </span>
+        </div>
+        <tt>value = {{example.value | date: "yyyy-MM-ddTHH:mm:ss"}}</tt><br/>
+        <tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br/>
+        <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br/>
+        <tt>myForm.$valid = {{myForm.$valid}}</tt><br/>
+        <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br/>
+      </form>
+-->

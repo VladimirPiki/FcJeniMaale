@@ -1,0 +1,22 @@
+<h3>Стадиони</h3>
+<div class="alert alert-success" ng-show="alert_success">Успешно ги внесовте податоците!</div>
+<div class="alert alert-danger" ng-show="error_alert">Ве молиме пополнете го правилно формуларот!</div>
+<form name="myForm">
+    <div class="mb-3">
+      <label for="ime" class="form-label">ime</label>
+      <span class="alert alert-danger" ng-show="myForm.ime.$invalid">Внесете име со најмалце 3 карактери!!!</span>
+      <input type="text" class="form-control"  placeholder="Внесете го името на стадионот" id="ime" name="ime" ng-minlength="3" ng-model="ime">
+    </div>
+    <div class="mb-3">
+        <label for="adresa" class="form-label">adresa</label>
+        <span class="alert alert-danger" ng-show="myForm.adresa.$invalid">Внесете адреса со најмалце 3 карактери!!!</span>
+        <input type="text" class="form-control"  placeholder="Внесете ја адресата на стадионот" id="adresa" name="adresa" ng-minlength="3" ng-model="adresa">
+    </div>
+    <div class="mb-3">
+        <label for="kapacitet" class="form-label">kapacitet</label>
+        <span class="alert alert-danger" ng-show="myForm.kapacitet.$invalid">Внесете капацитет со најмалце 3 бројки!!!</span>
+        <input type="number" class="form-control"  placeholder="Внесете го капацитетот на стадионот"  id="kapacitet" ng-minlength="3" name="kapacitet" ng-model="kapacitet">
+    </div>
+    <button type="button" class="btn btn-primary"   ng-click="
+    (myForm.ime.$valid && myForm.adresa.$valid && myForm.kapacitet.$valid) ? function_stadion(ime,adresa,kapacitet) : erorr()">Save</button>
+  </form>

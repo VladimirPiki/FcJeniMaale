@@ -1,0 +1,338 @@
+<h3>Натпреварување</h3>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>kolo_id</th>
+                <th>
+                    <input type="text" name="searchByDatum" id="searchByDatum" ng-model="searchByDatum" placeholder="Пребарај по датум на натпреварот">
+                </th>
+                <th>
+                    <input type="text" name="searchByProtivnik" id="searchByProtivnik" ng-model="searchByProtivnik" placeholder="Пребарај по противник на натпреварот">
+                </th>
+                <th>
+                    <input type="text" name="searchByRezultat" id="searchByRezultat" ng-model="searchByRezultat" placeholder="Пребарај по резултат на натпреварот">
+                </th>
+                <th>
+                    <input type="text" name="searchByMesto" id="searchByMesto" ng-model="searchByMesto" placeholder="Пребарај по место на натпреварот">
+                </th>
+                <th>
+                    <select class="form-control" id="searchBySostavId" name="searchBySostavId" ng-model="searchBySostavId">
+                        <option href="#" value="">Изберете опции</option>
+                        <option ng-repeat="sostavi in sostav" value="{{sostavi.sostav_id}}" >
+                            {{sostavi.sostav_id}} kolo || {{sostavi.datum_sostav}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" id="searchByStadionId" name="searchByStadionId" ng-model="searchByStadionId">
+                        <option href="#" value="">Изберете опции</option>
+                        <option ng-repeat="stadioni in stadion" value="{{stadioni.stadion_id}}" >
+                            {{stadioni.ime}} || {{stadioni.adresa}} ||  {{stadioni.kapacitet}}  kapacitet
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" id="searchByDatumId" name="searchByDatumId" ng-model="searchByDatumId">
+                        <option href="#" value="">Изберете опции</option>
+                        <option ng-repeat="publiki in publika" value="{{publiki.datum_id}}" >
+                            {{publiki.datum_id}} ||  {{publiki.datum_id}} home audience || {{publiki.gostinska}} away audience
+                        </option>
+                    </select>
+                </th>
+                <th><i class="fa-solid fa-pen"></i>edit</th>
+                <th><i class="fa-solid fa-trash-can"></i>delete</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="natprevar in natprevaruvanje | filter:{datum:searchByDatum,protivnik:searchByProtivnik,rezultat:searchByRezultat,mesto:searchByMesto,sostav_id:searchBySostavId,stadion_id:searchByStadionId,datum_id:searchByDatumId}">
+                <td>{{natprevar.kolo_id}}</td>
+                <td>{{natprevar.datum}}</td>
+                <td>{{natprevar.protivnik}}</td>
+                <td>{{natprevar.rezultat}}</td>
+                <td>{{natprevar.mesto}}</td>
+                <td>{{natprevar.sostav_id}}</td>
+                <td>{{natprevar.ime}}</td>
+                <td>{{natprevar.domashna}} home audience || {{natprevar.gostinska}} away audience</td>
+                <td title="Edit"><i class="fa-solid fa-pen"></i></td>
+                <td title="Delete {{natprevar.kolo_id}} || {{natprevar.datum}} || {{natprevar.protivnik}}"><i class="fa-solid fa-trash-can"></i></td>
+            </tr>
+        </tbody>
+        
+    </table>
+</div>
+<!--
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>kolo_id</th>
+            <th>datum</th>
+            <th>protivnik</th>
+            <th>rezultat</th>
+            <th>mesto</th>
+            <th>sostav_id</th>
+            <th>stadion_id</th>
+            <th>datum_id</th>
+            <th><i class="fa-solid fa-pen"></i>edit</th>
+            <th><i class="fa-solid fa-trash-can"></i>delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>2021-09-05 17:00:00</td>
+            <td>Fc Mladost</td>
+            <td>W-3:1</td>
+            <td>Tumbe Kafe</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2021-09-05</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2021-09-12 17:00:00</td>
+            <td>Fc Pelagonija</td>
+            <td>W-0:1</td>
+            <td>s.Dobromiri</td>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>2021-09-19 16:00:00</td>
+            <td>Fc KSK</td>
+            <td>D-0:0</td>
+            <td>Tumbe Kafe</td>
+            <td>3</td>
+            <td>1</td>
+            <td>2021-09-19</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>2021-09-26 16:00:00</td>
+            <td>Fc Pelister TM</td>
+            <td>W-0:6</td>
+            <td>s.Trnovo Magarevo</td>
+            <td>4</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>2021-10-03 15:00:00</td>
+            <td>Fc Crna Reka</td>
+            <td>W-3:0</td>
+            <td>Petar Miloshevski</td>
+            <td>5</td>
+            <td>2</td>
+            <td>2021-10-03</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>2021-10-10 15:00:00</td>
+            <td>Fc Old Boys</td>
+            <td>D-0:0</td>
+            <td>s.Poesevo</td>
+            <td>6</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>2021-10-17 14:00:00</td>
+            <td>Fc Chagor</td>
+            <td>W-4:0</td>
+            <td>Pavel Shatev</td>
+            <td>7</td>
+            <td>3</td>
+            <td>2021-10-17</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>2021-10-24 13:30:00</td>
+            <td>Fc Pelagonija</td>
+            <td>W-0:5</td>
+            <td>s.Trap</td>
+            <td>8</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>2021-10-31 13:30:00</td>
+            <td>Fc Svetlost</td>
+            <td>W-1:0</td>
+            <td>Tumbe Kafe</td>
+            <td>9</td>
+            <td>1</td>
+            <td>2021-10-31</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>2022-02-27 13:00:00</td>
+            <td>Fc Mladost</td>
+            <td>L-3:2</td>
+            <td>s.Dedebalci</td>
+            <td>10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>2022-03-06 14:00:00</td>
+            <td>Fc Pelagonija</td>
+            <td>L-2:4</td>
+            <td>Pomoshno 2</td>
+            <td>11</td>
+            <td>6</td>
+            <td>2022-03-06</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>2022-03-13 14:30:00</td>
+            <td>Fc KSK</td>
+            <td>D-1:1</td>
+            <td>s.Krklino</td>
+            <td>12</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>2022-03-20 15:00:00</td>
+            <td>Fc Pelister TM</td>
+            <td>D-1:1</td>
+            <td>Pomoshno 1</td>
+            <td>13</td>
+            <td>5</td>
+            <td>2022-03-20</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>2022-03-27 15:00:00</td>
+            <td>Fc Crna Reka</td>
+            <td>L-3:1</td>
+            <td>s.Charlija</td>
+            <td>14</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>2022-04-03 15:30:00</td>
+            <td>Fc Old boys</td>
+            <td>N-1:1</td>
+            <td>Kjumurno</td>
+            <td>15</td>
+            <td>4</td>
+            <td>2022-04-03</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>2022-04-10 16:00:00</td>
+            <td>Fc Chagor</td>
+            <td>W-1:3</td>
+            <td>s.Lopatica</td>
+            <td>16</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>2022-04-17 16:00:00</td>
+            <td>Fc Pelagonija</td>
+            <td>W-6:2</td>
+            <td>Petar Miloshevski</td>
+            <td>17</td>
+            <td>2</td>
+            <td>2022-04-17</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>2022-04-24 16:00:00</td>
+            <td>Fc Svetlost</td>
+            <td>W-0:2</td>
+            <td>s.Kukurecani</td>
+            <td>18</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>2022-05-01 17:00:00</td>
+            <td>Fc Pobeda Ivanjevci </td>
+            <td>W-(D-1:1Penatly 5:4)</td>
+            <td>Tumbe Kafe</td>
+            <td>19</td>
+            <td>1</td>
+            <td>2022-05-01</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>2022-05-15 17:00:00</td>
+            <td>Fc Kravari</td>
+            <td>L-(D-1:1Penatly 6:5)</td>
+            <td>Tumbe Kafe</td>
+            <td>20</td>
+            <td>1</td>
+            <td>2022-05-15</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>2023-02-01 13:00:00</td>
+            <td>Fc Partizan</td>
+            <td>W-3:1</td>
+            <td>Tumbe kafe</td>
+            <td>21</td>
+            <td>1</td>
+            <td>2023-02-01</td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+    </tbody>
+</table>
+-->

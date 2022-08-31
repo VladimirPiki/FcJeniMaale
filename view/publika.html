@@ -1,0 +1,143 @@
+<h3>Публика</h3>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>datum_id</th>
+                <th>
+                    <input type="number" name="searchByDomashna" id="searchByDomashna" ng-model="searchByDomashna" placeholder="Пребарај број на домашна публика на натпреварот">
+                </th>
+                <th>
+                    <input type="number" name="searchByGostinska" id="searchByGostinska" ng-model="searchByGostinska" placeholder="Пребарај број на гостинска публика на натпреварот">
+                </th>
+                <th>
+                    <input type="number" name="searchByKartiRasprodadeni" id="searchByKartiRasprodadeni" ng-model="searchByKartiRasprodadeni" placeholder="Пребарај број на распродадени карти на натпреварот">
+                </th>
+                <th><i class="fa-solid fa-pen"></i>edit</th>
+                <th><i class="fa-solid fa-trash-can"></i>delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="publiki in publika | filter:{domashna:searchByDomashna,gostinska:searchByGostinska,karti_rasprodadeni:searchByKartiRasprodadeni}">
+                <td>{{publiki.datum_id}}</td>
+                <td>{{publiki.domashna}}</td>
+                <td>{{publiki.gostinska}}</td>
+                <td>{{publiki.karti_rasprodadeni}}</td>
+                <td title="Edit"><i class="fa-solid fa-pen"></i></td>
+                <td title="Delete {{publiki.datum_id}}"><i class="fa-solid fa-trash-can"></i></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!--
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>datum_id</th>
+            <th>domashna</th>
+            <th>gostinska</th>
+            <th>karti_rasprodadeni</th>
+            <th><i class="fa-solid fa-pen"></i>edit</th>
+            <th><i class="fa-solid fa-trash-can"></i>delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2021-09-05</td>
+            <td>5900</td>
+            <td>124</td>
+            <td>5078</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2021-09-19</td>
+            <td>1430</td>
+            <td>0</td>
+            <td>1400</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2021-10-03</td>
+            <td>870</td>
+            <td>211</td>
+            <td>800</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2021-10-17</td>
+            <td>650</td>
+            <td>40</td>
+            <td>600</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2021-10-31</td>
+            <td>2000</td>
+            <td>200</td>
+            <td>2000</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2022-03-06</td>
+            <td>200</td>
+            <td>0</td>
+            <td>200</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2022-03-20</td>
+            <td>540</td>
+            <td>0</td>
+            <td>500</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2022-04-03</td>
+            <td>790</td>
+            <td>50</td>
+            <td>700</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2022-04-17</td>
+            <td>1590</td>
+            <td>450</td>
+            <td>1500</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2022-05-01</td>
+            <td>1250</td>
+            <td>34</td>
+            <td>1177</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2022-05-15</td>
+            <td>2497</td>
+            <td>674</td>
+            <td>1567</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2023-02-01</td>
+            <td>3900</td>
+            <td>334</td>
+            <td>3078</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+-->

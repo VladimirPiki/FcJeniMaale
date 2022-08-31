@@ -1,0 +1,52 @@
+/*Style*/
+
+/******This is example*******/
+.bg-danger
+{
+	background-color:#3a3c31!important;
+	color:blue;
+}
+/***************************/
+
+@font-face {
+	font-family: Decima Nova;
+	src: url('../fonts/Decima\ Nova.ttf');
+}
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Decima Nova;
+	font-size: 18px;
+}
+html,body{
+	height: 100%;
+}
+.coverFirst{
+	height: 100%;
+	width: 100%;
+}
+.navbar{
+	background-color:#029934!important;
+}
+footer{
+	/*
+	background-image: url('../img/IstutkanaHartija.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	*/
+	background-color:#029934!important;
+	text-align: center;
+	color: #1C4A9F;
+}
+footer h3{
+	color: #1C4A9F;
+	font-size: 15px;
+}
+footer p{
+
+	color: #1C4A9F;
+	font-size: 15px;
+}
+
+

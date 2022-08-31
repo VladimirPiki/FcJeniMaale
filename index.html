@@ -1,0 +1,125 @@
+<!DOCTYPE>
+<html lang="en">
+	<head>
+	  <title>Fc Jeni Maale</title>
+	  <meta charset="utf-8">
+	  <meta name="description" content="Football club">
+	  <meta name="keywords" content="Football club, Sports, Macedonia">
+	  <meta name="author" content="Vladimir Krstevski">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <!--Bootstrap framework-->
+	  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	  <!-- AngularJS Framework-->
+	  <script src="assets/js/angular.min.js"></script>
+	  <script src="assets/js/angular-route.js"></script>
+	  <script src="assets/js/app.js"></script>
+	  <script src="assets/js/routes.js"></script>
+	  
+	  <!--my style my events-->
+	  <link href="assets/css/style.css" rel="stylesheet">
+
+	  <link rel="stylesheet" href="assets/CCSS/style.css">
+
+	  <!--Icons link
+	  <script src="https://kit.fontawesome.com/5e51d69e47.js" crossorigin="anonymous"></script>
+	  -->
+
+	  <!--Icons link-->
+	   <link rel="stylesheet" href="assets/icons/fontawesome-free-6.1.2-web/css/all.css">
+	  
+	</head>
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<!-- view -->
+		<nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+			<div class="container-fluid">
+				<a href="#!home"><img src="assets/img/profilna nova.jpg" alt="Avatar Logo" style="width:40px;" class="rounded-pill"></a>
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav">
+				  <li class="nav-item">
+					<a class="nav-link" href="#!home"><i class="fa-solid fa-house fa-2x" aria-hidden="true"></i></a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Тим</a>
+					<ul class="dropdown-menu">
+					  <li><a class="dropdown-item" href="#!igrachi">Играчи</a></li></li>
+					  <hr>
+					  <li><a class="dropdown-item" href="#!uprava">Стручен штаб</a></li>
+					  <!--
+					  <li class="dropdown-submenu">
+						<a class="dropdown-item  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Трансфери</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#!income">Играчи кој доаѓаат</a></li>
+							<li><a class="dropdown-item" href="#!outcome">Играчи кој заминуваат од клубот</a></li>
+						</ul>
+					  </li>
+					  -->
+					</ul>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Натпреварување</a>
+					<ul class="dropdown-menu">
+					  <li><a class="dropdown-item" href="#!natprevaruvanje">Натпреварување</a></li>
+					  <hr>
+					  <li><a class="dropdown-item" href="#!sostav">Состав</a></li>
+					</ul>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">"Тумбе кафе"</a>
+					<ul class="dropdown-menu">
+					  <li><a class="dropdown-item"  href="#!stadion">Стадион</a></li>
+					  <hr>
+					  <li><a class="dropdown-item"  href="#!publika">Публика</a></li>
+					</ul>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Трансфери</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#!income">Играчи кој доаѓаат</a></li>
+						<hr>
+					  	<li><a class="dropdown-item" href="#!outcome">Играчи кој заминуваат од клубот</a></li>
+					</ul>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Внесете</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#!details_igrachi">Внесете Играчи</a></li>
+						<li><a class="dropdown-item" href="#!details_income">Внесете Трансфери кој доаѓаат</a></li>
+						<li><a class="dropdown-item" href="#!details_natprevaruvanje">Внесете Натпреварување</a></li>
+						<li><a class="dropdown-item" href="#!details_outcome">Внесете Играчи кој заминуваат од клубот</a></li>
+						<li><a class="dropdown-item" href="#!details_publika">Внесете Публика</a></li>
+						<li><a class="dropdown-item" href="#!details_sostav">Внесете Состав</a></li>
+						<li><a class="dropdown-item" href="#!details_stadion">Внесете Стадион</a></li>
+						<li><a class="dropdown-item" href="#!details_uprava">Внесете Управа</a></li>
+					</ul>
+				  </li>
+				  <li>
+					<a href="#!home"><img src="assets/img/Kojot.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill"></a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		  </nav>
+		  
+		  <div class="row">
+			<div class="col-sm-12">
+				<img class="coverFirst" src="assets/img/cover22.jpg" alt="">
+			</div>
+		  </div>
+
+
+		<div ng-view></div>
+		<footer>
+			<a href="#!home"><img src="assets/img/profilna nova.jpg" alt="Avatar Logo" style="width:40px;" class="rounded-pill"></a>
+
+			<a href="#!home"><img src="assets/img/Kojot.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill"></a>
+			<br>
+			<h3>© ФК ЈЕНИ МААЛЕ</h3>
+			<p>Повеќе од клуб!!!</p>
+		</footer>
+	</body>
+</html>

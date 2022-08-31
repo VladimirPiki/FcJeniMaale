@@ -1,0 +1,16 @@
+[{
+    "outcome_id":1,
+    "klub":"Fc Pelister Bitola",
+    "iznos_denari":100000.000000,
+    "dres_id":16
+},{
+    "outcome_id":2,
+    "klub":"Fc Pelister Bitola",
+    "iznos_denari":167000.000000,
+    "dres_id":20
+},{
+    "outcome_id":3,
+    "klub":"Fc Old Boys",
+    "iznos_denari":565000.000000,
+    "dres_id":22
+}]

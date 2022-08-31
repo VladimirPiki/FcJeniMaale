@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<uprava>
+
+    <upravi>
+        <dres_id>24</dres_id>
+        <zalaganje>dovolno</zalaganje>
+        <rabotna_ocenka>3</rabotna_ocenka>
+    </upravi>
+
+    <upravi>
+        <dres_id>25</dres_id>
+        <zalaganje>istaknato</zalaganje>
+        <rabotna_ocenka>5</rabotna_ocenka>
+    </upravi>
+
+    <upravi>
+        <dres_id>1</dres_id>
+        <zalaganje>istaknato</zalaganje>
+        <rabotna_ocenka>4</rabotna_ocenka>
+    </upravi>
+
+</uprava>

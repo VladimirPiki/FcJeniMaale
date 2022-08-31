@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<outcome>
+
+    <outcomes>
+        <outcome_id>1</outcome_id>
+        <klub>Fc Pelister Bitola</klub>
+        <iznos_denari>100000.000000</iznos_denari>
+        <dres_id>16</dres_id>
+    </outcomes>
+
+    <outcomes>
+        <outcome_id>2</outcome_id>
+        <klub>Fc Pelister Bitola</klub>
+        <iznos_denari>167000.000000</iznos_denari>
+        <dres_id>20</dres_id>
+    </outcomes>
+
+    <outcomes>
+        <outcome_id>3</outcome_id>
+        <klub>Fc Old Boys</klub>
+        <iznos_denari>565000.000000</iznos_denari>
+        <dres_id>22</dres_id>
+    </outcomes>
+
+</outcome>

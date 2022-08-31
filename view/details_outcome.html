@@ -1,0 +1,26 @@
+<h3>Трансфери кој заминуваат</h3>
+<div class="alert alert-success" ng-show="alert_success">Успешно ги внесовте податоците!</div>
+<div class="alert alert-danger" ng-show="error_alert">Ве молиме пополнете го правилно формуларот!</div>
+<form name="myForm">
+    <div class="mb-3">
+      <label for="klub" class="form-label">klub</label>
+      <span class="alert alert-danger" ng-show="myForm.klub.$invalid">Внесете клуб со најмалце 3 карактери!!!</span>
+      <input type="text" class="form-control"  placeholder="Внесете клубот во кој заминува" id="klub" name="klub" ng-minlength="3" ng-model="klub">
+    </div>
+    <div class="mb-3">
+        <label for="iznos_denari" class="form-label">iznos_denari</label>
+        <input type="number" class="form-control"  placeholder="Внесете износ во денари" id="iznos_denari" name="iznos_denari" ng-model="iznos_denari">
+    </div>
+    <div class="mb-3">
+        <label for="dres_id" class="form-label">dres_id</label>
+        <span class="alert alert-danger" ng-show="myForm.dres_id.$invalid">Внесете години со најмалце 1 бројка!!!</span>
+        <select class="form-control" id="dres_id" name="dres_id" ng-model="dres_id">
+          <option  value="">Изберете опции</option>
+          <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+            {{igrac.dres_id}} || {{igrac.ime}} {{igrac.prezime}} || {{igrac.pozicija}} || {{igrac.godini}}
+          </option>
+        </select>
+    </div>
+    <button type="button" class="btn btn-primary" ng-click="
+    (myForm.klub.$valid &&  myForm.dres_id.$valid) ? function_outcome(klub,iznos_denari,dres_id) : erorr()">Save</button>
+  </form>

@@ -1,0 +1,766 @@
+ <h3>Состав</h3>
+
+ <div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>sostav_id</th>
+                <th>
+                    <select class="form-control" name="searchByDatum" id="searchByDatum" ng-model="searchByDatum">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="natprevar in natprevaruvanje" value="{{natprevar.kolo_id}}" >
+                            {{natprevar.kolo_id}} коло  ||   {{natprevar.datum}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" name="searchByCoach" id="searchByCoach" ng-model="searchByCoach">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  || {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" name="searchByGK" id="searchByGK" ng-model="searchByGK">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" name="searchByCB1" id="searchByCB1" ng-model="searchByCB1">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" name="searchByCB2" id="searchByCB2" ng-model="searchByCB2">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" name="searchByRB" id="searchByRB" ng-model="searchByRB">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" name="searchByLB" id="searchByLB" ng-model="searchByLB">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||  {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control"  name="searchByDMF" id="searchByDMF" ng-model="searchByDMF">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control"  name="searchByCMF" id="searchByCMF" ng-model="searchByCMF">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" name="searchByAMF" id="searchByAMF" ng-model="searchByAMF">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" name="searchByRWF" id="searchByRWF" ng-model="searchByRWF">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" name="searchByLWF" id="searchByLWF" ng-model="searchByLWF">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" name="searchByCF" id="searchByCF" ng-model="searchByCF">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control"name="searchByReserve1" id="searchByReserve1" ng-model="searchByReserve1">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" name="searchByReserve2" id="searchByReserve2" ng-model="searchByReserve2">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" name="searchByReserve3" id="searchByReserve3" ng-model="searchByReserve3">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||  {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" name="searchByReserve4" id="searchByReserve4" ng-model="searchByReserve4">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" name="searchByReserve5" id="searchByReserve5" ng-model="searchByReserve5">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" name="searchByReserve6" id="searchByReserve6" ng-model="searchByReserve6">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control" name="searchByReserve7" id="searchByReserve7" ng-model="searchByReserve7">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th><i class="fa-solid fa-pen"></i>edit</th>
+                <th><i class="fa-solid fa-trash-can"></i>delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="sostavi in sostav | filter:{datum_sostav:searchByDatum,coach:searchByCoach,goalkeeper:searchByGK,
+                centre_back1:searchByCB1,centre_back2:searchByCB2,right_back:searchByRB,left_back:searchByLB,
+                defensive_midfielder:searchByDMF,center_midfielder:searchByCMF,attacking_midfielder:searchByAMF,
+                right_forward:searchByRWF,left_forward:searchByLWF,center_forward:searchByCF,reserve1:searchByReserve1,
+                reserve2:searchByReserve2,reserve3:searchByReserve3,reserve4:searchByReserve4,reserve5:searchByReserve5,
+                reserve6:searchByReserve6,reserve7:searchByReserve7}">
+                <td>{{sostavi.sostav_id}}</td>
+                <td>{{sostavi.datum_sostav}}</td>
+                <td>{{sostavi.coach}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.goalkeeper}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.centre_back1}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.centre_back2}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.right_back}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.left_back}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.defensive_midfielder}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.center_midfielder}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.attacking_midfielder}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.right_forward}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.left_forward}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.center_forward}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.reserve1}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.reserve2}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.reserve3}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.reserve4}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.reserve5}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.reserve6}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.reserve7}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td title="Edit"><i class="fa-solid fa-pen"></i></td>
+                <td title="Delete {{sostavi.sostav_id}} {{sostavi.datum}}"><i class="fa-solid fa-trash-can"></i></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+ <!--
+ <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>sostav_id</th>
+            <th>datum</th>
+            <th>coach</th>
+            <th>goalkeeper</th>
+            <th>centre_back1</th>
+            <th>centre_back2</th>
+            <th>right_back</th>
+            <th>left_back</th>
+            <th>defensive_midfielder</th>
+            <th>center_midfielder</th>
+            <th>attacking_midfielder</th>
+            <th>right_forward</th>
+            <th>left_forward</th>
+            <th>center_forward</th>
+            <th>reserve1</th>
+            <th>reserve2</th>
+            <th>reserve3</th>
+            <th>reserve4</th>
+            <th>reserve5</th>
+            <th>reserve6</th>
+            <th>reserve7</th>
+            <th><i class="fa-solid fa-pen"></i>edit</th>
+            <th><i class="fa-solid fa-trash-can"></i>delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>2021-09-05 17:00:00</td>
+            <td>27</td>
+            <td>1</td>
+            <td>2</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>14</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2021-09-12 17:00:00</td>
+            <td>27</td>
+            <td>1</td>
+            <td>2</td>
+            <td>5</td>
+            <td>15</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>14</td>
+            <td>4</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>2021-09-19 16:00:00</td>
+            <td>27</td>
+            <td>12</td>
+            <td>2</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>14</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>2021-09-26 16:00:00</td>
+            <td>27</td>
+            <td>12</td>
+            <td>22</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>14</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>2021-10-03 15:00:00</td>
+            <td>27</td>
+            <td>1</td>
+            <td>2</td>
+            <td>5</td>
+            <td>4</td>
+            <td>13</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>14</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>2021-10-10 15:00:00</td>
+            <td>27</td>
+            <td>1</td>
+            <td>2</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>14</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>2021-10-17 14:00:00</td>
+            <td>27</td>
+            <td>1</td>
+            <td>2</td>
+            <td>14</td>
+            <td>4</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>5</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>2021-10-24 13:30:00</td>
+            <td>27</td>
+            <td>1</td>
+            <td>22</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>14</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>2021-10-31 13:30:00</td>
+            <td>27</td>
+            <td>1</td>
+            <td>2</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>14</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>2022-02-27 13:00:00</td>
+            <td>27</td>
+            <td>1</td>
+            <td>2</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>14</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>2022-03-06 14:00:00</td>
+            <td>27</td>
+            <td>12</td>
+            <td>2</td>
+            <td>14</td>
+            <td>4</td>
+            <td>13</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>21</td>
+            <td>9</td>
+            <td>19</td>
+            <td>5</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>10</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>2022-03-13 14:30:00</td>
+            <td>27</td>
+            <td>12</td>
+            <td>2</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>14</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>2022-03-20 15:00:00</td>
+            <td>27</td>
+            <td>1</td>
+            <td>2</td>
+            <td>5</td>
+            <td>15</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>14</td>
+            <td>4</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>2022-03-27 15:00:00</td>
+            <td>27</td>
+            <td>1</td>
+            <td>2</td>
+            <td>14</td>
+            <td>4</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>5</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>2022-04-03 15:30:00</td>
+            <td>27</td>
+            <td>1</td>
+            <td>22</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>21</td>
+            <td>9</td>
+            <td>19</td>
+            <td>14</td>
+            <td>15</td>
+            <td>17</td>
+            <td>10</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>2022-04-10 16:00:00</td>
+            <td>27</td>
+            <td>1</td>
+            <td>22</td>
+            <td>14</td>
+            <td>4</td>
+            <td>13</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>5</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>2022-04-17 16:00:00</td>
+            <td>27</td>
+            <td>19</td>
+            <td>2</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>21</td>
+            <td>9</td>
+            <td>1</td>
+            <td>14</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>10</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>2022-04-24 16:00:00</td>
+            <td>27</td>
+            <td>12</td>
+            <td>2</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>14</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>2022-05-01 17:00:00</td>
+            <td>69</td>
+            <td>69</td>
+            <td>2</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>14</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>2022-05-15 17:00:00</td>
+            <td>27</td>
+            <td>1</td>
+            <td>2</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>14</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>2023-02-01 13:00:00</td>
+            <td>27</td>
+            <td>1</td>
+            <td>2</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>11</td>
+            <td>10</td>
+            <td>9</td>
+            <td>19</td>
+            <td>14</td>
+            <td>15</td>
+            <td>17</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+    </tbody>
+</table>
+-->

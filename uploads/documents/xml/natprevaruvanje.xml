@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<natprevaruvanje>
+
+    <natprevar>
+        <kolo_id>1</kolo_id>
+        <datum>2021-09-05 17:00:00</datum>
+        <protivnik>Fc Mladost</protivnik>
+        <rezultat>W-3:1</rezultat>
+        <mesto>Tumbe Kafe</mesto>
+        <sostav_id>1</sostav_id>
+        <stadion_id>1</stadion_id>
+        <datum_id>2021-09-05</datum_id>
+    </natprevar>
+
+    <natprevar>
+        <kolo_id>2</kolo_id>
+        <datum>2021-09-12 17:00:00</datum>
+        <protivnik>Fc Pelagonija</protivnik>
+        <rezultat>W-0:1</rezultat>
+        <mesto>s.Dobromiri</mesto>
+        <sostav_id>2</sostav_id>
+        <stadion_id>0</stadion_id>
+        <datum_id></datum_id>
+    </natprevar>
+
+    <natprevar>
+        <kolo_id>3</kolo_id>
+        <datum>2021-09-19 16:00:00</datum>
+        <protivnik>Fc KSK</protivnik>
+        <rezultat>D-0:0</rezultat>
+        <mesto>Tumbe Kafe</mesto>
+        <sostav_id>3</sostav_id>
+        <stadion_id>1</stadion_id>
+        <datum_id>2021-09-19</datum_id>
+    </natprevar>
+
+</natprevaruvanje>

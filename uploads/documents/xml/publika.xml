@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<publika>
+
+    <publiki>
+        <datum_id>2021-09-05</datum_id>
+        <domashna>5900</domashna>
+        <gostinska>124</gostinska>
+        <karti_rasprodadeni>5078</karti_rasprodadeni>
+    </publiki>
+
+    <publiki>
+        <datum_id>2021-09-19</datum_id>
+        <domashna>1430</domashna>
+        <gostinska>0</gostinska>
+        <karti_rasprodadeni>1400</karti_rasprodadeni>
+    </publiki>
+
+    <publiki>
+        <datum_id>2021-10-03</datum_id>
+        <domashna>870</domashna>
+        <gostinska>211</gostinska>
+        <karti_rasprodadeni>800</karti_rasprodadeni>
+    </publiki>
+
+</publika>

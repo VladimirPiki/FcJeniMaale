@@ -1,0 +1,16 @@
+[{
+    "stadion_id":1,
+    "ime":"Tumbe Kafe",
+    "adresa":"Ulica Tumbe kafe bb",
+    "kapacitet":7000
+},{
+    "stadion_id":2,
+    "ime":"Petar Miloshevski",
+    "adresa":"Ulica 16ta bb",
+    "kapacitet":7000
+},{
+    "stadion_id":3,
+    "ime":"Pavel Shatev",
+    "adresa":"Setaliste bb",
+    "kapacitet":7000
+}]

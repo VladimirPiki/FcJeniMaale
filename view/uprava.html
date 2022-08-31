@@ -1,0 +1,85 @@
+<h3>Стручен штаб</h3>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>dres_id</th>
+                <th>
+                    <input type="text" name="searchByZalaganje" id="searchByZalaganje" ng-model="searchByZalaganje" placeholder="Пребарај по залагање во клубот">
+                </th>
+                <th>
+                    <input type="number" name="searchByRabotnaOcenka" id="searchByRabotnaOcenka" ng-model="searchByRabotnaOcenka" placeholder="Пребарај од 1-5 работната оценка">
+                </th>
+                <th><i class="fa-solid fa-pen"></i>edit</th>
+                <th><i class="fa-solid fa-trash-can"></i>delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="upravi in uprava | filter:{zalaganje:searchByZalaganje,rabotna_ocenka:searchByRabotnaOcenka}">
+                <td>{{upravi.dres_id}}</td>
+                <td>{{upravi.zalaganje}}</td>
+                <td>{{upravi.rabotna_ocenka}}</td>
+                <td title="Edit "><i class="fa-solid fa-pen"></i></td>
+                <td title="Delete {{upravi.dres_id}} {{upravi.zalaganje}}"><i class="fa-solid fa-trash-can"></i></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!--
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>dres_id</th>
+            <th>zalaganje</th>
+            <th>rabotna_ocenka</th>
+            <th><i class="fa-solid fa-pen"></i>edit</th>
+            <th><i class="fa-solid fa-trash-can"></i>delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>24</td>
+            <td>dovolno</td>
+            <td>3</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>istaknato</td>
+            <td>5</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td>istaknato</td>
+            <td>4</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td>nedovolno</td>
+            <td>1</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td>dovolno</td>
+            <td>3</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>69</td>
+            <td>nedovolno</td>
+            <td>1</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+-->

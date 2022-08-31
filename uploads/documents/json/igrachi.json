@@ -1,0 +1,25 @@
+[{
+    "dres_id":1,
+    "ime":"Mice",
+    "prezime":"Dimov",
+    "pozicija":"Goalkeeper",
+    "godini":1997,
+    "plata_denari":100000.000000,
+    "income_id":"NULL"
+},{
+    "dres_id":2,
+    "ime":"Blagojche",
+    "prezime":"Popovski",
+    "pozicija":"Centre Back",
+    "godini":1995,
+    "plata_denari":64000.000000,
+    "income_id":"NULL"
+},{
+    "dres_id":3,
+    "ime":"Andrej",
+    "prezime":"Nedelkovski",
+    "pozicija":"Left Back",
+    "godini":1990,
+    "plata_denari":55000.000000,
+    "income_id":"NULL"
+}]

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<income>
+    <incomes>
+        <income_id>1</income_id>
+        <ime>Stojan</ime>
+        <prezime>Dimov</prezime>
+        <pozicija>Center Forward</pozicija>
+        <godini>1990</godini>
+        <klub>Fc Poesevo</klub>
+        <iznos_denari>67000.000000</iznos_denari>
+    </incomes>
+
+    <incomes>
+        <income_id>2</income_id>
+        <ime>Trajan</ime>
+        <prezime>Rizovski</prezime>
+        <pozicija>Left Back</pozicija>
+        <godini>1995</godini>
+        <klub>Fc Budimerci United</klub>
+        <iznos_denari>100000.000000</iznos_denari>
+    </incomes>
+
+    <incomes>
+        <income_id>3</income_id>
+        <ime>Mice</ime>
+        <prezime>Gacov</prezime>
+        <pozicija>Right Back</pozicija>
+        <godini>1998</godini>
+        <klub>Fc Budimerci United</klub>
+        <iznos_denari>150000.000000</iznos_denari>
+    </incomes>
+</income>

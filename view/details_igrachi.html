@@ -1,0 +1,42 @@
+<h3>Играчи</h3>
+<div class="alert alert-success" ng-show="alert_success">Успешно ги внесовте податоците!</div>
+<div class="alert alert-danger" ng-show="error_alert">Ве молиме пополнете го правилно формуларот!</div>
+
+<form name="myForm">
+    <div class="mb-3 mt-3">
+      <label for="ime" class="form-label">ime</label>
+      <span class="alert alert-danger" ng-show="myForm.ime.$invalid">Внесете име со најмалце 3 карактери!!!</span>
+      <input type="text" class="form-control" placeholder="Внесете го името на играчот"  id="ime" name="ime" ng-minlength="3" ng-model="ime">
+    </div>
+    <div class="mb-3">
+      <label for="prezime" class="form-label">prezime</label>
+      <span class="alert alert-danger" ng-show="myForm.prezime.$invalid">Внесете презиме со најмалце 3 карактери!!!</span>
+      <input type="text" class="form-control"  placeholder="Внесете го презимето на играчот"  id="prezime" name="prezime" ng-minlength="3" ng-model="prezime">
+    </div>
+    <div class="mb-3">
+        <label for="pozicija" class="form-label">pozicija</label>
+        <span class="alert alert-danger" ng-show="myForm.pozicija.$invalid">Внесете позиција со најмалце 5 карактери!!!</span>
+        <input type="text" class="form-control"  placeholder="Внесете ја позицијата на играчот"   id="pozicija" name="pozicija" ng-minlength="5" ng-model="pozicija">
+    </div>
+    <div class="mb-3">
+        <label for="godini" class="form-label">godini</label>
+        <span class="alert alert-danger" ng-show="myForm.godini.$invalid">Внесете години со 4 бројки!!!</span>
+        <input type="number" class="form-control"  placeholder="Внесете ги годините на играчот"  id="godini" name="godini" ng-min="1111" ng-max="9999" ng-model="godini">
+    </div>
+    <div class="mb-3">
+        <label for="plata_denari" class="form-label">plata_denari</label>
+        <input type="number" class="form-control"  placeholder="Внесете плата во денари"  id="plata_denari" name="plata_denari" ng-model="plata_denari">
+    </div>
+    <div class="mb-3">
+        <label for="income_id" class="form-label">income_id</label>
+        <span class="alert alert-danger" ng-show="myForm.income_id.$invalid">Внесете години со најмалце 1 бројка!!!</span>
+        <select class="form-control" id="income_id" name="income_id" ng-model="income_id">
+          <option  value="">Изберете опции</option>
+          <option ng-repeat="incomes in income" value="{{incomes.income_id}}">
+            {{incomes.income_id}} || {{incomes.ime}} {{incomes.prezime}}  ||  {{incomes.pozicija}}
+          </option>
+        </select>
+    </div>
+    <button type="button" class="btn btn-primary" ng-click="
+    (myForm.ime.$valid && myForm.prezime.$valid && myForm.pozicija.$valid && myForm.godini.$valid && myForm.income_id.$valid) ? function_igrachi(ime,prezime,pozicija,godini,plata_denari,income_id) : erorr()">Save</button>
+  </form>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<igrachi>
+    <igrach>
+        <dres_id>1</dres_id>
+        <ime>Mice</ime>
+        <prezime>Dimov</prezime>
+        <pozicija>Goalkeeper</pozicija>
+        <godini>1997</godini>
+        <plata_denari>100000.0</plata_denari>
+        <income_id></income_id>
+    </igrach>
+        <igrach>
+        <dres_id>2</dres_id>
+        <ime>Blagojche</ime>
+        <prezime>Popovski</prezime>
+        <pozicija>Centre Back</pozicija>
+        <godini>1995</godini>
+        <plata_denari>64000.0</plata_denari>
+        <income_id></income_id>
+    </igrach>
+        <igrach>
+        <dres_id>3</dres_id>
+        <ime>Andrej</ime>
+        <prezime>Nedelkovski</prezime>
+        <pozicija>Left Back</pozicija>
+        <godini>1990</godini>
+        <plata_denari>55000.0</plata_denari>
+        <income_id></income_id>
+    </igrach>
+</igrachi>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sostav>
+
+    <sostavi>
+        <sostav_id>1</sostav_id>
+        <datum>2021-09-05 17:00:00</datum>
+        <coach>27</coach>
+        <goalkeeper>1</goalkeeper>
+        <centre_back1>2</centre_back1>
+        <centre_back2>5</centre_back2>
+        <right_back>4</right_back>
+        <left_back>3</left_back>
+        <defensive_midfielder>6</defensive_midfielder>
+        <center_midfielder>7</center_midfielder>
+        <attacking_midfielder>8</attacking_midfielder>
+        <right_forward>11</right_forward>
+        <left_forward>10</left_forward>
+        <center_forward>9</center_forward>
+        <reserve1>19</reserve1>
+        <reserve2>14</reserve2>
+        <reserve3>15</reserve3>
+        <reserve4>17</reserve4>
+        <reserve5>20</reserve5>
+        <reserve6>21</reserve6>
+        <reserve7>23</reserve7>
+    </sostavi>
+
+    <sostavi>
+        <sostav_id>2</sostav_id>
+        <datum>2021-09-12 17:00:00</datum>
+        <coach>27</coach>
+        <goalkeeper>12</goalkeeper>
+        <centre_back1>2</centre_back1>
+        <centre_back2>5</centre_back2>
+        <right_back>15</right_back>
+        <left_back>3</left_back>
+        <defensive_midfielder>6</defensive_midfielder>
+        <center_midfielder>7</center_midfielder>
+        <attacking_midfielder>8</attacking_midfielder>
+        <right_forward>11</right_forward>
+        <left_forward>10</left_forward>
+        <center_forward>9</center_forward>
+        <reserve1>19</reserve1>
+        <reserve2>14</reserve2>
+        <reserve3>4</reserve3>
+        <reserve4>17</reserve4>
+        <reserve5>20</reserve5>
+        <reserve6>21</reserve6>
+        <reserve7>23</reserve7>
+    </sostavi>
+
+    <sostavi>
+        <sostav_id>3</sostav_id>
+        <datum>2021-09-19 16:00:00</datum>
+        <coach>27</coach>
+        <goalkeeper>1</goalkeeper>
+        <centre_back1>2</centre_back1>
+        <centre_back2>5</centre_back2>
+        <right_back>4</right_back>
+        <left_back>3</left_back>
+        <defensive_midfielder>6</defensive_midfielder>
+        <center_midfielder>7</center_midfielder>
+        <attacking_midfielder>8</attacking_midfielder>
+        <right_forward>11</right_forward>
+        <left_forward>10</left_forward>
+        <center_forward>9</center_forward>
+        <reserve1>19</reserve1>
+        <reserve2>14</reserve2>
+        <reserve3>15</reserve3>
+        <reserve4>17</reserve4>
+        <reserve5>20</reserve5>
+        <reserve6>21</reserve6>
+        <reserve7>23</reserve7>
+    </sostavi>
+
+</sostav>

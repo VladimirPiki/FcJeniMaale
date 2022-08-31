@@ -1,0 +1,132 @@
+<h3>Трансфери кој доааѓат</h3>
+<div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>income_id</th>
+                    <th>
+                        <input type="text" name="searchByName" id="searchByName" ng-model="searchByName" placeholder="Пребарај по име на играчот">
+                    </th>
+                    <th>
+                        <input type="text" name="searchByLastName" id="searchByLastName" ng-model="searchByLastName" placeholder="Пребарај по презиме на играчот">
+                    </th>
+                    <th>
+                        <input type="text" name="searchByPosition" id="searchByPosition" ng-model="searchByPosition" placeholder="Пребарај по позиција на играчот">
+                    </th>
+                    <th>
+                        <input type="text" name="searchByYear" id="searchByYear" ng-model="searchByYear" placeholder="Пребарај по години на играчот">
+                    </th>
+                    <th>
+                        <input type="text" name="searchByClub" id="searchByClub" ng-model="searchByClub" placeholder="Пребарај по името на клубот">
+                    </th>
+                    <th>
+                        <input type="text" name="searchByIznosDenari" id="searchByIznosDenari" ng-model="searchByIznosDenari" placeholder="Пребарај по износот на трансферот во денари">
+                    </th>
+                    <th><i class="fa-solid fa-pen"></i>edit</th>
+                    <th><i class="fa-solid fa-trash-can"></i>delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="incomes in income | filter:{ime:searchByName,prezime:searchByLastName,pozicija:searchByPosition,godini:searchByYear,klub:searchByClub,iznos_denari:searchByIznosDenari}">
+                    <td>{{incomes.income_id}}</td>
+                    <td>{{incomes.ime}}</td>
+                    <td>{{incomes.prezime}}</td>
+                    <td>{{incomes.pozicija}}</td>
+                    <td>{{incomes.godini}}</td>
+                    <td>{{incomes.klub}}</td>
+                    <td>{{incomes.iznos_denari}}</td>
+                    <td title="Edit"><i class="fa-solid fa-pen"></i></td>
+                    <td title="Delete {{incomes.ime}} {{incomes.prezime}}"><i class="fa-solid fa-trash-can"></i></td>
+                </tr>
+            </tbody>
+        </table>
+
+</div>
+
+
+<!--
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>income_id</th>
+            <th>ime</th>
+            <th>prezime</th>
+            <th>pozicija</th>
+            <th>godini</th>
+            <th>klub</th>
+            <th>iznos_denari</th>
+            <th><i class="fa-solid fa-pen"></i>edit</th>
+            <th><i class="fa-solid fa-trash-can"></i>delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Stojan</td>
+            <td>Dimov</td>
+            <td>Center Forward</td>
+            <td>1990</td>
+            <td>Fc Poesevo</td>
+            <td>67000.0</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Trajan</td>
+            <td>Rizovski</td>
+            <td>Left Back</td>
+            <td>1995</td>
+            <td>Fc Budimerci United</td>
+            <td>100000.0</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Mice</td>
+            <td>Gacov</td>
+            <td>Right Back</td>
+            <td>1998</td>
+            <td>Fc Budimerci United</td>
+            <td>150000.0</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Najdo</td>
+            <td>Sikijovski</td>
+            <td>Right Winger</td>
+            <td>2006</td>
+            <td>Fc Gradeshnica United</td>
+            <td>550000.0</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Borche</td>
+            <td>Stojanoski</td>
+            <td>Left Winger</td>
+            <td>2007</td>
+            <td>Fc Pelister Bitola</td>
+            <td>230000.0</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Boro</td>
+            <td>Stojanov</td>
+            <td>Center Midfielder</td>
+            <td>1998</td>
+            <td>Fc Pelister Bitola</td>
+            <td>1300000.0</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </tbody>
+</table>
+-->

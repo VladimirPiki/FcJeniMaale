@@ -1,0 +1,95 @@
+<h3>Трансфери кој заминуваат</h3>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>outcome_id</th>
+                <th>
+                    <input type="text" name="searchByKlub" id="searchByKlub" ng-model="searchByKlub" placeholder="Пребарај по името на клубот">
+                </th>
+                <th>
+                    <input type="text" name="searchByIznosDenari" id="searchByIznosDenari" ng-model="searchByIznosDenari" placeholder="Пребарај по износот на трансферот во денари">
+                </th>
+                <th>
+                    <select class="form-control" id="searchByDresId" name="searchByDresId"  ng-model="searchByDresId">
+                        <option href="#"  value="">Изберете опции</option>
+                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+                            {{igrac.dres_id}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.pozicija_igrachi}} || {{igrac.godini_igrachi}}
+                        </option>
+                    </select>
+                </th>
+                <th><i class="fa-solid fa-pen"></i>edit</th>
+                <th><i class="fa-solid fa-trash-can"></i>delete</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="outcomes in outcome | filter:{klub:searchByKlub,iznos_denari:searchByIznosDenari,dres_id:searchByDresId}">
+                <td>{{outcomes.outcome_id}}</td>
+                <td>{{outcomes.klub}}</td>
+                <td>{{outcomes.iznos_denari}}</td>
+                <td>{{outcomes.dres_id}} || {{outcomes.ime}} {{outcomes.prezime}} || {{outcomes.pozicija}} || {{outcomes.godini}}</td>
+                <td title="Edit"><i class="fa-solid fa-pen"></i></td>
+                <td title="Delete {{outcomes.outcome_id}} || {{outcomes.klub}} || {{outcomes.ime}} {{outcomes.prezime}}"><i class="fa-solid fa-trash-can"></i></td>
+            </tr>
+        </tbody>
+        
+    </table>
+</div>
+
+<!--
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>outcome_id</th>
+            <th>klub</th>
+            <th>iznos_denari</th>
+            <th>dres_id</th>
+            <th><i class="fa-solid fa-pen"></i>edit</th>
+            <th><i class="fa-solid fa-trash-can"></i>delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Fc Pelister Bitola</td>
+            <td>100000.0</td>
+            <td>16</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Fc Pelister Bitola</td>
+            <td>167000.0</td>
+            <td>20</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Fc Old Boys</td>
+            <td>565000.0</td>
+            <td>22</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Fc Rabotnik Bitola</td>
+            <td>123000.0</td>
+            <td>17</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Fc Valladolid</td>
+            <td>823000.0</td>
+            <td>18</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+-->

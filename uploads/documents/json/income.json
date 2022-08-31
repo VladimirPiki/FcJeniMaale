@@ -1,0 +1,25 @@
+[{
+    "income_id":1,
+    "ime":"Stojan",
+    "prezime":"Dimov",
+    "pozicija":"Center Forward",
+    "godini":1990,
+    "klub":"Fc Poesevo",
+    "iznos_denari":67000.000000
+},{
+    "income_id":2,
+    "ime":"Trajan",
+    "prezime":"Rizovski",
+    "pozicija":"Left Back",
+    "godini":1995,
+    "klub":"Fc Budimerci United",
+    "iznos_denari":100000.000000
+},{
+    "income_id":3,
+    "ime":"Mice",
+    "prezime":"Gacov",
+    "pozicija":"Right Back",
+    "godini":1998,
+    "klub":"Fc Budimerci United",
+    "iznos_denari":150000.000000
+}]
