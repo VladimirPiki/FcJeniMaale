@@ -1,5 +1,5 @@
 var app = angular.module('myApp', ["ngRoute"]);
-app.controller('myCtrl', function($scope,$http) {
+app.controller('myCtrl', function($scope,$http,$filter) {
 	$scope.error_alert=false;
   $scope.alert_success=false;
   $scope.datum = {
@@ -11,7 +11,7 @@ app.controller('myCtrl', function($scope,$http) {
   $scope.datum_id = {
      value: new Date(2000, 12, 15)
   }
-  
+
   var fullname="";
   $scope.firstName = "Vladimir";
   $scope.surname = "Doe";

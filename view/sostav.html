@@ -8,7 +8,7 @@
                 <th>
                     <select class="form-control" name="searchByDatum" id="searchByDatum" ng-model="searchByDatum">
                         <option  value="">Изберете опции</option>
-                        <option ng-repeat="natprevar in natprevaruvanje" value="{{natprevar.kolo_id}}" >
+                        <option ng-repeat="natprevar in natprevaruvanje" value="{{natprevar.datum}}" >
                             {{natprevar.kolo_id}} коло  ||   {{natprevar.datum}}
                         </option>
                     </select>
@@ -17,7 +17,7 @@
                     <select class="form-control" name="searchByCoach" id="searchByCoach" ng-model="searchByCoach">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  || {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  || {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -25,7 +25,7 @@
                     <select class="form-control" name="searchByGK" id="searchByGK" ng-model="searchByGK">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -33,7 +33,7 @@
                     <select class="form-control" name="searchByCB1" id="searchByCB1" ng-model="searchByCB1">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -41,7 +41,7 @@
                     <select class="form-control" name="searchByCB2" id="searchByCB2" ng-model="searchByCB2">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -49,7 +49,7 @@
                     <select class="form-control" name="searchByRB" id="searchByRB" ng-model="searchByRB">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -57,7 +57,7 @@
                     <select class="form-control" name="searchByLB" id="searchByLB" ng-model="searchByLB">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||  {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||  {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -65,7 +65,7 @@
                     <select class="form-control"  name="searchByDMF" id="searchByDMF" ng-model="searchByDMF">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -73,7 +73,7 @@
                     <select class="form-control"  name="searchByCMF" id="searchByCMF" ng-model="searchByCMF">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -81,7 +81,7 @@
                     <select class="form-control" name="searchByAMF" id="searchByAMF" ng-model="searchByAMF">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -89,7 +89,7 @@
                     <select class="form-control" name="searchByRWF" id="searchByRWF" ng-model="searchByRWF">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -97,7 +97,7 @@
                     <select class="form-control" name="searchByLWF" id="searchByLWF" ng-model="searchByLWF">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -105,7 +105,7 @@
                     <select class="form-control" name="searchByCF" id="searchByCF" ng-model="searchByCF">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -113,7 +113,7 @@
                     <select class="form-control"name="searchByReserve1" id="searchByReserve1" ng-model="searchByReserve1">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -121,7 +121,7 @@
                     <select class="form-control" name="searchByReserve2" id="searchByReserve2" ng-model="searchByReserve2">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -129,7 +129,7 @@
                     <select class="form-control" name="searchByReserve3" id="searchByReserve3" ng-model="searchByReserve3">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||  {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||  {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -137,7 +137,7 @@
                     <select class="form-control" name="searchByReserve4" id="searchByReserve4" ng-model="searchByReserve4">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -145,7 +145,7 @@
                     <select class="form-control" name="searchByReserve5" id="searchByReserve5" ng-model="searchByReserve5">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -153,7 +153,7 @@
                     <select class="form-control" name="searchByReserve6" id="searchByReserve6" ng-model="searchByReserve6">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
@@ -161,7 +161,7 @@
                     <select class="form-control" name="searchByReserve7" id="searchByReserve7" ng-model="searchByReserve7">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}} || {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                            {{igrac.dres_id}}  ||    {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
                         </option>
                     </select>
                 </th>
