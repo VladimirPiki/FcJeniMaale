@@ -53,7 +53,7 @@
         </thead>
 
         <tbody>
-            <tr ng-repeat="igrac in igrachi | filter:{ime:searchByName,prezime_igrachi:searchByLastName,pozicija_igrachi:searchByPosition,godini_igrachi:searchByYear,plata_denari:searchBySalary,income_id:searchByIncomeId}">
+            <tr ng-repeat="igrac in igrachi | filter:{ime_igrachi:searchByName,prezime_igrachi:searchByLastName,pozicija_igrachi:searchByPosition,godini_igrachi:searchByYear,plata_denari:searchBySalary,income_id:searchByIncomeId}">
                 <td>{{igrac.dres_id}} </td>
                 <td>{{igrac.ime_igrachi}}</td>
                 <td>{{igrac.prezime_igrachi}}</td>

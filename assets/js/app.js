@@ -11,7 +11,7 @@ app.controller('myCtrl', function($scope,$http) {
   $scope.datum_id = {
      value: new Date(2000, 12, 15)
   }
-
+  
   var fullname="";
   $scope.firstName = "Vladimir";
   $scope.surname = "Doe";
