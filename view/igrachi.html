@@ -44,7 +44,8 @@
                 <td class="text-center">{{igrac.ime_income}} {{igrac.prezime_income}} <br> {{igrac.pozicija_income}} <br> {{igrac.godini_income}}</td>
                 <td title="Edit"><i class="fa-solid fa-pen"></i></td>
                 <td title="Delete {{igrac.dres_id}} || {{igrac.ime_igrachi}} {{igrac.prezime_igrachi}}">
-                   <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal"> <i class="fa-solid fa-trash-can"></i></button>
+                   <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal" ng-click="passPosition($index)"> <i class="fa-solid fa-trash-can"></i></button>
+                    {{$index}}
                 </td>
             </tr>
         </tbody>
@@ -66,12 +67,12 @@
   
         <!-- Modal body -->
         <div class="modal-body myBtn">
-            Дали сте сигурни дека сакате да го избришите играчот???
+            Дали сте сигурни дека сакате да го избришите играчот {{igrachi[getIndex].ime_igrachi}} {{igrachi[getIndex].prezime_igrachi}}???
         </div>
   
         <!-- Modal footer -->
         <div class="modal-footer bg-light">
-          <button type="button" class="btn myBtn" data-bs-dismiss="modal">Да</button>
+          <button type="button" class="btn myBtn" data-bs-dismiss="modal" ng-click="deleteRow('igrachi',igrachi[getIndex].dres_id)">Да</button>
           <button type="button" class="btn myBtn" data-bs-dismiss="modal">Не</button>
           
         </div>

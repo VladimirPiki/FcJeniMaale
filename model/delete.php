@@ -18,6 +18,7 @@ $objDB = new   DB            ();
 #$table_name="natprevaruvanje";
 
 $table_name=$data[0]->table_name;
+$pk_value=$data[0]->pk_value;
 
 switch($table_name)
 {
@@ -25,7 +26,7 @@ switch($table_name)
         require_once "DAO/igrachiDAO.php";//file path 
         $objIgrachi = new IgrachiDAO($objDB);
         //setters POJO
-        $objIgrachi->setDresId($data[0]->dres_id);
+        $objIgrachi->setDresId($data[0]->pk_value);
         //DAO
         $objIgrachi ->deleteIgrachi();
 
