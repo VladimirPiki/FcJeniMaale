@@ -232,6 +232,10 @@
             foreach($results as $row ){
                 $data[]=array(
                 "dres_id" => $row["dres_id"],
+                "ime" => $row["ime"],
+                "prezime" => $row["prezime"],
+                "pozicija" => $row["pozicija"],
+                "godini" => $row["godini"],
                 "zalaganje" => $row["zalaganje"],
                 "rabotna_ocenka" => $row["rabotna_ocenka"]
             );

@@ -58,15 +58,14 @@
                 <td>{{natprevar.domashna}} home audience || {{natprevar.gostinska}} away audience</td>
                 <td title="Edit"><i class="fa-solid fa-pen"></i></td>
                 <td title="Delete {{natprevar.kolo_id}} || {{natprevar.datum}} || {{natprevar.protivnik}}">
-                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">
-                         <i class="fa-solid fa-trash-can"></i>
-                    </button>
+                    <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal"> <i class="fa-solid fa-trash-can"></i></button>
                 </td>
             </tr>
         </tbody>
-        
+
     </table>
 </div>
+
 
 <!-- The Modal -->
 <div class="modal" id="myModal">
@@ -74,20 +73,20 @@
       <div class="modal-content">
   
         <!-- Modal Header -->
-        <div class="modal-header bg-danger">
+        <div class="modal-header myBtn">
           <h4 class="modal-title">Внимание!!!</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
   
         <!-- Modal body -->
-        <div class="modal-body bg-primary">
+        <div class="modal-body myBtn">
             Дали сте сигурни дека сакате да го избришите играчот???
         </div>
   
         <!-- Modal footer -->
         <div class="modal-footer bg-light">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Да</button>
-          <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Не</button>
+          <button type="button" class="btn myBtn" data-bs-dismiss="modal">Да</button>
+          <button type="button" class="btn myBtn" data-bs-dismiss="modal">Не</button>
           
         </div>
   
