@@ -58,7 +58,7 @@
                 <td>{{natprevar.domashna}} home audience || {{natprevar.gostinska}} away audience</td>
                 <td title="Edit"><i class="fa-solid fa-pen"></i></td>
                 <td title="Delete {{natprevar.kolo_id}} || {{natprevar.datum}} || {{natprevar.protivnik}}">
-                    <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal"> <i class="fa-solid fa-trash-can"></i></button>
+                    <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal" ng-click="passPosition($index)"> <i class="fa-solid fa-trash-can"></i></button>
                 </td>
             </tr>
         </tbody>
@@ -80,12 +80,12 @@
   
         <!-- Modal body -->
         <div class="modal-body myBtn">
-            Дали сте сигурни дека сакате да го избришите играчот???
+            Дали сте сигурни дека сакате да го избришите натпреварот против {{natprevaruvanje[getIndex].protivnik}} на {{natprevaruvanje[getIndex].datum}}???
         </div>
   
         <!-- Modal footer -->
         <div class="modal-footer bg-light">
-          <button type="button" class="btn myBtn" data-bs-dismiss="modal">Да</button>
+          <button type="button" class="btn myBtn" data-bs-dismiss="modal" ng-click="deleteRow('natprevaruvanje',natprevaruvanje[getIndex].kolo_id)">Да</button>
           <button type="button" class="btn myBtn" data-bs-dismiss="modal">Не</button>
           
         </div>

@@ -212,6 +212,7 @@ app.controller('myCtrl', function($scope,$http,$filter) {
     postData("insert",objUprava);
   }
 
+
   $scope.getIndex=0;
   $scope.passPosition=function(position) // position=3
   {
@@ -219,11 +220,12 @@ app.controller('myCtrl', function($scope,$http,$filter) {
     $scope.getIndex=position; // 3
   }
   
-
   $scope.deleteRow=function(table_name,pk_value)
   {
     var objDelete=[];
     objDelete.push({"table_name":table_name,"pk_value":pk_value});
     postData("delete",objDelete);
-  
+  }
+
+
 });

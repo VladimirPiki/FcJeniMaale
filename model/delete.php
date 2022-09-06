@@ -37,7 +37,7 @@ switch($table_name)
       
         $objIncome = new IncomeDAO($objDB);
         //setters POJO
-        $objIncome->setIncomeId(70);
+        $objIncome->setIncomeId($data[0]->pk_value);
         //DAO
         $objIncome ->deleteIncome();
     break;
@@ -47,7 +47,7 @@ switch($table_name)
         
         $objNatprevaruvanje = new NatprevaruvanjeDAO($objDB);
         //setters POJO
-        $objNatprevaruvanje ->setKoloId(22);
+        $objNatprevaruvanje ->setKoloId($data[0]->pk_value);
         //DAO
         $objNatprevaruvanje -> deleteNatprevaruvanje();
     break;
@@ -57,7 +57,7 @@ switch($table_name)
        
         $objOutcome = new OutcomeDAO($objDB);
          //setters POJO
-         $objOutcome ->setOutcomeId(69);
+         $objOutcome ->setOutcomeId($data[0]->pk_value);
          //DAO
         $objOutcome ->deleteOutcome();
     break;
@@ -68,7 +68,7 @@ switch($table_name)
         $objPublika = new PublikaDAO($objDB);
 
         //setters POJO
-        $objPublika ->setDatumId('2023-02-01');
+        $objPublika ->setDatumId($data[0]->pk_value);
         //DAO
         $objPublika ->deletePublika();
     break;
@@ -78,7 +78,7 @@ switch($table_name)
             
             $objSostav = new SostavDAO($objDB);
             //setters POJO
-            $objSostav ->setSostavId(22);
+            $objSostav ->setSostavId($data[0]->pk_value);
             //DAO
             $objSostav ->deleteSostav();
 
@@ -89,7 +89,7 @@ switch($table_name)
             
             $objStadion= new StadionDAO($objDB);
             //setters POJO
-            $objStadion ->setStadionId(73);
+            $objStadion ->setStadionId($data[0]->pk_value);
             //DAO
             $objStadion ->deleteStadion();
     break;
@@ -99,7 +99,7 @@ switch($table_name)
             
             $objUprava = new UpravaDAO($objDB);
             //setters POJO
-            $objUprava ->setDresId(33);
+            $objUprava ->setDresId($data[0]->pk_value);
             //DAO
             $objUprava -> deleteUprava();
     break;
