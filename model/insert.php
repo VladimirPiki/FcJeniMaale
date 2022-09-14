@@ -29,7 +29,7 @@ switch($table_name)
 
         //setters POJO
 
-       // $objIgrachi->setDresId("1");// Primary key bidejki e autoincremet i mozam da go izbrisam no go ostavam
+        $objIgrachi->setDresId($data[0]->dres_id);
         $objIgrachi->setIme($data[0]->ime);
         $objIgrachi->setPrezime($data[0]->prezime);
         $objIgrachi->setPozicija($data[0]->pozicija);
@@ -65,7 +65,7 @@ switch($table_name)
         
         $objNatprevaruvanje = new NatprevaruvanjeDAO($objDB);
         //setters POJO
-        $formatDatum=date("Y-m-d H:m:s",strtotime($data[0]->datum));
+        $formatDatum=date("Y-m-d H:i:s",strtotime($data[0]->datum));
         //echo $data[0]->datum." ".$formatDatum;
         $objNatprevaruvanje ->setKoloId($data[0]->kolo_id);
         $objNatprevaruvanje ->setDatum($formatDatum);
@@ -114,7 +114,7 @@ switch($table_name)
             
             $objSostav = new SostavDAO($objDB);
             //setters POJO
-            $formatDatumSostav=date("Y-m-d H:m:s",strtotime($data[0]->datum_sostav));
+            $formatDatumSostav=date("Y-m-d H:i:s",strtotime($data[0]->datum_sostav));
 
             $objSostav ->setSostavId($data[0]->sostav_id);
             $objSostav ->setDatumSostav($formatDatumSostav);

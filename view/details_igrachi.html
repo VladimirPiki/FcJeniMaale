@@ -3,7 +3,12 @@
 <div class="alert alert-danger" ng-show="error_alert">Ве молиме пополнете го правилно формуларот!</div>
 
 <form name="myForm">
-    <div class="mb-3 mt-3">
+  <div class="mb-3 mt-3">
+    <label for="dres_id" class="form-label">dres_id</label>
+    <span class="alert alert-danger" ng-show="myForm.dres_id.$invalid">Внесете име со најмалце 1 бројка!!!</span>
+    <input type="number" class="form-control" placeholder="Внесете го дресот на играчот"  id="dres_id" name="dres_id" ng-minlength="1" ng-model="dres_id">
+  </div>
+    <div class="mb-3 ">
       <label for="ime" class="form-label">ime</label>
       <span class="alert alert-danger" ng-show="myForm.ime.$invalid">Внесете име со најмалце 3 карактери!!!</span>
       <input type="text" class="form-control" placeholder="Внесете го името на играчот"  id="ime" name="ime" ng-minlength="3" ng-model="ime">
@@ -38,5 +43,5 @@
         </select>
     </div>
     <button type="button" class="btn btn-primary" ng-click="
-    (myForm.ime.$valid && myForm.prezime.$valid && myForm.pozicija.$valid && myForm.godini.$valid && myForm.income_id.$valid) ? function_igrachi(ime,prezime,pozicija,godini,plata_denari,income_id) : erorr()">Save</button>
+    (myForm.dres_id.$valid && myForm.ime.$valid && myForm.prezime.$valid && myForm.pozicija.$valid && myForm.godini.$valid && myForm.income_id.$valid) ? function_igrachi(dres_id,ime,prezime,pozicija,godini,plata_denari,income_id) : erorr()">Save</button>
   </form>

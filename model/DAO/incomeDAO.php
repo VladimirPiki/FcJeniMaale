@@ -28,7 +28,6 @@ class IncomeDAO extends Income
      */
     public function insertIncome()
     {
-       
         $ime=parent::getIme();
         $prezime=parent::getPrezime();
         $pozicija=parent::getPozicija();
@@ -37,7 +36,6 @@ class IncomeDAO extends Income
         $iznos_denari=parent::getIznosDenari();
 
         $columns_value="'$ime','$prezime','$pozicija',$godini,'$klub',$iznos_denari";
-
         $this->database ->callStoredProcedure("_insert_income",$columns_value);
     }
 

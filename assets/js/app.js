@@ -3,13 +3,13 @@ app.controller('myCtrl', function($scope,$http,$filter) {
 	$scope.error_alert=false;
   $scope.alert_success=false;
   $scope.datum = {
-    value: new Date(2010, 11, 28, 14, 57)
+    value: new Date(2022, 11, 28, 14, 57)
   };
   $scope.datum_sostav = {
     value: new Date(2022, 12, 31, 23, 59)
   };
   $scope.datum_id = {
-     value: new Date(2000, 12, 15)
+     value: new Date(2022, 11-1, 23)
   }
 
   var fullname="";
@@ -146,10 +146,10 @@ app.controller('myCtrl', function($scope,$http,$filter) {
     $scope.alert_success=false;
   }
 
-  $scope.function_igrachi=function(ime,prezime,pozicija,godini,plata_denari,income_id)
+  $scope.function_igrachi=function(dres_id,ime,prezime,pozicija,godini,plata_denari,income_id)
   {
     var objIgrachi=[];
-    objIgrachi.push({"ime":ime,"prezime":prezime,"pozicija":pozicija,"godini":godini,"plata_denari":plata_denari,"income_id":income_id,"table_name":"igrachi"});
+    objIgrachi.push({"dres_id":dres_id,"ime":ime,"prezime":prezime,"pozicija":pozicija,"godini":godini,"plata_denari":plata_denari,"income_id":income_id,"table_name":"igrachi"});
     console.log(objIgrachi);
     postData("insert",objIgrachi);
   }

@@ -26,16 +26,16 @@ class IgrachiDAO extends Igrachi
      */
     public function insertIgrachi()
     {
-    
+       $dres_id=parent::getDresId();
        $ime=parent::getIme();
        $prezime=parent::getPrezime();
        $pozicija=parent::getPozicija();
        $godini=parent::getGodini();
        $plata_denari=parent::getPlataDenari();
-        $income_id=parent::getIncomeId();
+       $income_id=parent::getIncomeId();
 
-       $columns_value="'$ime','$prezime','$pozicija',$godini,$plata_denari,$income_id";
-        $this->database ->callStoredProcedure("_insert_igrachi",$columns_value);  
+       $columns_value="$dres_id,'$ime','$prezime','$pozicija',$godini,$plata_denari,$income_id";
+       $this->database ->callStoredProcedure("_insert_igrachi",$columns_value);  
     }
 
     /**

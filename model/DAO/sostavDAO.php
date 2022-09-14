@@ -48,28 +48,6 @@ class SostavDAO extends Sostav
         $reserve6=parent::getReserve6();
         $reserve7=parent::getReserve7();
 
-        $columns_name=" sostav_id,
-                        datum_sostav,
-                        coach,
-                        goalkeeper,
-                        centre_back1,
-                        centre_back2,
-                        right_back,
-                        left_back,
-                        defensive_midfielder,
-                        center_midfielder,
-                        attacking_midfielder,
-                        right_forward,
-                        left_forward,
-                        center_forward,
-                        reserve1,
-                        reserve2,
-                        reserve3,
-                        reserve4,
-                        reserve5,
-                        reserve6,
-                        reserve7";
-
         $columns_value="$sostav_id,
                         '$datum_sostav',
                         $coach,
@@ -92,10 +70,7 @@ class SostavDAO extends Sostav
                         $reserve6,
                         $reserve7";
 
-
-        $this->database -> insertRow($this->table_name,$columns_name,$columns_value);
-
-     
+         $this->database ->callStoredProcedure("_insert_sostav",$columns_value);
     }
 
     /**
@@ -104,13 +79,8 @@ class SostavDAO extends Sostav
     public function deleteSostav()
     {
         $sostav_id=parent::getSostavId();
-
-        $pk_name="sostav_id";
         $pk_value=$sostav_id;
-
-        $this->database ->deleteRow($this->table_name,$pk_name,$pk_value);
-
-        
+        $this->database ->callStoredProcedure("_delete_sostav",$pk_value);
     }
 
     /**

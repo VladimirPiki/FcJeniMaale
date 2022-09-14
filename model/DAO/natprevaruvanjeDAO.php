@@ -44,7 +44,7 @@ class NatprevaruvanjeDAO extends Natprevaruvanje
       {
         $kolo_id=parent::getKoloId();
         $pk_value=$kolo_id;
-        $this->database ->callStoredProcedure("_delete_natprevaruvanje",$pk_value);;//class database
+        $this->database ->callStoredProcedure("_delete_natprevaruvanje",$pk_value);
       }
 
       /**

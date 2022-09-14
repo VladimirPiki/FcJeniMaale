@@ -25,12 +25,8 @@ class PublikaDAO extends Publika
         $gostinska=parent::getGostinska();
         $karti_rasprodadeni=parent::getKartiRasprodadeni();
 
-        $columns_name="datum_id,domashna,gostinska,karti_rasprodadeni";
         $columns_value="'$datum_id',$domashna,$gostinska,$karti_rasprodadeni";
-
-       $this->database ->insertRow($this->table_name,$columns_name,$columns_value);
-
-      
+        $this->database ->callStoredProcedure("_insert_publika",$columns_value);
      }
 
      /**
@@ -39,13 +35,8 @@ class PublikaDAO extends Publika
      public function deletePublika()
      {
         $datum_id=parent::getDatumId();
-
-        $pk_name="datum_id";
         $pk_value="'$datum_id'";
-
-        $this->database ->deleteRow($this->table_name,$pk_name,$pk_value);
-
-       
+        $this->database ->callStoredProcedure("_delete_publika",$pk_value);
      }
 
      /**

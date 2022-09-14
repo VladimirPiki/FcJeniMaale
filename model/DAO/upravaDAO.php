@@ -30,12 +30,8 @@ class UpravaDAO extends Uprava
         $zalaganje=parent::getZalaganje();
         $rabotna_ocenka=parent::getRabotnaOcenka();
 
-        $columns_name="dres_id,zalaganje,rabotna_ocenka";
         $columns_value="$dres_id,'$zalaganje',$rabotna_ocenka";
-
-        $this->database ->insertRow($this->table_name,$columns_name,$columns_value);
-
-        
+        $this->database ->callStoredProcedure("_insert_uprava",$columns_value);   
     }
 
     /**
@@ -44,13 +40,8 @@ class UpravaDAO extends Uprava
     public function deleteUprava()
     {
         $dres_id=parent::getDresId();
-        
-        $pk_name="dres_id";
         $pk_value=$dres_id;
-
-        $this->database ->deleteRow($this->table_name,$pk_name,$pk_value);
-
-        
+        $this->database ->callStoredProcedure("_delete_uprava",$pk_value);    
     }
 
     /**

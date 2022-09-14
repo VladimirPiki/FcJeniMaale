@@ -24,7 +24,6 @@ class OutcomeDAO extends Outcome
      */
     public function insertOutcome()
     {
-
         $klub=parent::getKlub();
         $iznos_denari=parent::getIznosDenari();
         $dres_id=parent::getDresId();

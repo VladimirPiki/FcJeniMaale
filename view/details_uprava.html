@@ -5,12 +5,12 @@
   <div class="mb-3">
     <label for="dres_id" class="form-label">dres_id</label>
     <span class="alert alert-danger" ng-show="myForm.dres_id.$invalid">Внесете име со најмалце 1 бројка!!!</span>
-    <select class="form-control" id="dres_id" name="dres_id" ng-model="dres_id">
-      <option  value="">Изберете опции</option>
-      <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-        {{igrac.dres_id}}  ||  {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-      </option>
-  </select>
+        <select class="form-control" id="dres_id" name="dres_id" ng-model="dres_id">
+          <option  value="">Изберете опции</option>
+          <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
+            {{igrac.dres_id}}  ||  {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+          </option>
+        </select>
   </div>
     <div class="mb-3">
       <label for="zalaganje" class="form-label">zalaganje</label>
