@@ -18,6 +18,7 @@ class NatprevaruvanjeDAO extends Natprevaruvanje
       }
       //methods
       
+      /*
       public function insertNatprevaruvanje()
       {
         $kolo_id=parent::getKoloId();
@@ -34,6 +35,23 @@ class NatprevaruvanjeDAO extends Natprevaruvanje
 
         $this->database ->insertRow($this->table_name,$columns_name,$columns_value);
       }
+      */
+
+      public function insertNatprevaruvanje()
+      {
+        $kolo_id=parent::getKoloId();
+        $datum=parent::getDatum();
+        $protivnik=parent::getProtivnik();
+        $rezultat=parent::getRezultat();
+        $mesto=parent::getMesto();
+        $sostav_id=parent::getSostavID();
+        $stadion_id=parent::getStadionId();
+        $datum_id=parent::getDatumId();
+
+        $columns_value="$kolo_id,'$datum','$protivnik','$rezultat','$mesto',$sostav_id,$stadion_id,'$datum_id'";
+        $this->database ->callStoredProcedure("_insert_natprevaruvanje",$columns_value);  
+      }
+
 /*
       public function deleteNatprevaruvanje()
       {

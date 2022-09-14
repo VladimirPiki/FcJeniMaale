@@ -19,7 +19,7 @@ class IgrachiDAO extends Igrachi
     }
 
     //methods
-
+/*
     public function insertIgrachi()
     {
        //$dres_id=parent::getDresId();
@@ -33,9 +33,22 @@ class IgrachiDAO extends Igrachi
        $columns_name="ime,prezime,pozicija,godini,plata_denari,income_id";
        $columns_value="'$ime','$prezime','$pozicija',$godini,$plata_denari,$income_id";
 
-       $this->database ->insertRow($this->table_name,$columns_name,$columns_value);
+       $this->database ->insertRow($this->table_name,$columns_name,$columns_value);   
+    }
 
-       
+*/
+    public function insertIgrachi()
+    {
+       //$dres_id=parent::getDresId();
+       $ime=parent::getIme();
+       $prezime=parent::getPrezime();
+       $pozicija=parent::getPozicija();
+       $godini=parent::getGodini();
+       $plata_denari=parent::getPlataDenari();
+        $income_id=parent::getIncomeId();
+
+       $columns_value="'$ime','$prezime','$pozicija',$godini,$plata_denari,$income_id";
+        $this->database ->callStoredProcedure("_insert_igrachi",$columns_value);  
     }
 /*
     public function deleteIgrachi()
@@ -77,7 +90,7 @@ class IgrachiDAO extends Igrachi
         $this->database->updateRow($this->table_name,$columns,$condition);//class database
 
     }
-
+/*
     public function selectIgrachi ()
     {   
         return $this->database ->selectRowFilds("*,income.ime as ime_income,income.prezime as prezime_income,
@@ -87,5 +100,10 @@ class IgrachiDAO extends Igrachi
         LEFT JOIN income
         ON income.income_id=igrachi.income_id");
     }
+*/
+public function selectIgrachi ()
+{   
+    return $this->database ->selectRowStoredProcedure("_select_igrachi");
+}
 }
 ?>

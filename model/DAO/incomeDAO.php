@@ -22,6 +22,7 @@ class IncomeDAO extends Income
 
     //methods
 
+    /*
     public function insertIncome()
     {
        //$income_id=parent::getIncomeId();
@@ -36,9 +37,24 @@ class IncomeDAO extends Income
         $columns_value="'$ime','$prezime','$pozicija',$godini,'$klub',$iznos_denari";
 
         $this->database -> insertRow($this->table_name,$columns_name,$columns_value);//class database
-
-       
     }
+    */
+
+    public function insertIncome()
+    {
+       //$income_id=parent::getIncomeId();
+        $ime=parent::getIme();
+        $prezime=parent::getPrezime();
+        $pozicija=parent::getPozicija();
+        $godini=parent::getGodini();
+        $klub=parent::getKlub();
+        $iznos_denari=parent::getIznosDenari();
+
+        $columns_value="'$ime','$prezime','$pozicija',$godini,'$klub',$iznos_denari";
+
+        $this->database ->callStoredProcedure("_insert_income",$columns_value);  ;//class database
+    }
+
 /*
     public function deleteIncome()
     {
@@ -75,16 +91,18 @@ class IncomeDAO extends Income
                     iznos_denari=$iznos_denari";
 
         $condition="income_id=$income_id";
-       
-
-        $this->database->updateRow($this->table_name,$columns,$condition);//class database
-
-        
+    
+        $this->database->updateRow($this->table_name,$columns,$condition);//class database      
     }
-
+/*
     public function selectIncome()
     {
         return $this->database ->selectRow($this->table_name);
+    }
+*/
+    public function selectIncome()
+    {
+        return $this->database ->selectRowStoredProcedure("_select_income");
     }
 }
 ?>

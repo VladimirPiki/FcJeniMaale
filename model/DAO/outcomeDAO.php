@@ -18,6 +18,7 @@ class OutcomeDAO extends Outcome
      }
      //methods
 
+/*
     public function insertOutcome()
     {
         //$outcome_id=parent::getOutcomeId();
@@ -29,8 +30,17 @@ class OutcomeDAO extends Outcome
         $columns_value="'$klub',$iznos_denari,$dres_id";
 
         $this->database ->insertRow($this->table_name,$columns_name,$columns_value);
+    }
+*/
+    public function insertOutcome()
+    {
+        //$outcome_id=parent::getOutcomeId();
+        $klub=parent::getKlub();
+        $iznos_denari=parent::getIznosDenari();
+        $dres_id=parent::getDresId();
 
-      
+        $columns_value="'$klub',$iznos_denari,$dres_id";
+        $this->database ->callStoredProcedure("_insert_outcome",$columns_value);  
     }
 /*
     public function deleteOutcome ()
