@@ -35,9 +35,9 @@ class DB
 	 * @return [type]
 	 */
 	public function insertRow($table_name,$columns_name,$columns_value){
-		$sql="INSERT INTO $table_name($columns_name)
-			VALUES($columns_value)";
-		$this->conn->exec($sql);
+		$stmt=$this->conn->prepare("INSERT INTO $table_name($columns_name)
+		VALUES($columns_value)");
+		$stmt->execute();
 	}
 
 	/**
@@ -48,9 +48,9 @@ class DB
 	 * @return [type]
 	 */
 	public function deleteRow($table_name,$pk_name,$pk_value) {
-		$sql="DELETE FROM $table_name 
-			WHERE $pk_name=$pk_value";
-		$this->conn->exec($sql);
+		$stmt=$this->conn->prepare("DELETE FROM $table_name 
+		WHERE $pk_name=$pk_value");
+		$stmt->execute();
 	}
 
 	/**
@@ -86,10 +86,10 @@ class DB
 	 * @return [type]
 	 */
 	public function updateRow($table_name,$columns,$condition){
-		$sql="	UPDATE $table_name
+		$stmt=$this->conn->prepare("UPDATE $table_name
 				SET $columns
-				WHERE $condition";
-		$this->conn->exec($sql);
+				WHERE $condition");
+		$stmt->execute();
 	}
 
 	/**
