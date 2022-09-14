@@ -39,7 +39,7 @@ class IncomeDAO extends Income
 
        
     }
-
+/*
     public function deleteIncome()
     {
         $income_id=parent::getIncomeId();
@@ -48,7 +48,13 @@ class IncomeDAO extends Income
         $pk_value=$income_id;
 
         $this->database -> deleteRow($this->table_name,$pk_name,$pk_value);//class database
-
+    }
+*/
+    public function deleteIncome()
+    {
+        $income_id=parent::getIncomeId();
+        $pk_value=$income_id;
+        $this->database ->callStoredProcedure("_delete_income",$pk_value);;//class database
     }
 
     public function updateIncome()

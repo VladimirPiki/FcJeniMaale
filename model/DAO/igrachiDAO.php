@@ -37,7 +37,7 @@ class IgrachiDAO extends Igrachi
 
        
     }
-
+/*
     public function deleteIgrachi()
     {
         $dres_id=parent::getDresId();
@@ -46,8 +46,13 @@ class IgrachiDAO extends Igrachi
         $pk_value=$dres_id;
 
        $this->database ->deleteRow($this->table_name,$pk_name,$pk_value);
-
-       
+    }
+*/
+    public function deleteIgrachi()
+    {
+        $dres_id=parent::getDresId();
+        $pk_value=$dres_id;
+        $this->database ->callStoredProcedure("_delete_igrachi",$pk_value);
     }
 
     public function updateIgrachi()

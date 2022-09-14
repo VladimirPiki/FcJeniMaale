@@ -97,6 +97,7 @@ switch($table_name)
         
         $objPublika = new PublikaDAO($objDB);
 
+        //Format time
         $formatDatumId=date("Y-m-d",strtotime($data[0]->datum_id));
         //setters POJO
         $objPublika ->setDatumId($formatDatumId);

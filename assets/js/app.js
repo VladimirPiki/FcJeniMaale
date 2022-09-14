@@ -212,6 +212,7 @@ app.controller('myCtrl', function($scope,$http,$filter) {
     postData("insert",objUprava);
   }
 
+  ///Delete functions
 
   $scope.getIndex=0;
   $scope.passPosition=function(position) // position=3

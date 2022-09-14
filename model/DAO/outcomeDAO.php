@@ -32,7 +32,7 @@ class OutcomeDAO extends Outcome
 
       
     }
-
+/*
     public function deleteOutcome ()
     {
         $outcome_id=parent::getOutcomeId();
@@ -41,8 +41,14 @@ class OutcomeDAO extends Outcome
         $pk_value=$outcome_id;
 
         $this->database ->deleteRow($this->table_name,$pk_name,$pk_value);
-       
-      
+    }
+*/
+
+    public function deleteOutcome ()
+    {
+        $outcome_id=parent::getOutcomeId();
+        $pk_value=$outcome_id;
+        $this->database ->callStoredProcedure("_delete_outcome",$pk_value);
     }
 
     public function updateOutcome ()

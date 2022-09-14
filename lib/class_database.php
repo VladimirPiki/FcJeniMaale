@@ -70,5 +70,12 @@ class DB
 		$this->conn->exec($sql);
 	}
 
+//Stored procedure from database
+	public function callStoredProcedure($storedProcedureName,$params)
+	{
+		$stmt=$this->conn->prepare("call $storedProcedureName($params)");
+		$stmt->execute();
+		return $stmt->fetchAll();
+	}
 }
 ?>

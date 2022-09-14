@@ -34,7 +34,7 @@ class NatprevaruvanjeDAO extends Natprevaruvanje
 
         $this->database ->insertRow($this->table_name,$columns_name,$columns_value);
       }
-
+/*
       public function deleteNatprevaruvanje()
       {
         $kolo_id=parent::getKoloId();
@@ -43,8 +43,13 @@ class NatprevaruvanjeDAO extends Natprevaruvanje
         $pk_value=$kolo_id;
 
         $this->database -> deleteRow($this->table_name,$pk_name,$pk_value);
-
-       
+      }
+*/
+      public function deleteNatprevaruvanje()
+      {
+        $kolo_id=parent::getKoloId();
+        $pk_value=$kolo_id;
+        $this->database ->callStoredProcedure("_delete_natprevaruvanje",$pk_value);;//class database
       }
 
       public function updateNatprevaruvanje()
