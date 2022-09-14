@@ -7,7 +7,7 @@
 
 class Sostav
 {
-    //class attributes
+    
     private  $sostav_id;
 
     private  $datum_sostav;
@@ -50,16 +50,14 @@ class Sostav
 
     private  $reserve7;
 
-    //constructors
 
-    //getters,setters
 
     /**
      * @return
      */
     public function getSostavId() 
     {
-        // TODO implement here
+    
         return $this->sostav_id;
     }
 
@@ -68,7 +66,7 @@ class Sostav
      */
     public function setSostavId( $sostav_id):void
     {
-        // TODO implement here
+    
         $this->sostav_id=$sostav_id;
     }
 
@@ -77,7 +75,7 @@ class Sostav
      */
     public function getDatumSostav() 
     {
-        // TODO implement here
+      
         return $this->datum_sostav;
     }
 
@@ -86,7 +84,7 @@ class Sostav
      */
     public function setDatumSostav( $datum_sostav):void
     {
-        // TODO implement here
+      
         $this->datum_sostav=$datum_sostav;
     }
 
@@ -95,7 +93,7 @@ class Sostav
      */
     public function getCoach() 
     {
-        // TODO implement here
+      
         return $this->coach;
     }
 
@@ -104,7 +102,7 @@ class Sostav
      */
     public function setCoach( $coach):void
     {
-        // TODO implement here
+      
         $this->coach=$coach;
     }
 
@@ -113,7 +111,7 @@ class Sostav
      */
     public function getGoalkeeper() 
     {
-        // TODO implement here
+    
         return $this->goalkeeper;
     }
 
@@ -122,7 +120,7 @@ class Sostav
      */
     public function setGoalkeeper( $goalkeeper):void
     {
-        // TODO implement here
+    
         $this->goalkeeper=$goalkeeper;
     }
 
@@ -131,7 +129,7 @@ class Sostav
      */
     public function getCentreBack1() 
     {
-        // TODO implement here
+        
         return $this->centre_back1;
     }
 
@@ -148,7 +146,7 @@ class Sostav
      */
     public function getCentreBack2() 
     {
-        // TODO implement here
+        
         return $this->centre_back2;
     }
 
@@ -157,7 +155,7 @@ class Sostav
      */
     public function setCentreBack2( $centre_back2):void
     {
-        // TODO implement here
+       
         $this->centre_back2=$centre_back2;
     }
 
@@ -166,7 +164,7 @@ class Sostav
      */
     public function getRightBack() 
     {
-        // TODO implement here
+       
         return $this->right_back;
     }
 
@@ -175,7 +173,7 @@ class Sostav
      */
     public function setRightBack( $right_back):void
     {
-        // TODO implement here
+       
         $this->right_back=$right_back;
     }
 
@@ -184,7 +182,7 @@ class Sostav
      */
     public function getLeftBack() 
     {
-        // TODO implement here
+       
         return $this->left_back;
     }
 
@@ -193,7 +191,7 @@ class Sostav
      */
     public function setLeftBack( $left_back):void
     {
-        // TODO implement here
+       
         $this->left_back=$left_back;
     }
 
@@ -202,7 +200,7 @@ class Sostav
      */
     public function getDefensiveMidfielder() 
     {
-        // TODO implement here
+       
         return $this->defensive_midfielder;
     }
 
@@ -211,7 +209,7 @@ class Sostav
      */
     public function setDefensiveMidfielder( $defensive_midfielder):void
     {
-        // TODO implement here
+       
         $this->defensive_midfielder=$defensive_midfielder;
     }
 
@@ -220,7 +218,7 @@ class Sostav
      */
     public function getCenterMidfielder() 
     {
-        // TODO implement here
+       
         return $this->center_midfielder;
     }
 
@@ -229,7 +227,7 @@ class Sostav
      */
     public function setCenterMidfielder( $center_midfielder):void
     {
-        // TODO implement here
+      
         $this->center_midfielder=$center_midfielder;
     }
 
@@ -238,7 +236,7 @@ class Sostav
      */
     public function getAttackingMidfielder() 
     {
-        // TODO implement here
+      
         return $this->attacking_midfielder;
     }
 
@@ -247,7 +245,7 @@ class Sostav
      */
     public function setAttackingMidfielder( $attacking_midfielder):void
     {
-        // TODO implement here
+    
         $this->attacking_midfielder=$attacking_midfielder;
     }
 
@@ -256,7 +254,7 @@ class Sostav
      */
     public function getRightForward()
     {
-        // TODO implement here
+    
         return $this->right_forward;
     }
 
@@ -265,7 +263,7 @@ class Sostav
      */
     public function setRightForward( $right_forward):void
     {
-        // TODO implement here
+        
         $this->right_forward=$right_forward;
     }
 
@@ -274,7 +272,7 @@ class Sostav
      */
     public function getLeftForward() 
     {
-        // TODO implement here
+        
         return $this->left_forward;
     }
 
@@ -283,7 +281,7 @@ class Sostav
      */
     public function setLeftForward( $left_forward):void
     {
-        // TODO implement here
+        
         $this->left_forward=$left_forward;
     }
 
@@ -292,7 +290,7 @@ class Sostav
      */
     public function getCenterForward() 
     {
-        // TODO implement here
+        
         return $this->center_forward;
     }
 
@@ -301,7 +299,7 @@ class Sostav
      */
     public function setCenterForward( $center_forward):void
     {
-        // TODO implement here
+        
         $this->center_forward=$center_forward;
     }
 
@@ -310,7 +308,7 @@ class Sostav
      */
     public function getReserve1()
     {
-        // TODO implement here
+        
         return $this->reserve1;
     }
 
@@ -319,7 +317,7 @@ class Sostav
      */
     public function setReserve1( $reserve1):void
     {
-        // TODO implement here
+   
         $this->reserve1=$reserve1;
     }
 
@@ -328,7 +326,7 @@ class Sostav
      */
     public function getReserve2() 
     {
-        // TODO implement here
+       
         return $this->reserve2;
     }
 
@@ -337,7 +335,7 @@ class Sostav
      */
     public function setReserve2( $reserve2):void
     {
-        // TODO implement here
+       
         $this->reserve2=$reserve2;
     }
 
@@ -346,7 +344,7 @@ class Sostav
      */
     public function getReserve3() 
     {
-        // TODO implement here
+       
         return $this->reserve3;
     }
 
@@ -355,7 +353,7 @@ class Sostav
      */
     public function setReserve3( $reserve3):void
     {
-        // TODO implement here
+      
         $this->reserve3=$reserve3;
     }
 
@@ -364,7 +362,7 @@ class Sostav
      */
     public function getReserve4() 
     {
-        // TODO implement here
+      
         return $this->reserve4;
     }
 
@@ -373,7 +371,7 @@ class Sostav
      */
     public function setReserve4( $reserve4):void
     {
-        // TODO implement here
+      
         $this->reserve4=$reserve4;
     }
 
@@ -382,7 +380,7 @@ class Sostav
      */
     public function getReserve5() 
     {
-        // TODO implement here
+      
         return $this->reserve5;
     }
 
@@ -391,7 +389,7 @@ class Sostav
      */
     public function setReserve5( $reserve5):void
     {
-        // TODO implement here
+      
         $this->reserve5=$reserve5;
     }
 
@@ -400,7 +398,7 @@ class Sostav
      */
     public function getReserve6() 
     {
-        // TODO implement here
+      
         return $this->reserve6;
     }
 
@@ -409,7 +407,7 @@ class Sostav
      */
     public function setReserve6( $reserve6):void
     {
-        // TODO implement here
+     
         $this->reserve6=$reserve6;
     }
 
@@ -418,7 +416,7 @@ class Sostav
      */
     public function getReserve7() 
     {
-        // TODO implement here
+     
         return $this->reserve7;
     }
 
@@ -427,7 +425,7 @@ class Sostav
      */
     public function setReserve7( $reserve7):void
     {
-        // TODO implement here
+    
         $this->reserve7=$reserve7;
     }
 

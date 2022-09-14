@@ -8,19 +8,24 @@
 require_once "POJO/stadion.php";
 class StadionDAO extends Stadion
 {
-     //attributes class
+
      private $table_name="stadion";
      private $database = null;
-     //constructor
+
+     /**
+      * @param mixed $objDB
+      */
      public function __construct( $objDB)
      {
          $this->database= $objDB;
      }
-     //methods
+   
 
+    /**
+     * @return [type]
+     */
     public function insertStadion()
     {
-        //$stadion_id=parent::getStadionId();
         $ime=parent::getIme();
         $adresa=parent::getAdresa();
         $kapacitet=parent::getKapacitet();
@@ -33,6 +38,9 @@ class StadionDAO extends Stadion
         
     }
 
+    /**
+     * @return [type]
+     */
     public function deleteStadion()
     {
         $stadion_id=parent::getStadionId();
@@ -45,6 +53,9 @@ class StadionDAO extends Stadion
       
     }
 
+    /**
+     * @return [type]
+     */
     public function updateStadion()
     {
         $stadion_id=parent::getStadionId();
@@ -56,9 +67,12 @@ class StadionDAO extends Stadion
 
         $condition="stadion_id=$stadion_id";
 
-        $this->database->updateRow($this->table_name,$columns,$condition);//class database
+        $this->database->updateRow($this->table_name,$columns,$condition);
     }
 
+    /**
+     * @return [type]
+     */
     public function selectStadion()
     {
         return $this->database ->selectRow($this->table_name);

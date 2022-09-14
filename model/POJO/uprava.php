@@ -7,23 +7,20 @@
 
 class Uprava
 {
-    //class attributes
+    
     private  $dres_id;
 
     private  $zalaganje;
 
     private  $rabotna_ocenka;
 
-    //constructors
-
-    //getters,setters
 
     /**
      * @return
      */
     public function getDresId() 
     {
-        // TODO implement here
+        
         return $this->dres_id;
     }
 
@@ -32,7 +29,7 @@ class Uprava
      */
     public function setDresId( $dres_id):void
     {
-        // TODO implement here
+        
         $this->dres_id=$dres_id;
     }
 
@@ -41,7 +38,7 @@ class Uprava
      */
     public function getZalaganje() 
     {
-        // TODO implement here
+        
         return $this->zalaganje;
     }
 
@@ -50,7 +47,7 @@ class Uprava
      */
     public function setZalaganje( $zalaganje):void
     {
-        // TODO implement here
+        
         $this->zalaganje=$zalaganje;
     }
 
@@ -59,7 +56,7 @@ class Uprava
      */
     public function getRabotnaOcenka() 
     {
-        // TODO implement here
+       
         return $this->rabotna_ocenka;
     }
  
@@ -68,7 +65,7 @@ class Uprava
      */
     public function setRabotnaOcenka( $rabotna_ocenka):void
     {
-        // TODO implement here
+       
         $this->rabotna_ocenka=$rabotna_ocenka;
     }
 

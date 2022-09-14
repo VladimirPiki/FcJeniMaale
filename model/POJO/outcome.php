@@ -7,7 +7,7 @@
 
 class Outcome
 {
-    //class attributes
+ 
     private  $outcome_id;
 
     private  $klub;
@@ -16,16 +16,14 @@ class Outcome
 
     private  $dres_id;
 
-    //constructors
 
-    //getters,setters
 
     /**
      * @return
      */
     public function getOutcomeId()
     {
-        // TODO implement here
+        
        return $this->outcome_id;
     }
 
@@ -34,7 +32,7 @@ class Outcome
      */
     public function setOutcomeId( $outcome_id):void
     {
-        // TODO implement here
+        
         $this->outcome_id=$outcome_id;
     }
 
@@ -43,7 +41,7 @@ class Outcome
      */
     public function getKlub() 
     {
-        // TODO implement here
+    
         return $this->klub;
     }
 
@@ -52,7 +50,7 @@ class Outcome
      */
     public function setKlub( $klub):void
     {
-        // TODO implement here
+       
         $this->klub=$klub;
     }
 
@@ -61,7 +59,7 @@ class Outcome
      */
     public function getIznosDenari() 
     {
-        // TODO implement here
+       
         return  $this->iznos_denari;
     }
 
@@ -70,7 +68,7 @@ class Outcome
      */
     public function setIznosDenari( $iznos_denari):void
     {
-        // TODO implement here
+       
         $this->iznos_denari=$iznos_denari;
     }
 
@@ -79,7 +77,7 @@ class Outcome
      */
     public function getDresId() 
     {
-        // TODO implement here
+       
         return  $this->dres_id;
     }
 
@@ -88,7 +86,7 @@ class Outcome
      */
     public function setDresId( $dres_id):void
     {
-        // TODO implement here
+      
         $this->dres_id=$dres_id;
     }
 

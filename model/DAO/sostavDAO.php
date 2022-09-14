@@ -8,16 +8,22 @@
 require_once "POJO/sostav.php";
 class SostavDAO extends Sostav
 {
-     //attributes class
+    
      private $table_name="sostav";
      private $database = null;
-     //constructor
+    
+     /**
+      * @param mixed $objDB
+      */
      public function __construct( $objDB)
      {
          $this->database= $objDB;
      }
-     //methods
+   
 
+    /**
+     * @return [type]
+     */
     public function insertSostav()
     {
         $sostav_id=parent::getSostavId();
@@ -92,6 +98,9 @@ class SostavDAO extends Sostav
      
     }
 
+    /**
+     * @return [type]
+     */
     public function deleteSostav()
     {
         $sostav_id=parent::getSostavId();
@@ -104,6 +113,9 @@ class SostavDAO extends Sostav
         
     }
 
+    /**
+     * @return [type]
+     */
     public function updateSostav ()
     {
         $sostav_id=parent::getSostavId();
@@ -153,10 +165,13 @@ class SostavDAO extends Sostav
 
         $condition="sostav_id=$sostav_id";
         
-        $this->database->updateRow($this->table_name,$columns,$condition);//class database
+        $this->database->updateRow($this->table_name,$columns,$condition);
     }
-/*
-    public function selectSostav ()
+
+    /**
+     * @return [type]
+     */
+    public function selectSostavOld()
     {  
         return $this->database ->selectRow($this->table_name."
         LEFT JOIN igrachi AS igrachi1
@@ -201,8 +216,11 @@ class SostavDAO extends Sostav
         ON igrachi20.dres_id=sostav.reserve7"
     );   
     }
-    */
+    
 
+    /**
+     * @return [type]
+     */
     public function selectSostav(){
         return $this->database ->selectRowFilds("*",$this->table_name."
         right JOIN igrachi

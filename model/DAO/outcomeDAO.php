@@ -8,33 +8,23 @@
 require_once "POJO/outcome.php";
 class OutcomeDAO extends Outcome
 {
-     //attributes class
+
      private $table_name="outcome";
      private $database = null;
-     //constructor
+
+     /**
+      * @param mixed $objDB
+      */
      public function __construct( $objDB)
      {
          $this->database= $objDB;
      }
-     //methods
-
-/*
+    /**
+     * @return [type]
+     */
     public function insertOutcome()
     {
-        //$outcome_id=parent::getOutcomeId();
-        $klub=parent::getKlub();
-        $iznos_denari=parent::getIznosDenari();
-        $dres_id=parent::getDresId();
 
-        $columns_name="klub,iznos_denari,dres_id";
-        $columns_value="'$klub',$iznos_denari,$dres_id";
-
-        $this->database ->insertRow($this->table_name,$columns_name,$columns_value);
-    }
-*/
-    public function insertOutcome()
-    {
-        //$outcome_id=parent::getOutcomeId();
         $klub=parent::getKlub();
         $iznos_denari=parent::getIznosDenari();
         $dres_id=parent::getDresId();
@@ -42,18 +32,10 @@ class OutcomeDAO extends Outcome
         $columns_value="'$klub',$iznos_denari,$dres_id";
         $this->database ->callStoredProcedure("_insert_outcome",$columns_value);  
     }
-/*
-    public function deleteOutcome ()
-    {
-        $outcome_id=parent::getOutcomeId();
-        
-        $pk_name="outcome_id";
-        $pk_value=$outcome_id;
 
-        $this->database ->deleteRow($this->table_name,$pk_name,$pk_value);
-    }
-*/
-
+    /**
+     * @return [type]
+     */
     public function deleteOutcome ()
     {
         $outcome_id=parent::getOutcomeId();
@@ -61,6 +43,9 @@ class OutcomeDAO extends Outcome
         $this->database ->callStoredProcedure("_delete_outcome",$pk_value);
     }
 
+    /**
+     * @return [type]
+     */
     public function updateOutcome ()
     {   
         $outcome_id=parent::getOutcomeId();
@@ -72,24 +57,17 @@ class OutcomeDAO extends Outcome
 
         $condition="outcome_id=$outcome_id";
        
-        $this->database->updateRow($this->table_name,$columns,$condition);//class database
+        $this->database->updateRow($this->table_name,$columns,$condition);
     }
 
+    /**
+     * @return [type]
+     */
     public function selectOutcome ()
     {
         return $this->database ->selectRow($this->table_name." 
         INNER JOIN igrachi 
         ON igrachi.dres_id=outcome.dres_id");
     }
-/*
-public function selectOutcome ()
-{
-    return $this->database ->selectRowFilds("igrachi.ime as ime_igrachi,igrachi.prezime as prezime_igrachi,igrachi.pozicija as pozicija_igrachi,
-    igrachi.godini as godini_igrachi",$this->table_name." 
-    INNER JOIN igrachi 
-    ON igrachi.dres_id=outcome.dres_id");
-}
-*/
-
 }
 ?>

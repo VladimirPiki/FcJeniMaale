@@ -8,35 +8,20 @@
 require_once "POJO/natprevaruvanje.php";
 class NatprevaruvanjeDAO extends Natprevaruvanje
 {
-      //attributes class
       private $table_name="natprevaruvanje";
       private $database = null;
-      //constructor
+
+      /**
+       * @param mixed $objDB
+       */
       public function __construct( $objDB)
       {
           $this->database= $objDB;
       }
-      //methods
-      
-      /*
-      public function insertNatprevaruvanje()
-      {
-        $kolo_id=parent::getKoloId();
-        $datum=parent::getDatum();
-        $protivnik=parent::getProtivnik();
-        $rezultat=parent::getRezultat();
-        $mesto=parent::getMesto();
-        $sostav_id=parent::getSostavID();
-        $stadion_id=parent::getStadionId();
-        $datum_id=parent::getDatumId();
 
-        $columns_name="kolo_id,datum,protivnik,rezultat,mesto,sostav_id,stadion_id,datum_id";
-        $columns_value="$kolo_id,'$datum','$protivnik','$rezultat','$mesto',$sostav_id,$stadion_id,'$datum_id'";
-
-        $this->database ->insertRow($this->table_name,$columns_name,$columns_value);
-      }
-      */
-
+      /**
+       * @return [type]
+       */
       public function insertNatprevaruvanje()
       {
         $kolo_id=parent::getKoloId();
@@ -52,17 +37,9 @@ class NatprevaruvanjeDAO extends Natprevaruvanje
         $this->database ->callStoredProcedure("_insert_natprevaruvanje",$columns_value);  
       }
 
-/*
-      public function deleteNatprevaruvanje()
-      {
-        $kolo_id=parent::getKoloId();
-
-        $pk_name="kolo_id";
-        $pk_value=$kolo_id;
-
-        $this->database -> deleteRow($this->table_name,$pk_name,$pk_value);
-      }
-*/
+      /**
+       * @return [type]
+       */
       public function deleteNatprevaruvanje()
       {
         $kolo_id=parent::getKoloId();
@@ -70,6 +47,9 @@ class NatprevaruvanjeDAO extends Natprevaruvanje
         $this->database ->callStoredProcedure("_delete_natprevaruvanje",$pk_value);;//class database
       }
 
+      /**
+       * @return [type]
+       */
       public function updateNatprevaruvanje()
       {
         $kolo_id=parent::getKoloId();
@@ -95,6 +75,9 @@ class NatprevaruvanjeDAO extends Natprevaruvanje
 
       }
 
+      /**
+       * @return [type]
+       */
       public function selectNatprevaruvanje()
       {
       return $this->database -> selectRow($this->table_name."

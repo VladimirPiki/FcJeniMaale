@@ -7,7 +7,7 @@
 
 class Publika
 {
-    //class attributes
+
 
     private  $datum_id;
 
@@ -17,16 +17,14 @@ class Publika
 
     private  $karti_rasprodadeni;
 
-    //constructors
 
-    //getters,setters
 
     /**
      * @return
      */
     public function getDatumId() 
     {
-        // TODO implement here
+        
         return $this->datum_id;
     }
 
@@ -35,7 +33,7 @@ class Publika
      */
     public function setDatumId( $datum_id):void
     {
-        // TODO implement here
+        
         $this->datum_id=$datum_id;
     }
 
@@ -44,7 +42,7 @@ class Publika
      */
     public function getDomashna() 
     {
-        // TODO implement here
+       
         return $this->domashna;
     }
 
@@ -53,7 +51,7 @@ class Publika
      */
     public function setDomashna( $domashna):void
     {
-        // TODO implement here
+       
         $this->domashna=$domashna;
     }
 
@@ -62,7 +60,7 @@ class Publika
      */
     public function getGostinska() 
     {
-        // TODO implement here
+       
         return $this->gostinska;
     }
 
@@ -71,7 +69,7 @@ class Publika
      */
     public function setGostinska( $gostinska):void
     {
-        // TODO implement here
+       
         $this->gostinska=$gostinska;
     }
 
@@ -80,7 +78,7 @@ class Publika
      */
     public function getKartiRasprodadeni() 
     {
-        // TODO implement here
+       
         return $this->karti_rasprodadeni;
     }
 
@@ -89,7 +87,7 @@ class Publika
      */
     public function setKartiRasprodadeni( $karti_rasprodadeni):void
     {
-        // TODO implement here
+       
         $this->karti_rasprodadeni=$karti_rasprodadeni;
     }
 

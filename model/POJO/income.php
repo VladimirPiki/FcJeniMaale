@@ -8,7 +8,7 @@
 class Income
 {
 
-    //class attributes
+
     private  $income_id;
 
     private  $ime;
@@ -23,16 +23,12 @@ class Income
 
     private  $iznos_denari;
 
-    //constructors
-
-    //getters,setters
- 
     /**
      * @return 
      */
     public function getIncomeId()
     {
-        // TODO implement here
+        
         return $this->income_id;
     }
 
@@ -41,7 +37,7 @@ class Income
      */
     public function setIncomeId( $income_id):void
     {
-        // TODO implement here
+       
         $this->income_id=$income_id;
     }
 
@@ -50,7 +46,7 @@ class Income
      */
     public function getIme()
     {
-        // TODO implement here
+        
         return $this->ime;
     }
 
@@ -59,7 +55,7 @@ class Income
      */
     public function setIme( $ime):void
     {
-        // TODO implement here
+        
         $this->ime=$ime;
     }
 
@@ -68,7 +64,7 @@ class Income
      */
     public function getPrezime() 
     {
-        // TODO implement here
+        
         return $this->prezime;
     }
 
@@ -77,7 +73,7 @@ class Income
      */
     public function setPrezime( $prezime):void
     {
-        // TODO implement here
+        
         $this->prezime=$prezime;
     }
 
@@ -86,7 +82,7 @@ class Income
      */
     public function getPozicija()
     {
-        // TODO implement here
+      
         return $this->pozicija;
     }
 
@@ -95,7 +91,7 @@ class Income
      */
     public function setPozicija( $pozicija):void
     {
-        // TODO implement here
+     
         $this->pozicija=$pozicija;
     }
 
@@ -104,7 +100,7 @@ class Income
      */
     public function getGodini() 
     {
-        // TODO implement here
+       
         return $this->godini;
     }
 
@@ -113,7 +109,7 @@ class Income
      */
     public function setGodini( $godini):void
     {
-        // TODO implement here
+        
         $this->godini=$godini;
     }
 
@@ -122,7 +118,7 @@ class Income
      */
     public function getKlub() 
     {
-        // TODO implement here
+       
         return $this->klub;
     }
 
@@ -131,7 +127,7 @@ class Income
      */
     public function setKlub( $klub):void
     {
-        // TODO implement here
+        
         $this->klub=$klub;
     }
 
@@ -140,7 +136,7 @@ class Income
      */
     public function getIznosDenari()
     {
-        // TODO implement here
+        
         return $this->iznos_denari;
     }
 
@@ -149,7 +145,7 @@ class Income
      */
     public function setIznosDenari( $iznos_denari):void
     {
-        // TODO implement here
+        
         $this->iznos_denari=$iznos_denari;
     }
 

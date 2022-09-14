@@ -8,7 +8,7 @@
 class Igrachi
 {
        
-    //class attributes
+
          private $dres_id;
 
          private $ime;
@@ -22,16 +22,16 @@ class Igrachi
          private $plata_denari;
          
          private $income_id;
-    //constructors
+    
 
-    //setters
+   
 
     /**
      * @param  $dres_id
      */
         public function setDresId ($dres_id):void
         {
-            // TODO implement here
+          
             $this->dres_id=$dres_id;
         }
         
@@ -40,7 +40,7 @@ class Igrachi
          */
         public function setIme ($ime):void
         {
-            // TODO implement here
+          
             $this->ime=$ime;
         }
 
@@ -49,7 +49,7 @@ class Igrachi
          */
         public function setPrezime($prezime):void
         {
-            // TODO implement here
+          
             $this->prezime=$prezime;
         }
         
@@ -58,7 +58,7 @@ class Igrachi
          */
         public function setPozicija ($pozicija):void
         {
-            // TODO implement here
+            
             $this->pozicija=$pozicija;
         }
 
@@ -67,7 +67,7 @@ class Igrachi
          */
         public function setGodini($godini):void
         {
-            // TODO implement here
+           
             $this->godini=$godini;
         }
         
@@ -76,7 +76,7 @@ class Igrachi
          */
         public function setPlataDenari ($plata_denari):void
         {
-            // TODO implement here
+           
             $this->plata_denari=$plata_denari;
         }
 
@@ -85,18 +85,18 @@ class Igrachi
          */
         public function setIncomeId ($income_id):void
         {
-            // TODO implement here
+          
             $this->income_id=$income_id;
         }
 
-        //getters
+    
         
         /**
          * @return
          */
         public function getDresId ()
         {
-            // TODO implement here
+          
             return $this->dres_id;
         }
 
@@ -105,7 +105,7 @@ class Igrachi
          */      
         public function getIme ()
         {
-            // TODO implement here
+            
             return $this->ime;
         }
 
@@ -114,7 +114,7 @@ class Igrachi
          */
         public function getPrezime()
         {
-            // TODO implement here
+           
             return $this->prezime;
         }
 
@@ -123,7 +123,7 @@ class Igrachi
          */
         public function getPozicija()
         {
-            // TODO implement here
+           
             return $this->pozicija;
         }
 
@@ -132,7 +132,7 @@ class Igrachi
          */
         public function getGodini()
         {
-            // TODO implement here
+            
             return $this->godini;
         }
 
@@ -141,7 +141,7 @@ class Igrachi
          */
         public function getPlataDenari()
         {
-            // TODO implement here
+           
             return $this->plata_denari;
         }
         
@@ -150,7 +150,7 @@ class Igrachi
          */
         public function getIncomeId()
         {
-            // TODO implement here
+            
             return $this->income_id;
         }
 

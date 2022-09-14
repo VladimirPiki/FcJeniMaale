@@ -2,16 +2,22 @@
 require_once "POJO/publika.php";
 class PublikaDAO extends Publika
 {
-    //attributes class
+
     private $table_name="publika";
     private $database = null;
-    //constructor
+
+    /**
+     * @param mixed $objDB
+     */
     public function __construct( $objDB)
     {
         $this->database= $objDB;
     }
-    //methods
 
+
+     /**
+      * @return [type]
+      */
      public function insertPublika()
      {
         $datum_id=parent::getDatumId();
@@ -27,6 +33,9 @@ class PublikaDAO extends Publika
       
      }
 
+     /**
+      * @return [type]
+      */
      public function deletePublika()
      {
         $datum_id=parent::getDatumId();
@@ -39,6 +48,9 @@ class PublikaDAO extends Publika
        
      }
 
+     /**
+      * @return [type]
+      */
      public function updatePublika()
      {  
         $datum_id=parent::getDatumId();
@@ -50,10 +62,13 @@ class PublikaDAO extends Publika
 
         $condition="datum_id='$datum_id'";
 
-        $this->database->updateRow($this->table_name,$columns,$condition);//class database
+        $this->database->updateRow($this->table_name,$columns,$condition);
         
      }
 
+     /**
+      * @return [type]
+      */
      public function selectPublika()
      {
       return $this->database ->selectRow($this->table_name);

@@ -8,16 +8,22 @@
 require_once "POJO/uprava.php";
 class UpravaDAO extends Uprava
 {
-     //attributes class
+
      private $table_name="uprava";
      private $database = null;
-     //constructor
+
+     /**
+      * @param mixed $objDB
+      */
      public function __construct( $objDB)
      {
          $this->database= $objDB;
      }
-     //methods
 
+
+    /**
+     * @return [type]
+     */
     public function insertUprava()
     {
         $dres_id=parent::getDresId();
@@ -32,6 +38,9 @@ class UpravaDAO extends Uprava
         
     }
 
+    /**
+     * @return [type]
+     */
     public function deleteUprava()
     {
         $dres_id=parent::getDresId();
@@ -44,6 +53,9 @@ class UpravaDAO extends Uprava
         
     }
 
+    /**
+     * @return [type]
+     */
     public function updateUprava()
     {   
         $dres_id=parent::getDresId();
@@ -59,6 +71,9 @@ class UpravaDAO extends Uprava
      
     }
 
+    /**
+     * @return [type]
+     */
     public function selectUprava()
     {
         return $this->database ->selectRowFilds("igrachi.dres_id,igrachi.ime,igrachi.prezime,igrachi.pozicija,igrachi.godini,uprava.zalaganje,uprava.rabotna_ocenka,igrachi.ime as ime_igrachi,igrachi.prezime as prezime_igrachi,igrachi.pozicija as pozicija_igrachi,
