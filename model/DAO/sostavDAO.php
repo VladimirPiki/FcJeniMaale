@@ -167,64 +167,13 @@ class SostavDAO extends Sostav
         
         $this->database->updateRow($this->table_name,$columns,$condition);
     }
-
-    /**
-     * @return [type]
-     */
-    public function selectSostavOld()
-    {  
-        return $this->database ->selectRow($this->table_name."
-        LEFT JOIN igrachi AS igrachi1
-        ON igrachi1.dres_id=sostav.sostav_id
-        LEFT JOIN igrachi AS igrachi2
-        ON igrachi2.dres_id=sostav.coach
-        LEFT JOIN igrachi AS igrachi3
-        ON igrachi3.dres_id=sostav.goalkeeper
-        LEFT JOIN igrachi AS igrachi4
-        ON igrachi4.dres_id=sostav.centre_back1
-        LEFT JOIN igrachi AS igrachi5
-        ON igrachi5.dres_id=sostav.centre_back2
-        LEFT JOIN igrachi AS igrachi6
-        ON igrachi6.dres_id=sostav.right_back
-        LEFT JOIN igrachi AS igrachi7
-        ON igrachi7.dres_id=sostav.left_back
-        LEFT JOIN igrachi AS igrachi8
-        ON igrachi8.dres_id=sostav.defensive_midfielder
-        LEFT JOIN igrachi AS igrachi9
-        ON igrachi9.dres_id=sostav.center_midfielder
-        LEFT JOIN igrachi AS igrachi10
-        ON igrachi10.dres_id=sostav.attacking_midfielder
-        LEFT JOIN igrachi AS igrachi11
-        ON igrachi11.dres_id=sostav.right_forward
-        LEFT JOIN igrachi AS igrachi12
-        ON igrachi12.dres_id=sostav.left_forward
-        LEFT JOIN igrachi AS igrachi13
-        ON igrachi13.dres_id=sostav.center_forward
-        LEFT JOIN igrachi AS igrachi14
-        ON igrachi14.dres_id=sostav.reserve1
-        LEFT JOIN igrachi AS igrachi15
-        ON igrachi15.dres_id=sostav.reserve2
-        LEFT JOIN igrachi AS igrachi16
-        ON igrachi16.dres_id=sostav.reserve3
-        LEFT JOIN igrachi AS igrachi17
-        ON igrachi17.dres_id=sostav.reserve4
-        LEFT JOIN igrachi AS igrachi18
-        ON igrachi18.dres_id=sostav.reserve5
-        LEFT JOIN igrachi AS igrachi19
-        ON igrachi19.dres_id=sostav.reserve6
-        LEFT JOIN igrachi AS igrachi20
-        ON igrachi20.dres_id=sostav.reserve7"
-    );   
-    }
     
-
     /**
      * @return [type]
      */
     public function selectSostav(){
-        return $this->database ->selectRowFilds("*",$this->table_name."
-        right JOIN igrachi
-	    ON igrachi.dres_id=sostav.sostav_id");
+        return $this->database ->selectRowStoredProcedure("_select_sostav_natprevaruvanje");
     }
+    
 }
 ?>

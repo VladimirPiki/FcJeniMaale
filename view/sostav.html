@@ -14,6 +14,16 @@
                     </select>
                 </th>
                 <th>
+                    natprevar
+                    <select class="form-control" name="searchByNatprevar" id="searchByNatprevar" ng-model="searchByNatprevar">
+                        <option  value="">Изберете опции</option>
+                        <option ng-repeat="natprevar in natprevaruvanje" value="{{natprevar.kolo_id}}" >
+                            {{natprevar.kolo_id}}  ||  {{natprevar.protivnik}} || {{natprevar.rezultat}} || {{natprevar.mesto}}
+                        </option>
+                    </select>
+                </th>
+
+                <th>
                     <select class="form-control" name="searchByCoach" id="searchByCoach" ng-model="searchByCoach">
                         <option  value="">Изберете опции</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
@@ -170,7 +180,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="sostavi in sostav | filter:{datum_sostav:searchByDatum,coach:searchByCoach,goalkeeper:searchByGK,
+            <tr ng-repeat="sostavi in sostav | filter:{datum_sostav:searchByDatum,natprevar:searchByNatprevar,coach:searchByCoach,goalkeeper:searchByGK,
                 centre_back1:searchByCB1,centre_back2:searchByCB2,right_back:searchByRB,left_back:searchByLB,
                 defensive_midfielder:searchByDMF,center_midfielder:searchByCMF,attacking_midfielder:searchByAMF,
                 right_forward:searchByRWF,left_forward:searchByLWF,center_forward:searchByCF,reserve1:searchByReserve1,
@@ -178,25 +188,26 @@
                 reserve6:searchByReserve6,reserve7:searchByReserve7}">
                 <td>{{sostavi.sostav_id}}</td>
                 <td>{{sostavi.datum_sostav}}</td>
-                <td>{{sostavi.coach}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.goalkeeper}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.centre_back1}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.centre_back2}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.right_back}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.left_back}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.defensive_midfielder}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.center_midfielder}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.attacking_midfielder}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.right_forward}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.left_forward}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.center_forward}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.reserve1}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.reserve2}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.reserve3}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.reserve4}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.reserve5}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.reserve6}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
-                <td>{{sostavi.reserve7}} || {{sostavi.ime}} {{sostavi.prezime}} || {{sostavi.pozicija}} || {{sostavi.godini}}</td>
+                <td>{{sostavi.natprevar}}</td>
+                <td>{{sostavi.coach}}</td>
+                <td>{{sostavi.goalkeeper}}</td>
+                <td>{{sostavi.centre_back1}}</td>
+                <td>{{sostavi.centre_back2}}</td>
+                <td>{{sostavi.right_back}}</td>
+                <td>{{sostavi.left_back}}</td>
+                <td>{{sostavi.defensive_midfielder}}</td>
+                <td>{{sostavi.center_midfielder}}</td>
+                <td>{{sostavi.attacking_midfielder}}</td>
+                <td>{{sostavi.right_forward}}</td>
+                <td>{{sostavi.left_forward}}</td>
+                <td>{{sostavi.center_forward}}</td>
+                <td>{{sostavi.reserve1}}</td>
+                <td>{{sostavi.reserve2}}</td>
+                <td>{{sostavi.reserve3}}</td>
+                <td>{{sostavi.reserve4}}</td>
+                <td>{{sostavi.reserve5}}</td>
+                <td>{{sostavi.reserve6}}</td>
+                <td>{{sostavi.reserve7}}</td>
                 <td title="Edit"><i class="fa-solid fa-pen"></i></td>
                 <td title="Delete {{sostavi.sostav_id}} {{sostavi.datum}}">
                     <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal" ng-click="passPosition($index)"> <i class="fa-solid fa-trash-can"></i></button>

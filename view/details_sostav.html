@@ -22,10 +22,8 @@
                 <option ng-repeat="natprevar in natprevaruvanje" value="{{natprevar.datum}}" >
                 {{natprevar.kolo_id}} коло || {{natprevar.datum}} || {{natprevar.protivnik}} || {{natprevar.rezultat}} || {{natprevar.mesto}}
                 </option>
-        </select>
-        <!-- <input type="datetime-local" class="form-control" id="datum" name="datum" ng-model="datum.value" placeholder="yyyy-MM-ddTHH:mm:ss" min="2001-01-01T00:00:00" max="2222-12-31T00:00:00" required > -->
+            </select>
     </div>
-
     <div class="mb-3">
       <label for="coach" class="form-label">coach</label>
       <span class="alert alert-danger" ng-show="myForm.coach.$invalid">Внесете најмалку со 1 бројка!!!</span>
