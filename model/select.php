@@ -95,6 +95,27 @@
                 "rezultat" => $row["rezultat"],
                 "mesto" => $row["mesto"],
                 "sostav_id" => $row["sostav_id"],
+                "sostav_id" => $row["sostav_id"],
+                "datum_sostav" => $row["datum_sostav"],
+                "coach" => $row["coach"],
+                "goalkeeper" => $row["goalkeeper"],
+                "centre_back1" => $row["centre_back1"],
+                "centre_back2" => $row["centre_back2"],
+                "right_back" => $row["right_back"],
+                "left_back" => $row["left_back"],
+                "defensive_midfielder" => $row["defensive_midfielder"],
+                "center_midfielder" => $row["center_midfielder"],
+                "attacking_midfielder" => $row["attacking_midfielder"],
+                "right_forward" => $row["right_forward"],
+                "left_forward" => $row["left_forward"],
+                "center_forward" => $row["center_forward"],
+                "reserve1" => $row["reserve1"],
+                "reserve2" => $row["reserve2"],
+                "reserve3" => $row["reserve3"],
+                "reserve4" => $row["reserve4"],
+                "reserve5" => $row["reserve5"],
+                "reserve6" => $row["reserve6"],
+                "reserve7" => $row["reserve7"],
                 "stadion_id" => $row["stadion_id"],
                 "ime" => $row["ime"],
                 "adresa" => $row["adresa"],
@@ -221,13 +242,9 @@
 
             foreach($results as $row ){
                 $data[]=array(
-                "dres_id" => $row["dres_id"],
-                "ime" => $row["ime"],
-                "prezime" => $row["prezime"],
-                "pozicija" => $row["pozicija"],
-                "godini" => $row["godini"],
-                "zalaganje" => $row["zalaganje"],
-                "rabotna_ocenka" => $row["rabotna_ocenka"]
+                    "dres_id" => $row["dres_id"],
+                    "zalaganje" => $row["zalaganje"],
+                    "rabotna_ocenka" => $row["rabotna_ocenka"]
             );
             }
         break;

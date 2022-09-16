@@ -227,6 +227,4 @@ app.controller('myCtrl', function($scope,$http,$filter) {
     objDelete.push({"table_name":table_name,"pk_value":pk_value});
     postData("delete",objDelete);
   }
-
-
 });

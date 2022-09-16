@@ -5,12 +5,7 @@
         <thead>
             <tr>
                 <th>
-                    <select class="form-control" id="dres_id" name="dres_id" ng-model="dres_id">
-                        <option  value="">Изберете опции</option>
-                        <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
-                          {{igrac.dres_id}}  ||  {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                        </option>
-                    </select>
+                    dres_id
                 </th>
                 <th>
                     <input type="text" name="searchByZalaganje" id="searchByZalaganje" ng-model="searchByZalaganje" placeholder="Пребарај по залагање во клубот">
@@ -51,7 +46,7 @@
   
         <!-- Modal body -->
         <div class="modal-body myBtn">
-            Дали сте сигурни дека сакате да го избришите членот во управата {{uprava[getIndex].ime_igrachi}}  {{uprava[getIndex].prezime_igrachi}} ???
+            Дали сте сигурни дека сакате да го избришите членот во управата {{uprava[getIndex].dres_id}}???
         </div>
   
         <!-- Modal footer -->
@@ -64,60 +59,3 @@
       </div>
     </div>
   </div>
-<!--
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>dres_id</th>
-            <th>zalaganje</th>
-            <th>rabotna_ocenka</th>
-            <th><i class="fa-solid fa-pen"></i>edit</th>
-            <th><i class="fa-solid fa-trash-can"></i>delete</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>24</td>
-            <td>dovolno</td>
-            <td>3</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>25</td>
-            <td>istaknato</td>
-            <td>5</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>26</td>
-            <td>istaknato</td>
-            <td>4</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>27</td>
-            <td>nedovolno</td>
-            <td>1</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>28</td>
-            <td>dovolno</td>
-            <td>3</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>69</td>
-            <td>nedovolno</td>
-            <td>1</td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
--->

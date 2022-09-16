@@ -62,7 +62,7 @@ class PublikaDAO extends Publika
       */
      public function selectPublika()
      {
-      return $this->database ->selectRow($this->table_name);
+      return $this->database ->selectRowStoredProcedure("_select_publika");
      }
 }
 ?>

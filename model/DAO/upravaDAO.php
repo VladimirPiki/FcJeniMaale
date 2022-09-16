@@ -64,10 +64,7 @@ class UpravaDAO extends Uprava
      */
     public function selectUprava()
     {
-        return $this->database ->selectRowFilds("igrachi.dres_id,igrachi.ime,igrachi.prezime,igrachi.pozicija,igrachi.godini,uprava.zalaganje,uprava.rabotna_ocenka,igrachi.ime as ime_igrachi,igrachi.prezime as prezime_igrachi,igrachi.pozicija as pozicija_igrachi,
-        igrachi.godini as godini_igrachi".$this->table_name."
-        inner JOIN igrachi
-        ON igrachi.dres_id=uprava.dres_id");
+        return $this->database ->selectRowStoredProcedure("_select_uprava");
     }
 }
 ?>

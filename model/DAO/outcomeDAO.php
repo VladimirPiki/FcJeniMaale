@@ -64,9 +64,7 @@ class OutcomeDAO extends Outcome
      */
     public function selectOutcome ()
     {
-        return $this->database ->selectRow($this->table_name." 
-        INNER JOIN igrachi 
-        ON igrachi.dres_id=outcome.dres_id");
+        return $this->database ->selectRowStoredProcedure("_select_outcome");
     }
 }
 ?>

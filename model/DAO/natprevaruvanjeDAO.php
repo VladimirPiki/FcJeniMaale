@@ -84,7 +84,9 @@ class NatprevaruvanjeDAO extends Natprevaruvanje
       LEFT JOIN stadion
 	    ON (stadion.stadion_id=natprevaruvanje.stadion_id)
       LEFT JOIN publika
-	    ON (publika.datum_id=natprevaruvanje.datum_id)");
+	    ON (publika.datum_id=natprevaruvanje.datum_id)
+      LEFT JOIN sostav
+	    ON(sostav.sostav_id=natprevaruvanje.sostav_id)");
       }
 
 }

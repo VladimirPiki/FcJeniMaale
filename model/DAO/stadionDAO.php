@@ -66,7 +66,7 @@ class StadionDAO extends Stadion
      */
     public function selectStadion()
     {
-        return $this->database ->selectRow($this->table_name);
+        return $this->database ->selectRowStoredProcedure("_select_stadion");
     }
 }
 ?>
