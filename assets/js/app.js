@@ -9,7 +9,7 @@ app.controller('myCtrl', function($scope,$http,$filter) {
     value: new Date(2022, 12, 31, 23, 59)
   };
   $scope.datum_id = {
-     value: new Date(2022, 11-1, 23)
+     value: new Date(2022, 11, 23)
   }
 
   var fullname="";

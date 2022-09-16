@@ -55,6 +55,14 @@ footer p{
 	background-color:#029934;
 	color: white;
 }
-
-
+.myBackgroundSostav{
+	background-image: url('../../uploads/Images/field6.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.myBtnClose{
+	background-color:red;
+	color: white;
+}
 
