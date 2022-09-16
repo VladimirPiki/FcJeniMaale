@@ -2,7 +2,7 @@
 
 /**
  * @author Vladimir Krstevski <vlade.piki23@hotmail.com>
- * @link 
+ * @link
  */
 
 class DB
@@ -62,7 +62,6 @@ class DB
 		$stmt=$this->conn->prepare("SELECT * from ".$table_name);
 		$stmt->execute();
 		return $stmt->fetchAll();
-	
 	}
 
 	/**
@@ -75,7 +74,6 @@ class DB
 		$stmt=$this->conn->prepare("SELECT $filds from ".$table_name);
 		$stmt->execute();
 		return $stmt->fetchAll();
-	
 	}
 
 	/**
@@ -114,7 +112,6 @@ class DB
 		$stmt=$this->conn->prepare("call $selectRowStoredProcedureName()");
 		$stmt->execute();
 		return $stmt->fetchAll();
-	
 	}
 }
 ?>

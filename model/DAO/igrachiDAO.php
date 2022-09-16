@@ -33,7 +33,7 @@ class IgrachiDAO extends Igrachi
        $godini=parent::getGodini();
        $plata_denari=parent::getPlataDenari();
        $income_id=parent::getIncomeId();
-
+   
        $columns_value="$dres_id,'$ime','$prezime','$pozicija',$godini,$plata_denari,$income_id";
        $this->database ->callStoredProcedure("_insert_igrachi",$columns_value);  
     }

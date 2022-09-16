@@ -56,10 +56,7 @@ class UpravaDAO extends Uprava
         $columns="zalaganje='$zalaganje',rabotna_ocenka=$rabotna_ocenka";
 
         $condition="dres_id=$dres_id";
-
-
-        $this->database ->updateRow($this->table_name,$columns,$condition);
-     
+        $this->database ->updateRow($this->table_name,$columns,$condition);  
     }
 
     /**
