@@ -128,11 +128,13 @@ app.controller('myCtrl', function($scope,$http,$filter) {
 
 //Functions
   function postData(file,objData){
+    //if(objData.lenght > 0){}
     $http({
       method : "POST",
       url : "model/"+file+".php",
       data: objData
     }).then(function mySuccess(_response) {
+      //proverka na status 200, 201, 404, 500
       $scope.alert_success=true;
       $scope.error_alert=false;
     }, function myError(_response) {
