@@ -22,6 +22,9 @@
                     <th>
                         <input class="form-control text-center fw-bold" type="text" name="searchByIznosDenari" id="searchByIznosDenari" ng-model="searchByIznosDenari" placeholder="Износот на трансферот">
                     </th>
+                    <th>
+                        
+                    </th>
                     <th><i class="fa-solid fa-pen"></i>edit</th>
                     <th><i class="fa-solid fa-trash-can"></i>delete</th>
                 </tr>
@@ -35,6 +38,7 @@
                     <td>{{incomes.godini}}</td>
                     <td>{{incomes.klub}}</td>
                     <td>{{incomes.iznos_denari}}</td>
+                    <td><img class="rounded-circle" width="150" height="150" src="uploads/Images/income/{{incomes.income_img_path}}" alt="{{incomes.income_img_path}}"></td>
                     <td title="Edit"><i class="fa-solid fa-pen"></i></td>
                     <td title="Delete {{incomes.ime}} {{incomes.prezime}}">
                         <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal" ng-click="passPosition($index)"> <i class="fa-solid fa-trash-can"></i></button>

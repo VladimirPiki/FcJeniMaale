@@ -56,6 +56,7 @@ switch($table_name)
         $objIncome->setGodini($data[0]->godini);
         $objIncome->setKlub($data[0]->klub);
         $objIncome->setIznosDenari($data[0]->iznos_denari);
+        $objIncome->setIncomeImgPath($data[0]->income_img_path);
         //DAO
         $objIncome ->insertIncome();
     break;

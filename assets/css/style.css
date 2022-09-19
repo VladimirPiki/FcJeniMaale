@@ -46,10 +46,6 @@ footer{
 	text-align: center;
 	color: #1C4A9F;
 }
-footer h3{
-	color: #029934;
-	font-size: 12px;
-}
 footer p{
 	color: #029934;
 	font-size: 12px;
@@ -99,5 +95,12 @@ div select{
 }
 .myTable{
 	color: #1C4A9F;
+}
+/**********Details************************/
+.myInputDetails{
+	background:white!important;
+	text-align: center!important;
+	color: #1C4A9F;
+	font-weight: bold;
 }
 

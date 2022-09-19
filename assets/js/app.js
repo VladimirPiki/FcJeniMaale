@@ -156,10 +156,10 @@ app.controller('myCtrl', function($scope,$http,$filter) {
     postData("insert",objIgrachi);
   }
 
-  $scope.function_income=function(ime,prezime,pozicija,godini,klub,iznos_denari)
+  $scope.function_income=function(ime,prezime,pozicija,godini,klub,iznos_denari,income_img_path)
   {
     var objIncome=[];
-    objIncome.push({"ime":ime,"prezime":prezime,"pozicija":pozicija,"godini":godini,"klub":klub,"iznos_denari":iznos_denari,"table_name":"income"});
+    objIncome.push({"ime":ime,"prezime":prezime,"pozicija":pozicija,"godini":godini,"klub":klub,"iznos_denari":iznos_denari,"income_img_path":income_img_path,"table_name":"income"});
     console.log(objIncome);
     postData("insert",objIncome);
   }
@@ -168,7 +168,7 @@ app.controller('myCtrl', function($scope,$http,$filter) {
   {
     var objNatprevaruvanje=[];
     //datum treba da se konvertira vo format yyyy-mm-dd isto i za datum_id
-    objNatprevaruvanje.push({"kolo_id":kolo_id,"datum":datum,"protivnik":protivnik,"rezultat":rezultat,"mesto":mesto,"sostav_id":sostav_id,"stadion_id":stadion_id,"datum_id":datum_id,"table_name":"natprevaruvanje"});
+    objNatprevaruvanje.push({"kolo_id":kolo_id,"datum":datum,"protivnik":protivnik,"rezultat":rezultat,"mesto":mesto,"sostav_id":sostav_id,"stadion_id":stadion_id,"datum_id":datum_id,"income_img_path":income_img_path,"table_name":"natprevaruvanje"});
     console.log(objNatprevaruvanje);
     postData("insert",objNatprevaruvanje);
   }

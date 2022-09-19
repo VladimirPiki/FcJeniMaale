@@ -34,8 +34,9 @@ class IncomeDAO extends Income
         $godini=parent::getGodini();
         $klub=parent::getKlub();
         $iznos_denari=parent::getIznosDenari();
+        $income_img_path=parent::getIncomeImgPath();
 
-        $columns_value="'$ime','$prezime','$pozicija',$godini,'$klub',$iznos_denari";
+        $columns_value="'$ime','$prezime','$pozicija',$godini,'$klub',$iznos_denari,'$income_img_path'";
         $this->database ->callStoredProcedure("_insert_income",$columns_value);
     }
 

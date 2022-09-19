@@ -23,6 +23,8 @@ class Income
 
     private  $iznos_denari;
 
+    private $income_img_path;
+
     /**
      * @return 
      */
@@ -149,4 +151,19 @@ class Income
         $this->iznos_denari=$iznos_denari;
     }
 
+    /**
+     * @return 
+     */
+    public function getIncomeImgPath()
+    {
+        return $this->income_img_path;
+    }
+
+    /**
+     * @param  $income_img_path
+     */
+    public function setIncomeImgPath($income_img_path):void
+    {
+        $this->income_img_path=$income_img_path;
+    }
 }

@@ -3,33 +3,37 @@
 <div class="alert alert-danger" ng-show="error_alert">Ве молиме пополнете го правилно формуларот!</div>
 <form name="myForm">
     <div class="mb-3 mt-3">
-      <label for="ime" class="form-label">ime</label>
+      <label for="ime" class="form-label">Името на играч</label>
       <span class="alert alert-danger" ng-show="myForm.ime.$invalid">Внесете име со најмалце 3 карактери!!!</span>
       <input type="text" class="form-control" placeholder="Внесете го името на играчот"  id="ime" name="ime" ng-minlength="3" ng-model="ime">
     </div>
     <div class="mb-3">
-      <label for="prezime" class="form-label">prezime</label>
+      <label for="prezime" class="form-label">Презиме на играч</label>
       <span class="alert alert-danger" ng-show="myForm.prezime.$invalid">Внесете презиме со најмалце 3 карактери!!!</span>
       <input type="text" class="form-control"  placeholder="Внесете го презиме на играчот"  id="prezime" name="prezime" ng-minlength="3" ng-model="prezime">
     </div>
     <div class="mb-3">
-        <label for="pozicija" class="form-label">pozicija</label>
+        <label for="pozicija" class="form-label">Позиција на играч</label>
         <span class="alert alert-danger" ng-show="myForm.pozicija.$invalid">Внесете позиција со најмалце 5 карактери!!!</span>
         <input type="text" class="form-control"  placeholder="Внесете ја позицијата на играчот"  id="pozicija" name="pozicija" ng-minlength="5" ng-model="pozicija">
     </div>
     <div class="mb-3">
-        <label for="godini" class="form-label">godini</label>
+        <label for="godini" class="form-label">Возраст</label>
         <span class="alert alert-danger" ng-show="myForm.godini.$invalid">Внесете години со најмалце 4 бројки!!!</span>
         <input type="number" class="form-control"  placeholder="Внесете ги годините на играчот"  id="godini" name="godini" ng-min="1111" ng-max="9999" ng-model="godini">
     </div>
     <div class="mb-3">
-        <label for="klub" class="form-label">klub</label>
+        <label for="klub" class="form-label">Име на клуб</label>
         <input type="text" class="form-control"  placeholder="Внесете го клубот од кој доаѓа играчот"  id="klub" name="klub" ng-model="klub">
     </div>
     <div class="mb-3">
-        <label for="iznos_denari" class="form-label">iznos_denari</label>
+        <label for="iznos_denari" class="form-label">Вредност на трансферот</label>
         <input type="number" class="form-control"  placeholder="Внесете го износот во денари на трансферот"  id="iznos_denari" name="iznos_denari" ng-model="iznos_denari">
     </div>
+    <div class="mb-3">
+      <label for="income_img_path" class="form-label">Слика</label>
+      <input type="text" class="form-control"  placeholder="Внесете слика за играчот"  id="income_img_path" name="income_img_path" ng-model="income_img_path">
+  </div>
     <button type="button" class="btn btn-primary" ng-click="
-    (myForm.ime.$valid && myForm.prezime.$valid && myForm.pozicija.$valid && myForm.godini.$valid) ? function_income(ime,prezime,pozicija,godini,klub,iznos_denari) : erorr()">Save</button>
+    (myForm.ime.$valid && myForm.prezime.$valid && myForm.pozicija.$valid && myForm.godini.$valid) ? function_income(ime,prezime,pozicija,godini,klub,iznos_denari,income_img_path) : erorr()">Save</button>
   </form>

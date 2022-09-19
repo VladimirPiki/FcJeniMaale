@@ -72,7 +72,8 @@
                 "pozicija" => $row["pozicija"],
                 "godini" => $row["godini"],
                 "klub" => $row["klub"],
-                "iznos_denari" => $row["iznos_denari"]
+                "iznos_denari" => $row["iznos_denari"],
+                "income_img_path" => $row["income_img_path"]  
             );
             }
 
