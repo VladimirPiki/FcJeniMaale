@@ -36,18 +36,17 @@ footer{
 	background-repeat: no-repeat;
 	background-size: cover;
 	*/
-	background-color:#029934!important;
+	background-color:#1C4A9F!important;
 	text-align: center;
 	color: #1C4A9F;
 }
 footer h3{
-	color: #1C4A9F;
-	font-size: 15px;
+	color: #029934;
+	font-size: 10px;
 }
 footer p{
-
-	color: #1C4A9F;
-	font-size: 15px;
+	color: #029934;
+	font-size: 10px;
 }
 
 /*************************************************/
@@ -65,4 +64,12 @@ footer p{
 	background-color:red;
 	color: white;
 }
+.myStadion1{
+	background-image: url('../../uploads/Images/slika1.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 90vh;
+}
+
 

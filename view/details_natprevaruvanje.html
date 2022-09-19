@@ -36,7 +36,7 @@
             <select class="form-control" id="sostav_id" name="sostav_id" ng-model="sostav_id">
                 <option  value="">Изберете опции</option>     
                 <option ng-repeat="sostavi in sostav" value="{{sostavi.sostav_id}}" >
-                 {{sostavi.sostav_id}} коло || {{sostavi.datum}}
+                 {{sostavi.sostav_id}}  || {{sostavi.datum_sostav}} || {{sostavi.natprevar}}
                 </option>
             </select>
     </div>
@@ -61,34 +61,3 @@
     <button type="button" class="btn btn-primary"  ng-click="
     (myForm.kolo_id.$valid && myForm.datum.$valid && myForm.protivnik.$valid && myForm.rezultat.$valid && myForm.mesto.$valid) ? function_natprevaruvanje(kolo_id,datum.value,protivnik,rezultat,mesto,sostav_id,stadion_id,datum_id) : erorr()">Save</button>
   </form>
-
-
-
-<!--
-    <form action="myForm">
-        <div class="mb-3">
-            <label for="datum" class="form-label">datum</label>
-            <span class="alert alert-danger" ng-show="myForm.datum.$invalid">Внесете го точниот датум и време!!!</span>
-            <input type="date" class="form-control" placeholder="Внесете го датумот и времето на натпреварот"  id="datum" name="datum" ng-non-bindable="MM/dd/yyyy 'at' h:mma" ng-model="datum">
-        </div>
-    </form>
-
-    <form name="myForm" ng-controller="DateController as dateCtrl">
-            <label class="form-label" for="exampleInput">Pick a date between in 2013:</label>
-            <input class="form-control" type="datetime-local" id="exampleInput" name="input" ng-model="example.value"
-                placeholder="yyyy-MM-ddTHH:mm:ss" min="2001-01-01T00:00:00" max="2013-12-31T00:00:00" required />
-        <div role="alert">
-            <span class="error" ng-show="myForm.input.$error.required">
-                Required!
-                </span>
-            <span class="error" ng-show="myForm.input.$error.datetimelocal">
-                Not a valid date!
-            </span>
-        </div>
-        <tt>value = {{example.value | date: "yyyy-MM-ddTHH:mm:ss"}}</tt><br/>
-        <tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br/>
-        <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br/>
-        <tt>myForm.$valid = {{myForm.$valid}}</tt><br/>
-        <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br/>
-      </form>
--->

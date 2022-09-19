@@ -1,24 +1,24 @@
-<h3>Стадион</h3>
+<h3 class="text-center">Стадион</h3>
 
 <div class="table-responsive">
     <table class="table table-striped">
         <thead>
-            <tr>
-                <th>stadion_id</th>
+            <tr class="text-center">
+                <th>Стадион</th>
                 <th>
-                    <input type="text" name="searchByIme" id="searchByIme" ng-model="searchByIme" placeholder="Пребарај по име на стадионот">
+                    <input class="form-control text-center" type="text" name="searchByIme" id="searchByIme" ng-model="searchByIme" placeholder="Пребарај по име на стадионот">
                 </th>
                 <th>
-                    <input type="text" name="searchByAdresa" id="searchByAdresa" ng-model="searchByAdresa" placeholder="Пребарај по адреса на стадионот">
+                    <input class="form-control text-center" type="text" name="searchByAdresa" id="searchByAdresa" ng-model="searchByAdresa" placeholder="Пребарај по адреса на стадионот">
                 </th>
                 <th>
-                    <input type="number" name="searchByKapacitet" id="searchByKapacitet" ng-model="searchByKapacitet" placeholder="Пребарај по капацитет на стадионот">
+                    <input class="form-control text-center" type="number" name="searchByKapacitet" id="searchByKapacitet" ng-model="searchByKapacitet" placeholder="Пребарај по капацитет на стадионот">
                 </th>
                 <th><i class="fa-solid fa-pen"></i>edit</th>
                 <th><i class="fa-solid fa-trash-can"></i>delete</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="text-center">
             <tr ng-repeat="stadioni in stadion | filter:{ime:searchByIme,adresa:searchByAdresa,kapacitet:searchByKapacitet}">
                 <td>{{stadioni.stadion_id}}</td>
                 <td>{{stadioni.ime}}</td>

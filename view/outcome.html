@@ -1,18 +1,18 @@
-<h3>Трансфери кој заминуваат</h3>
+<h3 class="text-center">Трансфери кој заминуваат</h3>
 <div class="table-responsive">
-    <table class="table table-striped">
+    <table class="table table-striped text-center">
         <thead>
             <tr>
-                <th>outcome_id</th>
+                <th>Трансфери кој заминуваат</th>
                 <th>
-                    <input type="text" name="searchByKlub" id="searchByKlub" ng-model="searchByKlub" placeholder="Пребарај по името на клубот">
+                    <input class="form-control text-center" type="text" name="searchByKlub" id="searchByKlub" ng-model="searchByKlub" placeholder="Името на клуб">
                 </th>
                 <th>
-                    <input type="text" name="searchByIznosDenari" id="searchByIznosDenari" ng-model="searchByIznosDenari" placeholder="Пребарај по износот на трансферот во денари">
+                    <input class="form-control text-center" type="text" name="searchByIznosDenari" id="searchByIznosDenari" ng-model="searchByIznosDenari" placeholder="Износот на трансфер">
                 </th>
                 <th>
-                    <select class="form-control" id="searchByDresId" name="searchByDresId"  ng-model="searchByDresId">
-                        <option value="">Изберете опции</option>
+                    <select class="form-control text-center" id="searchByDresId" name="searchByDresId"  ng-model="searchByDresId">
+                        <option value="">Број на дрес, име, презиме, позиција, години</option>
                         <option ng-repeat="igrac in igrachi" value="{{igrac.dres_id}}" >
                             {{igrac.dres_id}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.pozicija_igrachi}} || {{igrac.godini_igrachi}}
                         </option>

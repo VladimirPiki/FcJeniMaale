@@ -1,43 +1,43 @@
-<h3>Натпреварување</h3>
+<h3 class="text-center">Натпреварување</h3>
 
 <div class="table-responsive">
     <table class="table table-striped">
         <thead>
-            <tr>
-                <th>kolo_id</th>
+            <tr class="text-center">
+                <th>Коло</th>
                 <th>
-                    <input type="text" name="searchByDatum" id="searchByDatum" ng-model="searchByDatum" placeholder="Пребарај по датум на натпреварот">
+                    <input class="form-control text-center" type="text" name="searchByDatum" id="searchByDatum" ng-model="searchByDatum" placeholder="Датум">
                 </th>
                 <th>
-                    <input type="text" name="searchByProtivnik" id="searchByProtivnik" ng-model="searchByProtivnik" placeholder="Пребарај по противник на натпреварот">
+                    <input class="form-control text-center" type="text" name="searchByProtivnik" id="searchByProtivnik" ng-model="searchByProtivnik" placeholder="Противник">
                 </th>
                 <th>
-                    <input type="text" name="searchByRezultat" id="searchByRezultat" ng-model="searchByRezultat" placeholder="Пребарај по резултат на натпреварот">
+                    <input class="form-control text-center" type="text" name="searchByRezultat" id="searchByRezultat" ng-model="searchByRezultat" placeholder="Резултат">
                 </th>
                 <th>
-                    <input type="text" name="searchByMesto" id="searchByMesto" ng-model="searchByMesto" placeholder="Пребарај по место на натпреварот">
+                    <input class="form-control text-center" type="text" name="searchByMesto" id="searchByMesto" ng-model="searchByMesto" placeholder="Место">
                 </th>
                 <th>
-                    <select class="form-control" id="searchBySostavId" name="searchBySostavId" ng-model="searchBySostavId">
-                        <option value="">Изберете опции</option>
+                    <select class="form-control text-center" id="searchBySostavId" name="searchBySostavId" ng-model="searchBySostavId">
+                        <option value="">Состав</option>
                         <option ng-repeat="sostavi in sostav" value="{{sostavi.sostav_id}}" >
-                            {{sostavi.sostav_id}} kolo || {{sostavi.datum_sostav}}
+                        {{sostavi.datum_sostav}}
                         </option>
                     </select>
                 </th>
                 <th>
-                    <select class="form-control" id="searchByStadionId" name="searchByStadionId" ng-model="searchByStadionId">
-                        <option  value="">Изберете опции</option>
+                    <select class="form-control text-center" id="searchByStadionId" name="searchByStadionId" ng-model="searchByStadionId">
+                        <option  value="">Стадион</option>
                         <option ng-repeat="stadioni in stadion" value="{{stadioni.stadion_id}}" >
-                            {{stadioni.ime}} || {{stadioni.adresa}} ||  {{stadioni.kapacitet}}  kapacitet
+                            {{stadioni.ime}} 
                         </option>
                     </select>
                 </th>
                 <th>
-                    <select class="form-control" id="searchByDatumId" name="searchByDatumId" ng-model="searchByDatumId">
-                        <option value="">Изберете опции</option>
+                    <select class="form-control text-center" id="searchByDatumId" name="searchByDatumId" ng-model="searchByDatumId">
+                        <option value="">Публика</option>
                         <option ng-repeat="publiki in publika" value="{{publiki.datum_id}}" >
-                            {{publiki.datum_id}} ||  {{publiki.datum_id}} home audience || {{publiki.gostinska}} away audience
+                            {{publiki.datum_id}}
                         </option>
                     </select>
                 </th>
@@ -56,9 +56,10 @@
                 <td>
                     <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModalSostav" ng-click="passPosition($index)"> <i class="fa-solid fa-shirt"></i></button>
                 </td>
-                <td>{{natprevar.ime}}</td>
+                <td>{{natprevar.ime}}
+                    <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModalStadion" ng-click="passPosition($index)"><i class="fa-solid fa-futbol"></i></button>
+                </td>
                 <td>
-                    {{natprevar.domashna}} home audience || {{natprevar.gostinska}} away audience
                     <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModalPublika" ng-click="passPosition($index)"><i class="fa-solid fa-futbol"></i></button>
                 </td>
                 <td title="Edit"><i class="fa-solid fa-pen"></i></td>
@@ -112,45 +113,49 @@
   
         <!-- Modal body -->
         <div class="modal-body myBtn myBackgroundSostav">
-            <div class="text-center"> Goalkeeper: <br> {{sostav[getIndex].goalkeeper}}</div>
-                <hr>
-            <div class="row">
-                <div class="col-sm-3 text-center">
+
+            <div class="row ">
+                <br>
+                <div class="col-12 text-center">
+                     Goalkeeper: <br> {{sostav[getIndex].goalkeeper}}
+                </div>
+                <br><br><br>
+                <div class="col-3 text-center ">
                     Right Back: <br> {{sostav[getIndex].right_back}}
                 </div>
-                <div class="col-sm-3 text-center">
+                <div class="col-3 text-center">
                     Center Back: <br> {{sostav[getIndex].centre_back1}}
                 </div>
-                <div class="col-sm-3 text-center">
+                <div class="col-3 text-center">
                     Center Back: <br> {{sostav[getIndex].centre_back2}}
                 </div>
-                <div class="col-sm-3 text-center">
+                <div class="col-3 text-center">
                     Left Back: <br> {{sostav[getIndex].left_back}}
                 </div>
             </div>
-            <hr>
+            <br><br>
             <div class="row">
-                <div class="col-sm-12 text-center">
+                <div class="col-12 text-center">
                     Defensive Midfielder Back: <br> {{sostav[getIndex].defensive_midfielder}}
                 </div>
                 <br>
-                <div class="col-sm-6 text-center">
+                <div class="col-6 text-center">
                     Center Midfielder: <br> {{sostav[getIndex].center_midfielder}}
                 </div>
-                <div class="col-sm-6 text-center">
+                <div class="col-6 text-center">
                     Attacking Midfielder: <br> {{sostav[getIndex].attacking_midfielder}}    <i class="fa-solid fa-c"></i>
                 </div>
             </div>
-            <hr>
+            <br><br>
             <div class="row">
-                <div class="col-sm-6 text-center">
+                <div class="col-6 text-center">
                     Right Forward Back: <br> {{sostav[getIndex].right_forward}}
                 </div>
-                <div class="col-sm-6 text-center">
+                <div class="col-6 text-center">
                     Left Forward: <br> {{sostav[getIndex].left_forward}}
                 </div>
                 <br>
-                <div class="col-sm-12 text-center">
+                <div class="col-12 text-center">
                     Center Forward: <br> {{sostav[getIndex].center_forward}}
                 </div>
             </div>
@@ -217,6 +222,30 @@
             На стадионот {{natprevaruvanje[getIndex].ime}} во {{natprevaruvanje[getIndex].mesto}} против екипата на {{natprevaruvanje[getIndex].protivnik}} кој заврши со 
             резултат {{natprevaruvanje[getIndex].rezultat}}.На натпреварот беа присутни {{natprevaruvanje[getIndex].domashna}} домашна публика и {{natprevaruvanje[getIndex].gostinska}} гостинска публика.
             Распродадени се {{natprevaruvanje[getIndex].karti_rasprodadeni}} карти.
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn myBtn" data-bs-dismiss="modal">Врати се назад</button> 
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <!-- The Modal Stadion-->
+<div class="modal" id="myModalStadion">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header myBtn">
+          <h4 class="modal-title">{{natprevaruvanje[getIndex].ime}}</h4>
+          <i type="button" data-bs-dismiss="modal" class="fa-regular fa-rectangle-xmark fa-2x"></i>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body myBtn myStadion1">
         </div>
   
         <!-- Modal footer -->

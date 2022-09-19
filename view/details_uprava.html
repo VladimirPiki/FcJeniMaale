@@ -14,13 +14,23 @@
   </div>
     <div class="mb-3">
       <label for="zalaganje" class="form-label">zalaganje</label>
-      <span class="alert alert-danger" ng-show="myForm.zalaganje.$invalid">Внесете го залагањето со најмалце 7 карактери!!!</span>
-      <input type="text" class="form-control"  placeholder="Внесете го залагањето на управата во клубот" id="zalaganje" name="zalaganje" ng-minlength="7" ng-model="zalaganje">
+      <select class="form-control" name="zalaganje" id="zalaganje" ng-model="zalaganje" placeholder="Внесете го залагањето на управата во клубот">
+        <option value="">Choose option</option>
+        <option name="zalaganje" id="zalaganje" ng-model="zalaganje">nedovolno</option>
+        <option name="zalaganje" id="zalaganje" ng-model="zalaganje">dovolno</option>
+        <option name="zalaganje" id="zalaganje" ng-model="zalaganje">istaknato</option>
+      </select>
     </div>
     <div class="mb-3">
         <label for="rabotna_ocenka" class="form-label">rabotna_ocenka</label>
-        <span class="alert alert-danger" ng-show="myForm.rabotna_ocenka.$invalid">Внесете ја работната оценка со најмалце 3 карактери!!!</span>
-        <input type="number" class="form-control"  placeholder="Внесете ја работната оценка на управата во клубот" id="rabotna_ocenka" name="rabotna_ocenka" ng-minlength="1" ng-model="rabotna_ocenka">
+        <select class="form-control" name="rabotna_ocenka" id="rabotna_ocenka" ng-model="rabotna_ocenka" placeholder="несете ја работната оценка на управата во клубот">
+          <option value="">Choose option</option>
+          <option name="rabotna_ocenka" id="rabotna_ocenka" ng-model="rabotna_ocenka">1</option>
+          <option name="rabotna_ocenka" id="rabotna_ocenka" ng-model="rabotna_ocenka">2</option>
+          <option name="rabotna_ocenka" id="rabotna_ocenka" ng-model="rabotna_ocenka">3</option>
+          <option name="rabotna_ocenka" id="rabotna_ocenka" ng-model="rabotna_ocenka">4</option>
+          <option name="rabotna_ocenka" id="rabotna_ocenka" ng-model="rabotna_ocenka">5</option>
+        </select>
     </div>
     <button type="button" class="btn btn-primary" ng-click="
     (myForm.dres_id.$valid && myForm.zalaganje.$valid && myForm.rabotna_ocenka.$valid) ? function_uprava(dres_id,zalaganje,rabotna_ocenka) : erorr()">Save</button>

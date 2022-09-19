@@ -1,28 +1,28 @@
-<h3>Играчи</h3>
+<h3 class="text-center">Играчи</h3>
 <div class="table-responsive">
 
     <table class="table table-striped">
-        <thead>
+        <thead >
             <tr>
-                <th>dres_id</th>
+                <th class="text-center">Број на дрес</th>
                 <th>
-                    <input type="text" name="searchByName" id="searchByName" ng-model="searchByName" placeholder="Пребарај по име на играчот">
+                    <input class="form-control text-center" type="text" name="searchByName" id="searchByName" ng-model="searchByName" placeholder="Име">
                 </th>
                 <th>
-                    <input type="text" name="searchByLastName" id="searchByLastName" ng-model="searchByLastName" placeholder="Пребарај по презиме на играчот">
+                    <input class="form-control text-center" type="text" name="searchByLastName" id="searchByLastName" ng-model="searchByLastName" placeholder="Презиме">
                 </th>
                 <th>
-                    <input type="text" name="searchByPosition" id="searchByPosition" ng-model="searchByPosition" placeholder="Пребарај по позиција на играчот">
+                    <input class="form-control text-center" type="text" name="searchByPosition" id="searchByPosition" ng-model="searchByPosition" placeholder="Позиција">
                 </th>
                 <th>
-                    <input type="text" name="searchByYear" id="searchByYear" ng-model="searchByYear" placeholder="Пребарај по години на играчот">
+                    <input class="form-control text-center" type="text" name="searchByYear" id="searchByYear" ng-model="searchByYear" placeholder="Години">
                 </th>
                 <th>
-                    <input type="text" name="searchBySalary" id="searchBySalary" ng-model="searchBySalary" placeholder="Пребарај по месечно плата во денари на играчот">
+                    <input class="form-control text-center" type="text" name="searchBySalary" id="searchBySalary" ng-model="searchBySalary" placeholder="Плата">
                 </th>
                 <th>
-                    <select class="form-control" id="searchByIncomeId" name="searchByIncomeId" ng-model="searchByIncomeId">
-                        <option  value="">Изберете опции</option>
+                    <select class="form-control text-center" id="searchByIncomeId" name="searchByIncomeId" ng-model="searchByIncomeId">
+                        <option  value="">Трансфери кој доааѓат</option>
                         <option ng-repeat="incomes in income" value="{{incomes.income_id}}" >
                             {{incomes.income_id}} || {{incomes.ime}} || {{incomes.prezime}} || {{incomes.pozicija}}
                         </option>
@@ -35,12 +35,12 @@
 
         <tbody>
             <tr ng-repeat="igrac in igrachi | filter:{ime_igrachi:searchByName,prezime_igrachi:searchByLastName,pozicija_igrachi:searchByPosition,godini_igrachi:searchByYear,plata_denari:searchBySalary,income_id:searchByIncomeId}">
-                <td>{{igrac.dres_id}} </td>
-                <td>{{igrac.ime_igrachi}}</td>
-                <td>{{igrac.prezime_igrachi}}</td>
-                <td>{{igrac.pozicija_igrachi}}</td>
-                <td>{{igrac.godini_igrachi}}</td>
-                <td>{{igrac.plata_denari}}</td>
+                <td class="text-center">{{igrac.dres_id}} </td>
+                <td class="text-center">{{igrac.ime_igrachi}}</td>
+                <td class="text-center">{{igrac.prezime_igrachi}}</td>
+                <td class="text-center">{{igrac.pozicija_igrachi}}</td>
+                <td class="text-center">{{igrac.godini_igrachi}}</td>
+                <td class="text-center">{{igrac.plata_denari}}</td>
                 <td class="text-center">{{igrac.ime_income}} {{igrac.prezime_income}} <br> {{igrac.pozicija_income}} <br> {{igrac.godini_income}}</td>
                 <td title="Edit"><i class="fa-solid fa-pen"></i></td>
                 <td title="Delete {{igrac.dres_id}} || {{igrac.ime_igrachi}} {{igrac.prezime_igrachi}}">

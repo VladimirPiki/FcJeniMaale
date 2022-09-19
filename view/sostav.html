@@ -1,10 +1,10 @@
- <h3>Состав</h3>
+ <h3 class="text-center">Состав</h3>
 
  <div class="table-responsive">
     <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>sostav_id</th>
+        <!--<thead>
+            <tr class="text-center">
+                <th>Составот на колото</th>
                 <th>
                     <select class="form-control" name="searchByDatum" id="searchByDatum" ng-model="searchByDatum">
                         <option  value="">Изберете опции</option>
@@ -178,9 +178,9 @@
                 <th><i class="fa-solid fa-pen"></i>edit</th>
                 <th><i class="fa-solid fa-trash-can"></i>delete</th>
             </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="sostavi in sostav | filter:{datum_sostav:searchByDatum,natprevar:searchByNatprevar,coach:searchByCoach,goalkeeper:searchByGK,
+        </thead>-->
+        <!--<tbody>
+            <tr class="text-center" ng-repeat="sostavi in sostav | filter:{datum_sostav:searchByDatum,natprevar:searchByNatprevar,coach:searchByCoach,goalkeeper:searchByGK,
                 centre_back1:searchByCB1,centre_back2:searchByCB2,right_back:searchByRB,left_back:searchByLB,
                 defensive_midfielder:searchByDMF,center_midfielder:searchByCMF,attacking_midfielder:searchByAMF,
                 right_forward:searchByRWF,left_forward:searchByLWF,center_forward:searchByCF,reserve1:searchByReserve1,
@@ -189,6 +189,11 @@
                 <td>{{sostavi.sostav_id}}</td>
                 <td>{{sostavi.datum_sostav}}</td>
                 <td>{{sostavi.natprevar}}</td>
+                <td>
+                    <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModalSostav" ng-click="passPosition($index)"> <i class="fa-solid fa-shirt"></i></button>
+                </td>
+               
+                <td>{{sostavi.coach}}</td>
                 <td>{{sostavi.coach}}</td>
                 <td>{{sostavi.goalkeeper}}</td>
                 <td>{{sostavi.centre_back1}}</td>
@@ -208,8 +213,55 @@
                 <td>{{sostavi.reserve5}}</td>
                 <td>{{sostavi.reserve6}}</td>
                 <td>{{sostavi.reserve7}}</td>
+                
                 <td title="Edit"><i class="fa-solid fa-pen"></i></td>
-                <td title="Delete {{sostavi.sostav_id}} {{sostavi.datum}}">
+                <td title="Delete {{sostavi.sostav_id}} {{sostavi.datum_sostav}}">
+                    <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal" ng-click="passPosition($index)"> <i class="fa-solid fa-trash-can"></i></button>
+                </td>
+            </tr>
+        </tbody>-->
+        <thead>
+            <tr class="text-center">
+                <th>Составот на колото</th>
+                <th>
+                    <select class="form-control text-center" name="searchByDatum" id="searchByDatum" ng-model="searchByDatum">
+                        <option  value="">Датум</option>
+                        <option ng-repeat="natprevar in natprevaruvanje" value="{{natprevar.datum}}" >
+                        {{natprevar.datum}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    natprevar
+                    <select class="form-control text-center" name="searchByNatprevar" id="searchByNatprevar" ng-model="searchByNatprevar">
+                        <option  value="">Натпревар</option>
+                        <option ng-repeat="natprevar in natprevaruvanje" value="{{natprevar.protivnik}}" >
+                         {{natprevar.protivnik}} || {{natprevar.rezultat}} || {{natprevar.mesto}}
+                        </option>
+                    </select>
+                </th>
+                <th>
+                    <select class="form-control text-center" name="searchBySostav" id="searchBySostav" ng-model="searchBySostav">
+                        <option  value="">Состав</option>
+                        <option ng-repeat="sostavi in sostav" value="{{sostavi.sostav_id}}" >
+                            {{sostavi.sostav_id}} || {{sostavi.datum_sostav}}  || {{sostavi.natprevar}}
+                        </option>
+                    </select>
+                </th>
+                <th><i class="fa-solid fa-pen"></i>edit</th>
+                <th><i class="fa-solid fa-trash-can"></i>delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text-center" ng-repeat="sostavi in sostav | filter:{datum_sostav:searchByDatum,natprevar:searchByNatprevar,sostav_id:searchBySostav}">
+                <td>{{sostavi.sostav_id}}</td>
+                <td>{{sostavi.datum_sostav}}</td>
+                <td>{{sostavi.natprevar}}</td>
+                <td>
+                    <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModalSostav" ng-click="passPosition($index)"> <i class="fa-solid fa-shirt"></i></button>
+                </td>
+                <td title="Edit"><i class="fa-solid fa-pen"></i></td>
+                <td title="Delete {{sostavi.sostav_id}} {{sostavi.datum_sostav}}">
                     <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal" ng-click="passPosition($index)"> <i class="fa-solid fa-trash-can"></i></button>
                 </td>
             </tr>
@@ -246,3 +298,110 @@
     </div>
   </div>
  
+
+      <!-- The Modal Sostav ID-->
+<div class="modal" id="myModalSostav">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header myBtn">
+          <h4 class="modal-title text-center">Составот против екипата на {{natprevaruvanje[getIndex].protivnik}} на {{natprevaruvanje[getIndex].datum}}</h4>
+          <i type="button" data-bs-dismiss="modal" class="fa-regular fa-rectangle-xmark fa-2x"></i>
+          
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body myBtn myBackgroundSostav">
+
+            <div class="row ">
+                <br>
+                <div class="col-12 text-center">
+                     Goalkeeper: <br> {{sostav[getIndex].goalkeeper}}
+                </div>
+                <br><br><br>
+                <div class="col-3 text-center ">
+                    Right Back: <br> {{sostav[getIndex].right_back}}
+                </div>
+                <div class="col-3 text-center">
+                    Center Back: <br> {{sostav[getIndex].centre_back1}}
+                </div>
+                <div class="col-3 text-center">
+                    Center Back: <br> {{sostav[getIndex].centre_back2}}
+                </div>
+                <div class="col-3 text-center">
+                    Left Back: <br> {{sostav[getIndex].left_back}}
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-12 text-center">
+                    Defensive Midfielder Back: <br> {{sostav[getIndex].defensive_midfielder}}
+                </div>
+                <br>
+                <div class="col-6 text-center">
+                    Center Midfielder: <br> {{sostav[getIndex].center_midfielder}}
+                </div>
+                <div class="col-6 text-center">
+                    Attacking Midfielder: <br> {{sostav[getIndex].attacking_midfielder}}    <i class="fa-solid fa-c"></i>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-6 text-center">
+                    Right Forward Back: <br> {{sostav[getIndex].right_forward}}
+                </div>
+                <div class="col-6 text-center">
+                    Left Forward: <br> {{sostav[getIndex].left_forward}}
+                </div>
+                <br>
+                <div class="col-12 text-center">
+                    Center Forward: <br> {{sostav[getIndex].center_forward}}
+                </div>
+            </div>
+        </div>
+        <div class="modal-body text-start myBtn border-top border-light">
+            <div class="row">
+                <div class="col-sm-12">
+                    Coach: {{sostav[getIndex].coach}}
+                </div>
+                <hr>
+                <div class="col-sm-12">
+                    Reserve 1: {{sostav[getIndex].reserve1}}
+                </div>
+                <hr>
+                <div class="col-sm-12">
+                    Reserve 2: {{sostav[getIndex].reserve2}}
+                </div>
+                <hr>
+                <div class="col-sm-12">
+                    Reserve 3: {{sostav[getIndex].reserve3}}
+                </div>
+                <hr>
+                <div class="col-sm-12">
+                    Reserve 4: {{sostav[getIndex].reserve4}}
+                </div>
+                <hr>
+                <div class="col-sm-12">
+                    Reserve1 5: {{sostav[getIndex].reserve5}}
+                </div>
+                <hr>
+                <div class="col-sm-12">
+                    Reserve1 6: {{sostav[getIndex].reserve6}}
+                </div>
+                <hr>
+                <div class="col-sm-12">
+                    Reserve 7: {{sostav[getIndex].reserve7}}
+                </div>
+            </div>
+        </div>
+        
+  
+        <!-- Modal footer -->
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn myBtn" data-bs-dismiss="modal">Назад</button> 
+        </div>
+  
+      </div>
+    </div>
+  </div> 
