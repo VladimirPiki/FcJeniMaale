@@ -6,7 +6,7 @@
 	background-color:#3a3c31!important;
 	color:blue;
 }
-/***************************/
+/*********For all*************/
 
 @font-face {
 	font-family: Decima Nova;
@@ -15,20 +15,26 @@
 *{
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+}
+html{
 	font-family: Decima Nova;
-	font-size: 18px;
+	font-size: 17px;
 }
-html,body{
-	height: 100%;
-	width: 100%;
+body{
+	height: 100vh;
+	max-width:100%;
 }
+/****************First images in main**************************/
 .coverFirst{
 	height: 100%;
 	width: 100%;
 }
+/*************Navbar***************************/
 .navbar{
 	background-color:#029934!important;
 }
+/************Footer************************/
 footer{
 	/*
 	background-image: url('../img/IstutkanaHartija.jpg');
@@ -42,14 +48,16 @@ footer{
 }
 footer h3{
 	color: #029934;
-	font-size: 10px;
+	font-size: 12px;
 }
 footer p{
 	color: #029934;
-	font-size: 10px;
+	font-size: 12px;
 }
-
-/*************************************************/
+footer i{
+	color: #029934;
+}
+/*************View*********************/
 .myBtn{
 	background-color:#029934;
 	color: white;
@@ -71,5 +79,25 @@ footer p{
 	background-size: cover;
 	height: 90vh;
 }
-
+.myView{
+	background-image: url('../img/backgroundView.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: #1C4A9F;
+}
+div input{
+	background-image: url('../img/cover22.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	font-weight: bold;
+	font-size: 20px;
+}
+div select{
+	background-image: url('../img/cover22.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.myTable{
+	color: #1C4A9F;
+}
 
