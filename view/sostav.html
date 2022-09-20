@@ -1,6 +1,6 @@
-<div class="table-responsive myView">
+<div class="table-responsive myViewCover22">
     <h3 class="text-center">Состав</h3>
-    <table class="table table-striped">
+    <table class="table">
         <!--<thead>
             <tr class="text-center">
                 <th>Составот на колото</th>
@@ -246,21 +246,25 @@
                         </option>
                     </select>
                 </th>
+                <th></th>
                 <th><i class="fa-solid fa-pen"></i>Измени</th>
                 <th><i class="fa-solid fa-trash-can"></i>Избриши</th>
             </tr>
         </thead>
         <tbody>
             <tr class="text-center" ng-repeat="sostavi in sostav | filter:{datum_sostav:searchByDatum,natprevar:searchByNatprevar,sostav_id:searchBySostav}">
-                <td>{{sostavi.sostav_id}}</td>
-                <td>{{sostavi.datum_sostav}}</td>
-                <td>{{sostavi.natprevar}}</td>
+                <td><br><br>{{sostavi.sostav_id}}</td>
+                <td><br><br>{{sostavi.datum_sostav}}</td>
+                <td><br><br>{{sostavi.natprevar}}</td>
                 <td>
-                    <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModalSostav" ng-click="passPosition($index)"> <i class="fa-solid fa-shirt"></i></button>
+                    <br><br><button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModalSostav" ng-click="passPosition($index)"> <i class="fa-solid fa-shirt"></i></button>
                 </td>
-                <td title="Edit"><i class="fa-solid fa-pen"></i></td>
+                <td>
+                    <img class="sostavSlika" width="150" height="150" src="uploads/Images/sostav/{{sostavi.sostav_img_path}}" alt="{{sostavi.sostav_img_path}}">
+                </td>
+                <td title="Edit"><br><br><i class="fa-solid fa-pen"></i></td>
                 <td title="Delete {{sostavi.sostav_id}} {{sostavi.datum_sostav}}">
-                    <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal" ng-click="passPosition($index)"> <i class="fa-solid fa-trash-can"></i></button>
+                    <br><br><button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal" ng-click="passPosition($index)"> <i class="fa-solid fa-trash-can"></i></button>
                 </td>
             </tr>
         </tbody>

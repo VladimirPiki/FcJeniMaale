@@ -209,7 +209,8 @@
                 "reserve5" => $row["reserve5"],
                 "reserve6" => $row["reserve6"],
                 "reserve7" => $row["reserve7"],
-                "natprevar" => $row["natprevar"]
+                "natprevar" => $row["natprevar"],
+                "sostav_img_path" => $row["sostav_img_path"]
             );
             }
 

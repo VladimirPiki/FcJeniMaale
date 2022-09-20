@@ -79,16 +79,25 @@ footer i{
 	background-size: cover;
 	height: 90vh;
 }
-.myView{
+.myViewCover22{
 	background-image: url('../img/cover22.jpg');
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-repeat: repeat;
 	color: #1C4A9F;
 }
-.myViewIgrachi{
-	background-image: url('../img/IstutkanaHartija.jpg');
-	background-repeat: no-repeat;
+.myViewKojot{
+	background-image: url('../img/Kojot.png');
+	background-repeat: repeat;
+	color: #1C4A9F;
+}
+.myViewJeniMaaleLogo{
+	background-image: url('../img/JeniMaaleLogo.png');
 	background-size: 100% 100%;
+	background-repeat:no-repeat;
+	color: #1C4A9F;
+}
+.myViewProfilnaNova{
+	background-image: url('../img/profilna\ nova.jpg');
+	background-repeat: repeat;
 	color: #1C4A9F;
 }
 
@@ -136,6 +145,10 @@ h3:hover{
 .myDropdown{
 	color: #1C4A9F;
 	font-weight: bold;
+}
+.sostavSlika:hover{
+	height: 350px;
+	width: 300px;
 }
 /**********Details************************/
 .myInputDetails{

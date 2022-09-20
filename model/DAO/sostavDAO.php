@@ -47,6 +47,7 @@ class SostavDAO extends Sostav
         $reserve5=parent::getReserve5();
         $reserve6=parent::getReserve6();
         $reserve7=parent::getReserve7();
+        $sostav_img_path=parent::getSostavImgPath();
 
         $columns_value="$sostav_id,
                         '$datum_sostav',
@@ -68,8 +69,8 @@ class SostavDAO extends Sostav
                         $reserve4,
                         $reserve5,
                         $reserve6,
-                        $reserve7";
-
+                        $reserve7,
+                        '$sostav_img_path'";
          $this->database ->callStoredProcedure("_insert_sostav",$columns_value);
     }
 
@@ -109,9 +110,6 @@ class SostavDAO extends Sostav
         $reserve5=parent::getReserve5();
         $reserve6=parent::getReserve6();
         $reserve7=parent::getReserve7();
-
-
-
         $columns="  datum_sostav='$datum_sostav',
                     coach=$coach,
                     goalkeeper=$goalkeeper,
@@ -132,9 +130,7 @@ class SostavDAO extends Sostav
                     reserve5=$reserve5,
                     reserve6=$reserve6,
                     reserve7=$reserve7";
-
-        $condition="sostav_id=$sostav_id";
-        
+        $condition="sostav_id=$sostav_id";    
         $this->database->updateRow($this->table_name,$columns,$condition);
     }
     

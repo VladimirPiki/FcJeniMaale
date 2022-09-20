@@ -139,6 +139,7 @@ switch($table_name)
             $objSostav ->setReserve5($data[0]->reserve5);
             $objSostav ->setReserve6($data[0]->reserve6);
             $objSostav ->setReserve7($data[0]->reserve7);
+            $objSostav ->setSostavImgPath($data[0]->sostav_img_path);
             //DAO
             $objSostav ->insertSostav();
 

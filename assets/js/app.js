@@ -189,10 +189,10 @@ app.controller('myCtrl', function($scope,$http,$filter) {
     postData("insert",objPublika);
   }
 
-  $scope.function_sostav=function(sostav_id,datum_sostav,coach,goalkeeper,centre_back1,centre_back2,right_back,left_back,defensive_midfielder,center_midfielder,attacking_midfielder,right_forward,left_forward,center_forward,reserve1,reserve2,reserve3,reserve4,reserve5,reserve6,reserve7)
+  $scope.function_sostav=function(sostav_id,datum_sostav,coach,goalkeeper,centre_back1,centre_back2,right_back,left_back,defensive_midfielder,center_midfielder,attacking_midfielder,right_forward,left_forward,center_forward,reserve1,reserve2,reserve3,reserve4,reserve5,reserve6,reserve7,sostav_img_path)
   {
     var objSostav=[];
-    objSostav.push({"sostav_id":sostav_id,"datum_sostav":datum_sostav,"coach":coach,"goalkeeper":goalkeeper,"centre_back1":centre_back1,"centre_back2":centre_back2,"right_back":right_back,"left_back":left_back,"defensive_midfielder":defensive_midfielder,"center_midfielder":center_midfielder,"attacking_midfielder":attacking_midfielder,"right_forward":right_forward,"left_forward":left_forward,"center_forward":center_forward,"reserve1":reserve1,"reserve2":reserve2,"reserve3":reserve3,"reserve4":reserve4,"reserve5":reserve5,"reserve6":reserve6,"reserve7":reserve7,"table_name":"sostav"});
+    objSostav.push({"sostav_id":sostav_id,"datum_sostav":datum_sostav,"coach":coach,"goalkeeper":goalkeeper,"centre_back1":centre_back1,"centre_back2":centre_back2,"right_back":right_back,"left_back":left_back,"defensive_midfielder":defensive_midfielder,"center_midfielder":center_midfielder,"attacking_midfielder":attacking_midfielder,"right_forward":right_forward,"left_forward":left_forward,"center_forward":center_forward,"reserve1":reserve1,"reserve2":reserve2,"reserve3":reserve3,"reserve4":reserve4,"reserve5":reserve5,"reserve6":reserve6,"reserve7":reserve7,"sostav_img_path":sostav_img_path,"table_name":"sostav"});
     console.log(objSostav);
     postData("insert",objSostav);
   }
