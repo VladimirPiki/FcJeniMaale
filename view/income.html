@@ -1,47 +1,45 @@
 <div class="table-responsive myView">
     <h3 class="text-center">Трансфери кој доааѓат</h3>
-        <table class="table table-striped text-center">
+        <table class="table text-center">
             <thead>
                 <tr>
-                    <th>Трансфери кој доааѓат</th>
-                    <th>
-                        <input class="form-control text-center fw-bold" type="text" name="searchByName" id="searchByName" ng-model="searchByName" placeholder="Име">
-                    </th>
-                    <th>
-                        <input class="form-control text-center fw-bold" type="text" name="searchByLastName" id="searchByLastName" ng-model="searchByLastName" placeholder="Презиме">
-                    </th>
-                    <th>
-                        <input class="form-control text-center fw-bold" type="text" name="searchByPosition" id="searchByPosition" ng-model="searchByPosition" placeholder="Позиција">
-                    </th>
-                    <th>
-                        <input class="form-control text-center fw-bold" type="text" name="searchByYear" id="searchByYear" ng-model="searchByYear" placeholder="Години">
-                    </th>
-                    <th>
-                        <input class="form-control text-center fw-bold" type="text" name="searchByClub" id="searchByClub" ng-model="searchByClub" placeholder="Клубот">
-                    </th>
-                    <th>
-                        <input class="form-control text-center fw-bold" type="text" name="searchByIznosDenari" id="searchByIznosDenari" ng-model="searchByIznosDenari" placeholder="Износот на трансферот">
-                    </th>
-                    <th>
-                        
-                    </th>
-                    <th><i class="fa-solid fa-pen"></i>edit</th>
-                    <th><i class="fa-solid fa-trash-can"></i>delete</th>
+                        <th>Трансфери кој доааѓат</th>
+                        <th></th>
+                        <th>
+                            <input class="form-control text-center fw-bold" type="text" name="searchByName" id="searchByName" ng-model="searchByName" placeholder="Име">
+                        </th>
+                        <th> 
+                            <input class="form-control text-center fw-bold" type="text" name="searchByLastName" id="searchByLastName" ng-model="searchByLastName" placeholder="Презиме">
+                        </th>
+                        <th>
+                            <input class="form-control text-center fw-bold" type="text" name="searchByPosition" id="searchByPosition" ng-model="searchByPosition" placeholder="Позиција">
+                        </th>
+                        <th>
+                            <input class="form-control text-center fw-bold" type="text" name="searchByYear" id="searchByYear" ng-model="searchByYear" placeholder="Години">
+                        </th>
+                        <th>
+                            <input class="form-control text-center fw-bold" type="text" name="searchByClub" id="searchByClub" ng-model="searchByClub" placeholder="Клубот">
+                        </th>
+                        <th>
+                            <input class="form-control text-center fw-bold" type="text" name="searchByIznosDenari" id="searchByIznosDenari" ng-model="searchByIznosDenari" placeholder="Износот на трансферот">
+                        </th>
+                        <th><i class="fa-solid fa-pen"></i>Измени</th>
+                        <th><i class="fa-solid fa-trash-can"></i>Избриши</th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="incomes in income | filter:{ime:searchByName,prezime:searchByLastName,pozicija:searchByPosition,godini:searchByYear,klub:searchByClub,iznos_denari:searchByIznosDenari}">
-                    <td>{{incomes.income_id}}</td>
-                    <td>{{incomes.ime}}</td>
-                    <td>{{incomes.prezime}}</td>
-                    <td>{{incomes.pozicija}}</td>
-                    <td>{{incomes.godini}}</td>
-                    <td>{{incomes.klub}}</td>
-                    <td>{{incomes.iznos_denari}}</td>
-                    <td><img class="rounded-circle" width="150" height="150" src="uploads/Images/income/{{incomes.income_img_path}}" alt="{{incomes.income_img_path}}"></td>
-                    <td title="Edit"><i class="fa-solid fa-pen"></i></td>
-                    <td title="Delete {{incomes.ime}} {{incomes.prezime}}">
-                        <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal" ng-click="passPosition($index)"> <i class="fa-solid fa-trash-can"></i></button>
+                    <td> <br>{{incomes.income_id}}</td>
+                    <td><img class="rounded-circle" width="100" height="100" src="uploads/Images/income/{{incomes.income_img_path}}" alt="{{incomes.income_img_path}}"></td>
+                    <td> <br>{{incomes.ime}}</td>
+                    <td><br>{{incomes.prezime}}</td>
+                    <td><br>{{incomes.pozicija}}</td>
+                    <td><br>{{incomes.godini}}</td>
+                    <td><br>{{incomes.klub}}</td>
+                    <td><br>{{incomes.iznos_denari}}</td>     
+                    <td title="Измени"><br><i class="fa-solid fa-pen"></i></td>
+                    <td title="Избриши {{incomes.ime}} {{incomes.prezime}}">
+                        <br><button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal" ng-click="passPosition($index)"> <i class="fa-solid fa-trash-can"></i></button>
                     </td>
                 </tr>
             </tbody>

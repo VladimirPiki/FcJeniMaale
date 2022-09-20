@@ -1,6 +1,6 @@
 <div class="table-responsive myView">
     <h3 class="text-center">Натпреварување</h3>
-    <table class="table table-striped">
+    <table class="table">
         <thead>
             <tr class="text-center">
                 <th>Коло</th>
@@ -17,31 +17,31 @@
                     <input class="form-control text-center fw-bold" type="text" name="searchByMesto" id="searchByMesto" ng-model="searchByMesto" placeholder="Место">
                 </th>
                 <th>
-                    <select class="form-control text-center" id="searchBySostavId" name="searchBySostavId" ng-model="searchBySostavId">
-                        <option value="">Состав</option>
-                        <option ng-repeat="sostavi in sostav" value="{{sostavi.sostav_id}}" >
+                    <select class="form-control text-center myDropdown" id="searchBySostavId" name="searchBySostavId" ng-model="searchBySostavId">
+                        <option class="myDropdown" value="">Состав</option>
+                        <option class="myDropdown" ng-repeat="sostavi in sostav" value="{{sostavi.sostav_id}}" >
                         {{sostavi.datum_sostav}}
                         </option>
                     </select>
                 </th>
                 <th>
-                    <select class="form-control text-center" id="searchByStadionId" name="searchByStadionId" ng-model="searchByStadionId">
-                        <option  value="">Стадион</option>
-                        <option ng-repeat="stadioni in stadion" value="{{stadioni.stadion_id}}" >
+                    <select class="form-control text-center myDropdown" id="searchByStadionId" name="searchByStadionId" ng-model="searchByStadionId">
+                        <option class="myDropdown" value="">Стадион</option>
+                        <option class="myDropdown" ng-repeat="stadioni in stadion" value="{{stadioni.stadion_id}}" >
                             {{stadioni.ime}} 
                         </option>
                     </select>
                 </th>
                 <th>
-                    <select class="form-control text-center" id="searchByDatumId" name="searchByDatumId" ng-model="searchByDatumId">
-                        <option value="">Публика</option>
-                        <option ng-repeat="publiki in publika" value="{{publiki.datum_id}}" >
+                    <select class="form-control text-center myDropdown" id="searchByDatumId" name="searchByDatumId" ng-model="searchByDatumId">
+                        <option class="myDropdown"  value="">Публика</option>
+                        <option class="myDropdown"  ng-repeat="publiki in publika" value="{{publiki.datum_id}}" >
                             {{publiki.datum_id}}
                         </option>
                     </select>
                 </th>
-                <th><i class="fa-solid fa-pen"></i>edit</th>
-                <th><i class="fa-solid fa-trash-can"></i>delete</th>
+                <th><i class="fa-solid fa-pen"></i>Измени</th>
+                <th><i class="fa-solid fa-trash-can"></i>Избриши</th>
             </tr>
         </thead>
 
@@ -55,14 +55,12 @@
                 <td>
                     <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModalSostav" ng-click="passPosition($index)"> <i class="fa-solid fa-shirt"></i></button>
                 </td>
-                <td>{{natprevar.ime}}
-                    <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModalStadion" ng-click="passPosition($index)"><i class="fa-solid fa-futbol"></i></button>
-                </td>
+                <td>{{natprevar.ime}}</td>
                 <td>
                     <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModalPublika" ng-click="passPosition($index)"><i class="fa-solid fa-futbol"></i></button>
                 </td>
-                <td title="Edit"><i class="fa-solid fa-pen"></i></td>
-                <td title="Delete {{natprevar.kolo_id}} || {{natprevar.datum}} || {{natprevar.protivnik}}">
+                <td title="Измени"><i class="fa-solid fa-pen"></i></td>
+                <td title="Избриши {{natprevar.kolo_id}} коло || {{natprevar.datum}} || {{natprevar.protivnik}}">
                     <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal" ng-click="passPosition($index)"> <i class="fa-solid fa-trash-can"></i></button>
                 </td>
             </tr>
@@ -215,38 +213,14 @@
           <h4 class="modal-title">Детали за натпреварот на ден {{natprevaruvanje[getIndex].datum}}!!!</h4>
           <i type="button" data-bs-dismiss="modal" class="fa-regular fa-rectangle-xmark fa-2x"></i>
         </div>
-  
+     
         <!-- Modal body -->
         <div class="modal-body myBtn">
             На стадионот {{natprevaruvanje[getIndex].ime}} во {{natprevaruvanje[getIndex].mesto}} против екипата на {{natprevaruvanje[getIndex].protivnik}} кој заврши со 
             резултат {{natprevaruvanje[getIndex].rezultat}}.На натпреварот беа присутни {{natprevaruvanje[getIndex].domashna}} домашна публика и {{natprevaruvanje[getIndex].gostinska}} гостинска публика.
             Распродадени се {{natprevaruvanje[getIndex].karti_rasprodadeni}} карти.
         </div>
-  
-        <!-- Modal footer -->
-        <div class="modal-footer bg-light">
-          <button type="button" class="btn myBtn" data-bs-dismiss="modal">Врати се назад</button> 
-        </div>
-  
-      </div>
-    </div>
-  </div>
 
-  <!-- The Modal Stadion-->
-<div class="modal" id="myModalStadion">
-    <div class="modal-dialog">
-      <div class="modal-content">
-  
-        <!-- Modal Header -->
-        <div class="modal-header myBtn">
-          <h4 class="modal-title">{{natprevaruvanje[getIndex].ime}}</h4>
-          <i type="button" data-bs-dismiss="modal" class="fa-regular fa-rectangle-xmark fa-2x"></i>
-        </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body myBtn myStadion1">
-        </div>
-  
         <!-- Modal footer -->
         <div class="modal-footer bg-light">
           <button type="button" class="btn myBtn" data-bs-dismiss="modal">Врати се назад</button> 

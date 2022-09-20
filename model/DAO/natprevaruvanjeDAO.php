@@ -32,7 +32,6 @@ class NatprevaruvanjeDAO extends Natprevaruvanje
         $sostav_id=parent::getSostavID();
         $stadion_id=parent::getStadionId();
         $datum_id=parent::getDatumId();
-
         $columns_value="$kolo_id,'$datum','$protivnik','$rezultat','$mesto',$sostav_id,$stadion_id,'$datum_id'";
         $this->database ->callStoredProcedure("_insert_natprevaruvanje",$columns_value);  
       }
@@ -60,19 +59,15 @@ class NatprevaruvanjeDAO extends Natprevaruvanje
         $sostav_id=parent::getSostavID();
         $stadion_id=parent::getStadionId();
         $datum_id=parent::getDatumId();
-
         $columns="  datum='$datum',
                     protivnik='$protivnik',
                     rezultat='$rezultat',
                     mesto='$mesto',
                     sostav_id=$sostav_id,
                     stadion_id=$stadion_id,
-                    datum_id='$datum_id'    ";
-
+                    datum_id='$datum_id'";
         $condition="kolo_id=$kolo_id";
-        
-        $this->database->updateRow($this->table_name,$columns,$condition);//class database
-
+        $this->database->updateRow($this->table_name,$columns,$condition);
       }
 
       /**
@@ -80,13 +75,7 @@ class NatprevaruvanjeDAO extends Natprevaruvanje
        */
       public function selectNatprevaruvanje()
       {
-      return $this->database -> selectRow($this->table_name."
-      LEFT JOIN stadion
-	    ON (stadion.stadion_id=natprevaruvanje.stadion_id)
-      LEFT JOIN publika
-	    ON (publika.datum_id=natprevaruvanje.datum_id)
-      LEFT JOIN sostav
-	    ON(sostav.sostav_id=natprevaruvanje.sostav_id)");
+        return $this->database ->selectRowStoredProcedure("_select_natprevaruvanje");
       }
 
 }

@@ -1,40 +1,40 @@
 <div class="table-responsive myView">
     <h3 class="text-center">Стручен штаб</h3>
-    <table class="table table-striped">
+    <table class="table">
         <thead>
             <tr class="text-center">
                 <th>
-                    Број на членот
+                    Број на дрес во стручен штаб
                 </th>
                 <th>
-                    <select class="form-control text-center" name="searchByZalaganje" id="searchByZalaganje" ng-model="searchByZalaganje">
-                        <option value="">Залагање во клубот</option>
-                        <option>nedovolno</option>
-                        <option >dovolno</option>
-                        <option >istaknato</option>
+                    <select class="form-control text-center myDropdown" name="searchByZalaganje" id="searchByZalaganje" ng-model="searchByZalaganje">
+                        <option class="myDropdown" value="">Залагање во клубот</option>
+                        <option class="myDropdown">nedovolno</option>
+                        <option class="myDropdown" >dovolno</option>
+                        <option class="myDropdown" >istaknato</option>
                     </select>
                 </th>
                 <th>
-                    <select class="form-control text-center" name="searchByRabotnaOcenka" id="searchByRabotnaOcenka" ng-model="searchByRabotnaOcenka">
-                        <option value="">Работна оценка</option>
-                        <option>1</option>
-                        <option >2</option>
-                        <option >3</option>
-                        <option >4</option>
-                        <option >5</option>
+                    <select class="form-control text-center myDropdown" name="searchByRabotnaOcenka" id="searchByRabotnaOcenka" ng-model="searchByRabotnaOcenka">
+                        <option class="myDropdown" value="">Работна оценка</option>
+                        <option class="myDropdown">1</option>
+                        <option class="myDropdown" >2</option>
+                        <option class="myDropdown" >3</option>
+                        <option class="myDropdown" >4</option>
+                        <option class="myDropdown" >5</option>
                     </select>
                 </th>
-                <th><i class="fa-solid fa-pen"></i>edit</th>
-                <th><i class="fa-solid fa-trash-can"></i>delete</th>
+                <th><i class="fa-solid fa-pen"></i>Измени</th>
+                <th><i class="fa-solid fa-trash-can"></i>Избриши</th>
             </tr>
         </thead>
         <tbody>
             <tr class="text-center" ng-repeat="upravi in uprava | filter:{zalaganje:searchByZalaganje,rabotna_ocenka:searchByRabotnaOcenka}">
-                <td>{{upravi.dres_id}}</td>
+                <td class="text-start">{{upravi.dres_id}}</td>
                 <td>{{upravi.zalaganje}}</td>
                 <td>{{upravi.rabotna_ocenka}}</td>
-                <td title="Edit "><i class="fa-solid fa-pen"></i></td>
-                <td title="Delete {{upravi.dres_id}} {{upravi.zalaganje}}">
+                <td title="Измени "><i class="fa-solid fa-pen"></i></td>
+                <td title="Избриши {{upravi.dres_id}} {{upravi.zalaganje}}">
                     <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal" ng-click="passPosition($index)"> <i class="fa-solid fa-trash-can"></i></button>
                 </td>
             </tr>

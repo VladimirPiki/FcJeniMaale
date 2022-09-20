@@ -36,7 +36,7 @@ switch($table_name)
         $objIgrachi->setGodini($data[0]->godini);
         $objIgrachi->setPlataDenari($data[0]->plata_denari);
         $objIgrachi->setIncomeId($data[0]->income_id);
-
+        $objIgrachi->setIgrachiImgPath($data[0]->igrachi_img_path);
         //DAO
         $objIgrachi ->insertIgrachi();
 
@@ -89,6 +89,7 @@ switch($table_name)
          $objOutcome ->setKlub($data[0]->klub);
          $objOutcome ->setIznosDenari($data[0]->iznos_denari);
          $objOutcome ->setDresId($data[0]->dres_id);
+         $objOutcome->setOutcomeImgPath($data[0]->outcome_img_path);
          //DAO
         $objOutcome ->insertOutcome();
     break;

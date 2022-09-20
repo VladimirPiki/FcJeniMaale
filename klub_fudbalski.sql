@@ -26,57 +26,53 @@ CREATE TABLE IF NOT EXISTS `igrachi` (
   `prezime` varchar(30) NOT NULL,
   `pozicija` varchar(30) NOT NULL,
   `godini` year(4) NOT NULL,
-  `plata_denari` decimal(20,6) unsigned NOT NULL,
-  `income_id` tinyint(2) unsigned zerofill DEFAULT NULL,
+  `plata_denari` decimal(20,1) unsigned NOT NULL,
+  `income_id` tinyint(2) unsigned NOT NULL,
+  `igrachi_img_path` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`dres_id`),
   KEY `FK_income_igrachi` (`income_id`),
-  CONSTRAINT `FK_income_igrachi` FOREIGN KEY (`income_id`) REFERENCES `income` (`income_id`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=utf8;
+  CONSTRAINT `FK_income_igrachi` FOREIGN KEY (`income_id`) REFERENCES `income` (`income_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=utf8;
 
--- Dumping data for table klub_fudbalski.igrachi: ~42 rows (approximately)
-INSERT INTO `igrachi` (`dres_id`, `ime`, `prezime`, `pozicija`, `godini`, `plata_denari`, `income_id`) VALUES
-	(1, 'Mice', 'Dimov', 'Goalkeeper', '1997', 100000.000000, NULL),
-	(2, 'Blagojche', 'Popovski', 'Centre Back', '1995', 64000.000000, NULL),
-	(3, 'Andrej', 'Nedelkovski', 'Left Back', '1990', 55000.000000, NULL),
-	(4, 'Darko', 'Joshevski', 'Right Back', '1991', 55000.000000, NULL),
-	(5, 'Hristian', 'Risteski', 'Centre Back', '1999', 189500.000000, NULL),
-	(6, 'Vladimir', 'Krsteski', 'Defensive Midfielder', '2000', 150000.000000, NULL),
-	(7, 'Kire', 'Lazarov', 'Center Midfielder', '1997', 90000.000000, NULL),
-	(8, 'Darko', 'Risteski', 'Attacking Midfilder', '1990', 65000.000000, NULL),
-	(9, 'Borche', 'Manevski', 'Center Forward', '1988', 65000.000000, NULL),
-	(10, 'Darko', 'Krstevski', 'Left Forward', '2006', 32000.000000, NULL),
-	(11, 'Andrej', 'Markovski', 'Right Forward', '2000', 120000.000000, NULL),
-	(12, 'Aleksandar', 'Markoski', 'Goalkeeper', '2001', 20000.000000, NULL),
-	(13, 'Nikola', 'Piskacev', 'Left Back', '1980', 35000.000000, NULL),
-	(14, 'Jove', 'Nikolov', 'Centre Back', '2008', 14000.000000, NULL),
-	(15, 'Jove', 'Nikolovski', 'Right Back', '1997', 29000.000000, NULL),
-	(16, 'Mile', 'Poposki', 'Defensive Midfielder', '1982', 10000.000000, NULL),
-	(17, 'Jorgo', 'Popovski', 'Center Midfielder', '1985', 19000.000000, NULL),
-	(18, 'Jordan', 'Mitev', 'Attacking Midfielder', '1985', 15000.000000, NULL),
-	(19, 'Antimon', 'Krsteski', 'Goalkeeper', '1967', 18000.000000, NULL),
-	(20, 'Cristiano', 'Ronaldo', 'Center Forward', '1997', 565000.000000, NULL),
-	(21, 'Vlade', 'Krstevski', 'Left Forward', '1997', 39000.000000, NULL),
-	(22, 'Deni', 'Popovski', 'Centre Back', '2007', 25000.000000, NULL),
-	(23, 'Hristijan', 'Dragarski', 'Right Forward', '1991', 20000.000000, NULL),
-	(24, 'Darko', 'Joshev', 'Physiotherapist', '1998', 45000.000000, NULL),
-	(25, 'Hristi', 'Risteski', 'Condition Coach', '1990', 24000.000000, NULL),
-	(26, 'Viktor', 'Koteski', 'Deputy Coach', '1979', 50000.000000, NULL),
-	(27, 'Stefan', 'Ristevski', 'Coach', '1977', 90000.000000, NULL),
-	(28, 'Darko', 'Risteski', 'Sports Director', '1980', 120000.000000, NULL),
-	(30, 'Trajan', 'Rizovski', 'Left Back', '1995', 34000.000000, 02),
-	(31, 'Najdo', 'Sikijovski', 'Right Winger', '2006', 34200.000000, 04),
-	(33, 'Borche', 'Stojanovski', 'Left Winger', '2007', 42678.000000, 05),
-	(34, 'Boro', 'Stojanov', 'Center Midfielder', '1998', 22385.000000, 06),
-	(69, 'Vladimir', 'Krstevski', 'Director', '1967', 655000.000000, NULL),
-	(77, 'Mice', 'Gacov', 'Right Back', '1998', 15000.000000, 03),
-	(78, 'Darko', 'Krstevski', 'Left back', '2000', 14500.000000, 72),
-	(79, 'Hristijan', 'Ristevski', 'Center back', '1998', 40000.000000, NULL),
-	(80, 'robe', 'ristevski', 'Left back', '0000', 111111.000000, NULL),
-	(81, 'robe', 'ristevski', 'Left back', '0000', 111111.000000, NULL),
-	(82, 'Vlad', 'Piki', 'Center Back', '0000', 11111111.000000, NULL),
-	(83, 'Stojan', 'Dimov', 'Center Forward', '1990', 20000.000000, 01),
-	(89, 'Jorgo', 'Jorgov', 'Center Forward', '1999', 20000.000000, NULL),
-	(93, 'Vlado', 'Pavlov', 'Coach', '1990', 20000.000000, 74);
+-- Dumping data for table klub_fudbalski.igrachi: ~37 rows (approximately)
+INSERT INTO `igrachi` (`dres_id`, `ime`, `prezime`, `pozicija`, `godini`, `plata_denari`, `income_id`, `igrachi_img_path`) VALUES
+	(1, 'Aleksandar', 'Dimovski', 'Goalkeeper', '1997', 100000.0, 0, 'golman.jpg'),
+	(2, 'Blagojche', 'Petrevski', 'Centre Back', '1995', 64000.0, 0, 'dugal.jpg'),
+	(3, 'Dragan', 'Dumevski', 'Left Back', '1990', 55000.0, 0, 'dragan.jpg'),
+	(4, 'Petar', 'Ristevski', 'Right Back', '1991', 55000.0, 0, 'petar.jpg'),
+	(5, 'Hristian', 'Ristevski', 'Centre Back', '1999', 189500.0, 0, 'teri.jpg'),
+	(6, 'Vladimir', 'Krstevski', 'Defensive Midfielder', '2000', 150000.0, 0, 'jas.jpg'),
+	(7, 'Trajche', 'Georgievski', 'Center Midfielder', '1997', 90000.0, 0, 'trajce.jpg'),
+	(8, 'Nikola', 'Piskacev', 'Attacking Midfilder', '1990', 65000.0, 0, 'piskac.jpg'),
+	(9, 'Vasko', 'Naumovski', 'Center Forward', '1988', 65000.0, 0, 'vasko.jpg'),
+	(10, 'Hajdin', 'Mustafai', 'Left Forward', '2006', 32000.0, 0, 'hajdin.jpg'),
+	(11, 'Andrej', 'Mitrevski', 'Right Forward', '2000', 120000.0, 0, 'skole.jpg'),
+	(12, 'Aleksandar', 'Radevski', 'Goalkeeper', '2001', 20000.0, 0, 'golman.jpg'),
+	(13, 'Filip', 'Zirov', 'Left Back', '1980', 35000.0, 0, 'zirov.jpg'),
+	(14, 'Marijan', 'Zlatevski', 'Centre Back', '2008', 14000.0, 0, 'marijan.jpg'),
+	(15, 'Pece', 'Vasilevski', 'Right Back', '1997', 29000.0, 0, 'dres3.jpg'),
+	(16, 'Boban', 'Bogdanovski', 'Right Back', '1982', 10000.0, 0, 'dres3.jpg'),
+	(17, 'Bobi', 'Dumevski', 'Center Midfielder', '1985', 19000.0, 0, 'dres3.jpg'),
+	(18, 'Andrej', 'Lozanovski', 'Attacking Midfielder', '1985', 15000.0, 0, 'andrejL.jpg'),
+	(19, 'Antimon', 'Krstevski', 'Goalkeeper', '1967', 18000.0, 0, 'dres3.jpg'),
+	(20, 'Mihajlo', 'Vangelov', 'Center Forward', '1997', 565000.0, 0, 'doktoro.jpg'),
+	(21, 'Vlade', 'Krstevski', 'Left Forward', '1997', 39000.0, 0, 'dres3.jpg'),
+	(22, 'Deni', 'Popovski', 'Centre Back', '2007', 25000.0, 0, 'dres3.jpg'),
+	(23, 'Mile', 'Taskovski', 'Right Forward', '1991', 20000.0, 0, 'mile.jpg'),
+	(24, 'Darko', 'Joshev', 'Physiotherapist', '1998', 45000.0, 0, 'dres3.jpg'),
+	(25, 'Hristi', 'Risteski', 'Condition Coach', '1990', 24000.0, 0, 'dres3.jpg'),
+	(26, 'Viktor', 'Koteski', 'Deputy Coach', '1979', 50000.0, 0, 'dres3.jpg'),
+	(27, 'Stefan', 'Ristevski', 'Coach', '1977', 90000.0, 0, 'dres3.jpg'),
+	(28, 'Darko', 'Risteski', 'Sports Director', '1980', 120000.0, 0, 'dres3.jpg'),
+	(30, 'Trajan', 'Rizovski', 'Left Back', '1995', 34000.0, 2, 'dres3.jpg'),
+	(31, 'Najdo', 'Sikijovski', 'Right Winger', '2006', 34200.0, 4, 'dres3.jpg'),
+	(32, 'Goran', 'Pandev', 'Center Forward', '1978', 45000.0, 75, 'dres3.jpg'),
+	(33, 'Borche', 'Stojanovski', 'Left Winger', '2007', 42678.0, 5, 'dres3.jpg'),
+	(34, 'Boro', 'Stojanov', 'Center Midfielder', '1998', 22385.0, 6, 'dres3.jpg'),
+	(69, 'Vladimir', 'Krstevski', 'Director', '1967', 655000.0, 0, 'dres3.jpg'),
+	(77, 'Mice', 'Gacov', 'Right Back', '1998', 15000.0, 3, 'dres3.jpg'),
+	(83, 'Stojan', 'Dimov', 'Center Forward', '1990', 20000.0, 1, 'dres3.jpg'),
+	(93, 'Vlado', 'Pavlov', 'Coach', '1990', 20000.0, 74, 'dres3.jpg');
 
 -- Dumping structure for table klub_fudbalski.income
 CREATE TABLE IF NOT EXISTS `income` (
@@ -86,22 +82,21 @@ CREATE TABLE IF NOT EXISTS `income` (
   `pozicija` varchar(30) NOT NULL,
   `godini` year(4) NOT NULL,
   `klub` varchar(50) DEFAULT 'nema klub',
-  `iznos_denari` decimal(20,6) NOT NULL,
+  `iznos_denari` decimal(20,1) NOT NULL,
+  `income_img_path` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`income_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=utf8;
 
--- Dumping data for table klub_fudbalski.income: ~8 rows (approximately)
-INSERT INTO `income` (`income_id`, `ime`, `prezime`, `pozicija`, `godini`, `klub`, `iznos_denari`) VALUES
-	(1, 'Stojan', 'Dimov', 'Center Forward', '1990', 'Fc Poesevo', 67000.000000),
-	(2, 'Trajan', 'Rizovski', 'Left Back', '1995', 'Fc Budimerci United', 100000.000000),
-	(3, 'Mice', 'Gacov', 'Right Back', '1998', 'Fc Budimerci United', 150000.000000),
-	(4, 'Najdo', 'Sikijovski', 'Right Winger', '2006', 'Fc Gradeshnica United', 550000.000000),
-	(5, 'Borche', 'Stojanoski', 'Left Winger', '2007', 'Fc Pelister Bitola', 230000.000000),
-	(6, 'Boro', 'Stojanov', 'Center Midfielder', '1998', 'Fc Pelister Bitola', 1300000.000000),
-	(71, 'Vladimir', 'Krstevski', 'Goalkeeper', '1997', 'Fc Pelister', 10000.000000),
-	(72, 'Darko', 'Krstevski', 'Left back', '2000', 'Fc Manchester United', 120000.000000),
-	(73, 'andrej', 'krstev', 'goalkeeper', '1998', 'Fc Manchester United', 500000.000000),
-	(74, 'Vlado', 'Pavlov', 'Coach', '1990', 'free agent', 300000.000000);
+-- Dumping data for table klub_fudbalski.income: ~9 rows (approximately)
+INSERT INTO `income` (`income_id`, `ime`, `prezime`, `pozicija`, `godini`, `klub`, `iznos_denari`, `income_img_path`) VALUES
+	(1, 'Stojan', 'Dimov', 'Center Forward', '1990', 'Fc Poesevo', 67000.0, 'dres1.jpg'),
+	(2, 'Trajan', 'Rizovski', 'Left Back', '1995', 'Fc Budimerci United', 100000.0, 'dres1.jpg'),
+	(3, 'Mice', 'Gacov', 'Right Back', '1998', 'Fc Budimerci United', 150000.0, 'dres1.jpg'),
+	(4, 'Najdo', 'Sikijovski', 'Right Winger', '2006', 'Fc Gradeshnica United', 550000.0, 'dres1.jpg'),
+	(5, 'Borche', 'Stojanoski', 'Left Winger', '2007', 'Fc Pelister Bitola', 230000.0, 'dres1.jpg'),
+	(6, 'Boro', 'Stojanov', 'Center Midfielder', '1998', 'Fc Pelister Bitola', 1300000.0, 'dres1.jpg'),
+	(74, 'Vlado', 'Pavlov', 'Coach', '1990', 'free agent', 300000.0, 'dres1.jpg'),
+	(75, 'Goran', 'Pandev', 'Center Forward', '1978', 'Genova', 50000.0, 'dres1.jpg');
 
 -- Dumping structure for table klub_fudbalski.natprevaruvanje
 CREATE TABLE IF NOT EXISTS `natprevaruvanje` (
@@ -110,102 +105,97 @@ CREATE TABLE IF NOT EXISTS `natprevaruvanje` (
   `protivnik` varchar(30) NOT NULL,
   `rezultat` varchar(30) NOT NULL,
   `mesto` varchar(50) NOT NULL,
-  `sostav_id` tinyint(2) unsigned DEFAULT NULL,
+  `sostav_id` tinyint(2) unsigned NOT NULL,
   `stadion_id` tinyint(2) unsigned DEFAULT NULL,
   `datum_id` date DEFAULT NULL,
+  `Column 9` int(11) DEFAULT NULL,
   PRIMARY KEY (`kolo_id`),
   UNIQUE KEY `datum` (`datum`,`protivnik`),
   KEY `FK_natprevaruvanje` (`sostav_id`),
-  KEY `FK_stadion` (`stadion_id`),
   KEY `FK_publika` (`datum_id`),
+  KEY `FK_stadion` (`stadion_id`),
   CONSTRAINT `FK_natprevaruvanje` FOREIGN KEY (`sostav_id`) REFERENCES `sostav` (`sostav_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `FK_publika` FOREIGN KEY (`datum_id`) REFERENCES `publika` (`datum_id`) ON UPDATE CASCADE,
-  CONSTRAINT `FK_stadion` FOREIGN KEY (`stadion_id`) REFERENCES `stadion` (`stadion_id`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8;
+  CONSTRAINT `FK_publika` FOREIGN KEY (`datum_id`) REFERENCES `publika` (`datum_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_stadion` FOREIGN KEY (`stadion_id`) REFERENCES `stadion` (`stadion_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
--- Dumping data for table klub_fudbalski.natprevaruvanje: ~27 rows (approximately)
-INSERT INTO `natprevaruvanje` (`kolo_id`, `datum`, `protivnik`, `rezultat`, `mesto`, `sostav_id`, `stadion_id`, `datum_id`) VALUES
-	(1, '2021-09-05 17:00:00', 'Fc Mladost', 'W-3:1', 'Tumbe Kafe', 1, 1, '2021-09-05'),
-	(2, '2021-09-12 17:00:00', 'Fc Pelagonija', 'W-0:1', 's.Dobromiri', 2, 0, NULL),
-	(3, '2021-09-19 16:00:00', 'Fc KSK', 'D-0:0', 'Tumbe Kafe', 3, 1, '2021-09-19'),
-	(4, '2021-09-26 16:00:00', 'Fc Pelister TM', 'W-0:6', 's.Trnovo Magarevo', 4, 0, NULL),
-	(5, '2021-10-03 15:00:00', 'Fc Crna Reka', 'W-3:0', 'Petar Miloshevski', 5, 2, '2021-10-03'),
-	(6, '2021-10-10 15:00:00', 'Fc Old Boys', 'D-0:0', 's.Poesevo', 6, 0, NULL),
-	(7, '2021-10-17 14:00:00', 'Fc Chagor', 'W-4:0', 'Pavel Shatev', 7, 3, '2021-10-17'),
-	(8, '2021-10-24 13:30:00', 'Fc Pelagonija', 'W-0:5', 's.Trap', 8, 0, NULL),
-	(9, '2021-10-31 13:30:00', 'Fc Svetlost', 'W-1:0', 'Tumbe Kafe', 9, 1, '2021-10-31'),
-	(10, '2022-02-27 13:00:00', 'Fc Mladost', 'L-3:2', 's.Dedebalci', 10, 0, NULL),
-	(11, '2022-03-06 14:00:00', 'Fc Pelagonija', 'L-2:4', 'Pomoshno 2', 11, 6, '2022-03-06'),
-	(12, '2022-03-13 14:30:00', 'Fc KSK', 'D-1:1', 's.Krklino', 12, 0, NULL),
-	(13, '2022-03-20 15:00:00', 'Fc Pelister TM', 'D-1:1', 'Pomoshno 1', 13, 5, '2022-03-20'),
-	(14, '2022-03-27 15:00:00', 'Fc Crna Reka', 'L-3:1', 's.Charlija', 14, 0, NULL),
-	(15, '2022-04-03 15:30:00', 'Fc Old boys', 'N-1:1', 'Kjumurno', 15, 4, '2022-04-03'),
-	(16, '2022-04-10 16:00:00', 'Fc Chagor', 'W-1:3', 's.Lopatica', 16, 0, NULL),
-	(17, '2022-04-17 16:00:00', 'Fc Pelagonija', 'W-6:2', 'Petar Miloshevski', 17, 2, '2022-04-17'),
-	(18, '2022-04-24 16:00:00', 'Fc Svetlost', 'W-0:2', 's.Kukurecani', 18, 0, NULL),
-	(19, '2022-05-01 17:00:00', 'Fc Pobeda Ivanjevci ', 'W-(D-1:1Penatly 5:4)', 'Tumbe Kafe', 19, 1, '2022-05-01'),
-	(20, '2022-05-15 17:00:00', 'Fc Kravari', 'L-(D-1:1Penatly 6:5)', 'Tumbe Kafe', 20, 1, '2022-05-15'),
-	(21, '2023-02-01 13:00:00', 'Fc Partizan', 'W-3:1', 'Tumbe kafe', 21, 1, '2023-02-01'),
-	(22, '2022-08-31 17:00:00', 'OFK Bitola', 'W-3:1', 'Tumbe Kafe', 22, 1, '2022-08-30'),
-	(23, '2022-08-16 15:00:00', 'OFK Bitola', 'W-3:1', 'Tumbe Kafe', 23, 1, '2022-08-16'),
-	(24, '2022-09-02 17:30:00', 'Karaorman', 'L-0:2', 'Tumbe Kafe', 24, 1, '2022-09-02'),
-	(25, '2022-08-22 17:30:00', 'Gorno Orizari', 'W-3:1', 'Tumbe Kafe', 25, 1, '2022-08-21'),
-	(26, '2022-08-25 12:22:00', 'Fk Mogila', 'L-3:0', 'Tumbe Kafe', 17, 5, '2022-08-16'),
-	(27, '2022-08-26 17:08:00', 'Real', 'L-0:2', 's.Mogila', 14, 1, '2022-08-21');
+-- Dumping data for table klub_fudbalski.natprevaruvanje: ~23 rows (approximately)
+INSERT INTO `natprevaruvanje` (`kolo_id`, `datum`, `protivnik`, `rezultat`, `mesto`, `sostav_id`, `stadion_id`, `datum_id`, `Column 9`) VALUES
+	(1, '2021-09-05 17:00:00', 'Fc Mladost', 'W-3:1', 'Bitola', 1, 1, '2021-09-05', NULL),
+	(2, '2021-09-12 17:00:00', 'Fc Pelagonija', 'W-0:1', 's.Dobromiri', 2, 7, '2021-09-12', NULL),
+	(3, '2021-09-19 16:00:00', 'Fc KSK', 'D-0:0', 'Bitola', 3, 1, '2021-09-19', NULL),
+	(4, '2021-09-26 16:00:00', 'Fc Pelister TM', 'W-0:6', 's.Trnovo Magarevo', 4, 8, '2021-09-26', NULL),
+	(5, '2021-10-03 15:00:00', 'Fc Crna Reka', 'W-3:0', 'Bitola', 5, 2, '2021-10-03', NULL),
+	(6, '2021-10-10 15:00:00', 'Fc Old Boys', 'D-0:0', 's.Poesevo', 6, 9, '2021-10-10', NULL),
+	(7, '2021-10-17 14:00:00', 'Fc Chagor', 'W-4:0', 'Bitola', 7, 3, '2021-10-17', NULL),
+	(8, '2021-10-24 13:30:00', 'Fc Pelagonija', 'W-0:5', 's.Trap', 8, 10, '2021-10-24', NULL),
+	(9, '2021-10-31 13:30:00', 'Fc Svetlost', 'W-1:0', 'Bitola', 9, 1, '2021-10-31', NULL),
+	(10, '2022-02-27 13:00:00', 'Fc Mladost', 'L-3:2', 's.Dedebalci', 10, 11, '2022-02-27', NULL),
+	(11, '2022-03-06 14:00:00', 'Fc Pelagonija', 'L-2:4', 'Bitola', 11, 6, '2022-03-06', NULL),
+	(12, '2022-03-13 14:30:00', 'Fc KSK', 'D-1:1', 's.Krklino', 12, 12, '2022-03-13', NULL),
+	(13, '2022-03-20 15:00:00', 'Fc Pelister TM', 'D-1:1', 'Bitola', 13, 5, '2022-03-20', NULL),
+	(14, '2022-03-27 15:00:00', 'Fc Crna Reka', 'L-3:1', 's.Charlija', 14, 13, '2022-03-27', NULL),
+	(15, '2022-04-03 15:30:00', 'Fc Old boys', 'N-1:1', 'Bitola', 15, 4, '2022-04-03', NULL),
+	(16, '2022-04-10 16:00:00', 'Fc Chagor', 'W-1:3', 's.Lopatica', 16, 14, '2022-04-10', NULL),
+	(17, '2022-04-17 16:00:00', 'Fc Pelagonija', 'W-6:2', 'Bitola', 17, 2, '2022-04-17', NULL),
+	(18, '2022-04-24 16:00:00', 'Fc Svetlost', 'W-0:2', 's.Kukurecani', 18, 15, '2022-04-24', NULL),
+	(19, '2022-05-01 17:00:00', 'Fc Pobeda Ivanjevci ', 'W-(D-1:1Penatly 5:4)', 'Bitola', 19, 1, '2022-05-01', NULL),
+	(20, '2022-05-15 17:00:00', 'Fc Kravari', 'L-(D-1:1Penatly 6:5)', 'Bitola', 20, 1, '2022-05-15', NULL);
 
 -- Dumping structure for table klub_fudbalski.outcome
 CREATE TABLE IF NOT EXISTS `outcome` (
   `outcome_id` tinyint(2) unsigned NOT NULL AUTO_INCREMENT,
   `klub` varchar(50) NOT NULL,
-  `iznos_denari` decimal(20,6) unsigned NOT NULL,
+  `iznos_denari` decimal(20,1) unsigned NOT NULL,
   `dres_id` tinyint(2) unsigned zerofill DEFAULT NULL,
+  `outcome_img_path` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`outcome_id`),
   KEY `FK_outcome` (`dres_id`),
-  CONSTRAINT `FK_outcome` FOREIGN KEY (`dres_id`) REFERENCES `igrachi` (`dres_id`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8;
+  CONSTRAINT `FK_outcome` FOREIGN KEY (`dres_id`) REFERENCES `igrachi` (`dres_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=utf8;
 
--- Dumping data for table klub_fudbalski.outcome: ~9 rows (approximately)
-INSERT INTO `outcome` (`outcome_id`, `klub`, `iznos_denari`, `dres_id`) VALUES
-	(1, 'Fc Pelister Bitola', 100000.000000, 16),
-	(2, 'Fc Pelister Bitola', 167000.000000, 20),
-	(3, 'Fc Old Boys', 565000.000000, 22),
-	(4, 'Fc Rabotnik Bitola', 123000.000000, 17),
-	(5, 'Fc Valladolid', 823000.000000, 18),
-	(72, 'Fc Manchester United', 500000.000000, 01),
-	(73, 'city', 1111111.000000, 19),
-	(74, 'free agent', 1000000.000000, 89),
-	(75, 'free agent', 1000000.000000, 69);
+-- Dumping data for table klub_fudbalski.outcome: ~7 rows (approximately)
+INSERT INTO `outcome` (`outcome_id`, `klub`, `iznos_denari`, `dres_id`, `outcome_img_path`) VALUES
+	(1, 'Fc Pelister Bitola', 100000.0, 16, 'dres2.jpg'),
+	(2, 'Fc Pelister Bitola', 167000.0, 20, 'dres2.jpg'),
+	(3, 'Fc Old Boys', 565000.0, 22, 'dres2.jpg'),
+	(4, 'Fc Rabotnik Bitola', 123000.0, 17, 'dres2.jpg'),
+	(72, 'Fc Manchester United', 500000.0, 01, 'dres2.jpg'),
+	(75, 'free agent', 1000000.0, 69, 'dres2.jpg'),
+	(77, 'Vlade', 111.0, 02, 'dres2.jpg');
 
 -- Dumping structure for table klub_fudbalski.publika
 CREATE TABLE IF NOT EXISTS `publika` (
   `datum_id` date NOT NULL,
-  `domashna` smallint(5) unsigned NOT NULL,
+  `domashna` smallint(5) unsigned DEFAULT NULL,
   `gostinska` smallint(5) unsigned DEFAULT NULL,
-  `karti_rasprodadeni` smallint(5) unsigned NOT NULL,
+  `karti_rasprodadeni` smallint(5) unsigned DEFAULT NULL,
   PRIMARY KEY (`datum_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Dumping data for table klub_fudbalski.publika: ~19 rows (approximately)
 INSERT INTO `publika` (`datum_id`, `domashna`, `gostinska`, `karti_rasprodadeni`) VALUES
 	('2021-09-05', 5900, 124, 5078),
+	('2021-09-12', 1000, 20, 0),
 	('2021-09-19', 1430, 0, 1400),
+	('2021-09-26', 4000, 100, 0),
 	('2021-10-03', 870, 211, 800),
+	('2021-10-10', 3330, 120, 0),
 	('2021-10-17', 650, 40, 600),
+	('2021-10-24', 2230, 140, 0),
 	('2021-10-31', 2000, 200, 2000),
+	('2022-02-27', 2630, 149, 0),
 	('2022-03-06', 200, 0, 200),
+	('2022-03-13', 1630, 89, 0),
 	('2022-03-20', 540, 0, 500),
+	('2022-03-27', 1880, 0, 0),
 	('2022-04-03', 790, 50, 700),
+	('2022-04-10', 2000, 120, 0),
 	('2022-04-17', 1590, 450, 1500),
+	('2022-04-24', 2100, 220, 0),
 	('2022-05-01', 1250, 34, 1177),
 	('2022-05-04', 10, 10, 10),
-	('2022-05-15', 2497, 674, 1567),
-	('2022-08-16', 400, 0, 250),
-	('2022-08-21', 500, 0, 500),
-	('2022-08-30', 5000, 300, 4900),
-	('2022-09-02', 3000, 290, 2900),
-	('2022-12-31', 1000, 1000, 1000),
-	('2023-02-01', 3900, 334, 3078),
-	('2025-05-05', 20, 20, 20);
+	('2022-05-15', 2497, 674, 1567);
 
 -- Dumping structure for table klub_fudbalski.sostav
 CREATE TABLE IF NOT EXISTS `sostav` (
@@ -259,8 +249,8 @@ CREATE TABLE IF NOT EXISTS `sostav` (
   CONSTRAINT `Centre-Back2` FOREIGN KEY (`centre_back2`) REFERENCES `igrachi` (`dres_id`) ON UPDATE CASCADE,
   CONSTRAINT `Coach` FOREIGN KEY (`coach`) REFERENCES `igrachi` (`dres_id`) ON UPDATE CASCADE,
   CONSTRAINT `Defensive-Midfielder` FOREIGN KEY (`defensive_midfielder`) REFERENCES `igrachi` (`dres_id`) ON UPDATE CASCADE,
-  CONSTRAINT `FK_sostav_datum` FOREIGN KEY (`datum_sostav`) REFERENCES `natprevaruvanje` (`datum`) ON UPDATE CASCADE,
-  CONSTRAINT `FK_sostav_kolo_id` FOREIGN KEY (`sostav_id`) REFERENCES `natprevaruvanje` (`kolo_id`) ON UPDATE CASCADE,
+  CONSTRAINT `FK_sostav_datum` FOREIGN KEY (`datum_sostav`) REFERENCES `natprevaruvanje` (`datum`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_sostav_kolo_id` FOREIGN KEY (`sostav_id`) REFERENCES `natprevaruvanje` (`kolo_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `Goalkeeper` FOREIGN KEY (`goalkeeper`) REFERENCES `igrachi` (`dres_id`) ON UPDATE CASCADE,
   CONSTRAINT `Left-Back` FOREIGN KEY (`left_back`) REFERENCES `igrachi` (`dres_id`) ON UPDATE CASCADE,
   CONSTRAINT `Left-Forward` FOREIGN KEY (`left_forward`) REFERENCES `igrachi` (`dres_id`) ON UPDATE CASCADE,
@@ -272,9 +262,9 @@ CREATE TABLE IF NOT EXISTS `sostav` (
   CONSTRAINT `Reserve6` FOREIGN KEY (`reserve6`) REFERENCES `igrachi` (`dres_id`) ON UPDATE CASCADE,
   CONSTRAINT `Right-Back` FOREIGN KEY (`right_back`) REFERENCES `igrachi` (`dres_id`) ON UPDATE CASCADE,
   CONSTRAINT `Right-Forward` FOREIGN KEY (`right_forward`) REFERENCES `igrachi` (`dres_id`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
--- Dumping data for table klub_fudbalski.sostav: ~24 rows (approximately)
+-- Dumping data for table klub_fudbalski.sostav: ~22 rows (approximately)
 INSERT INTO `sostav` (`sostav_id`, `datum_sostav`, `coach`, `goalkeeper`, `centre_back1`, `centre_back2`, `right_back`, `left_back`, `defensive_midfielder`, `center_midfielder`, `attacking_midfielder`, `right_forward`, `left_forward`, `center_forward`, `reserve1`, `reserve2`, `reserve3`, `reserve4`, `reserve5`, `reserve6`, `reserve7`) VALUES
 	(1, '2021-09-05 17:00:00', 27, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23),
 	(2, '2021-09-12 17:00:00', 27, 1, 2, 5, 15, 3, 6, 7, 8, 11, 10, 9, 19, 14, 4, 17, 20, 21, 23),
@@ -295,13 +285,7 @@ INSERT INTO `sostav` (`sostav_id`, `datum_sostav`, `coach`, `goalkeeper`, `centr
 	(17, '2022-04-17 16:00:00', 27, 19, 2, 5, 4, 3, 6, 7, 8, 11, 21, 9, 1, 14, 15, 17, 20, 10, 23),
 	(18, '2022-04-24 16:00:00', 27, 12, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23),
 	(19, '2022-05-01 17:00:00', 69, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23),
-	(20, '2022-05-15 17:00:00', 69, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23),
-	(21, '2023-02-01 13:00:00', 27, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23),
-	(22, '2022-08-31 17:00:00', 27, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23),
-	(23, '2022-08-16 15:00:00', 27, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 17, 18, 20, 21, 23, 15),
-	(24, '2022-09-02 17:30:00', 27, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 17, 14, 15, 20, 21, 23),
-	(25, '2022-08-22 17:30:00', 27, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-	(27, '2022-08-26 17:08:00', 2, 2, 17, 13, 17, 15, 18, 15, 15, 13, 11, 13, 16, 16, 17, 16, 16, 19, 17);
+	(20, '2022-05-15 17:00:00', 69, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23);
 
 -- Dumping structure for table klub_fudbalski.stadion
 CREATE TABLE IF NOT EXISTS `stadion` (
@@ -310,9 +294,9 @@ CREATE TABLE IF NOT EXISTS `stadion` (
   `adresa` varchar(50) NOT NULL,
   `kapacitet` smallint(5) unsigned NOT NULL,
   PRIMARY KEY (`stadion_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8;
 
--- Dumping data for table klub_fudbalski.stadion: ~7 rows (approximately)
+-- Dumping data for table klub_fudbalski.stadion: ~16 rows (approximately)
 INSERT INTO `stadion` (`stadion_id`, `ime`, `adresa`, `kapacitet`) VALUES
 	(1, 'Tumbe Kafe', 'Ulica Tumbe kafe bb', 7000),
 	(2, 'Petar Miloshevski', 'Ulica 16ta bb', 5000),
@@ -320,7 +304,15 @@ INSERT INTO `stadion` (`stadion_id`, `ime`, `adresa`, `kapacitet`) VALUES
 	(4, 'Kjumurno', 'Setaliste bb', 1564),
 	(5, 'Pomoshno 1', 'Ulica Tumbe kafe bb', 635),
 	(6, 'FFM', 'Kiril i Metodij bb', 295),
-	(74, 'Kajnak Arena', 's.Gorno Orizari', 500);
+	(7, 'Dobromiri Stadion', 's.Dobromiri', 5000),
+	(8, 'Trnovo Magarevo Stadion', 's.Trnovo Magarevo', 4000),
+	(9, 'Poesevo Stadium', 's.Poesevo', 4400),
+	(10, 'Trap Stadium', 's.Trap', 2500),
+	(11, 'Dedebalci Stadium', 's.Dedebalci', 6900),
+	(12, 'Krklino Stadium', 's.Krklino', 2200),
+	(13, 's.Charlija Stadium', 's.Charlija', 5400),
+	(14, 'Lopatica Stadium', 's.Lopatica', 5700),
+	(15, 'Kukurecani Stadium', 's.Kukurecani', 4790);
 
 -- Dumping structure for table klub_fudbalski.uprava
 CREATE TABLE IF NOT EXISTS `uprava` (
@@ -329,18 +321,18 @@ CREATE TABLE IF NOT EXISTS `uprava` (
   `rabotna_ocenka` enum('1','2','3','4','5') DEFAULT NULL,
   PRIMARY KEY (`dres_id`),
   KEY `FK_uprava` (`dres_id`),
-  CONSTRAINT `FK_uprava` FOREIGN KEY (`dres_id`) REFERENCES `igrachi` (`dres_id`) ON UPDATE CASCADE
+  CONSTRAINT `FK_uprava` FOREIGN KEY (`dres_id`) REFERENCES `igrachi` (`dres_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=92 DEFAULT CHARSET=utf8;
 
--- Dumping data for table klub_fudbalski.uprava: ~5 rows (approximately)
+-- Dumping data for table klub_fudbalski.uprava: ~7 rows (approximately)
 INSERT INTO `uprava` (`dres_id`, `zalaganje`, `rabotna_ocenka`) VALUES
+	(1, 'nedovolno', '1'),
 	(24, 'dovolno', '3'),
 	(25, 'istaknato', '5'),
 	(26, 'istaknato', '4'),
 	(27, 'nedovolno', '1'),
 	(28, 'dovolno', '3'),
-	(69, 'nedovolno', '1'),
-	(79, 'dovolno', '3');
+	(69, 'nedovolno', '1');
 
 -- Dumping structure for procedure klub_fudbalski._delete_igrachi
 DELIMITER //
@@ -433,33 +425,35 @@ DELIMITER ;
 -- Dumping structure for procedure klub_fudbalski._insert_igrachi
 DELIMITER //
 CREATE PROCEDURE `_insert_igrachi`(
-	IN `dres_id_param` TINYINT(2),
+	IN `dres_id_param` TINYINT,
 	IN `ime_pram` VARCHAR(15),
 	IN `prezime_param` VARCHAR(30),
 	IN `pozicija_param` VARCHAR(15),
 	IN `godini_param` YEAR,
-	IN `plata_denari_param` DECIMAL(20,6)
+	IN `plata_denari_param` DECIMAL(20,6),
+	IN `income_id_param` TINYINT,
+	IN `igrachi_img_path_param` VARCHAR(255)
 )
 BEGIN
-INSERT INTO igrachi(dres_id,ime,prezime,pozicija,godini,plata_denari)
-VALUES(dres_id_param,ime_pram,prezime_param,pozicija_param,godini_param,plata_denari_param);
+INSERT INTO igrachi(dres_id,ime,prezime,pozicija,godini,plata_denari,income_id,igrachi_img_path)
+VALUES(dres_id_param,ime_pram,prezime_param,pozicija_param,godini_param,plata_denari_param,income_id_param,igrachi_img_path_param);
 END//
 DELIMITER ;
 
 -- Dumping structure for procedure klub_fudbalski._insert_income
 DELIMITER //
 CREATE PROCEDURE `_insert_income`(
-	IN `income_id_param` TINYINT(2),
 	IN `ime_param` VARCHAR(15),
 	IN `prezime_param` VARCHAR(30),
 	IN `pozicija_param` VARCHAR(15),
 	IN `godini_param` YEAR,
 	IN `klub_param` VARCHAR(50),
-	IN `iznos_denari_param` DECIMAL(20,6)
+	IN `iznos_denari_param` DECIMAL(20,6),
+	IN `income_img_path_param` VARCHAR(255)
 )
 BEGIN
-INSERT INTO income(income_id,ime,prezime,pozicija,godini,klub,iznos_denari)
-VALUES(income_id_param,ime_param,prezime_param,pozicija_param,godini_param,klub_param,iznos_denari_param);
+INSERT INTO income(ime,prezime,pozicija,godini,klub,iznos_denari,income_img_path)
+VALUES(ime_param,prezime_param,pozicija_param,godini_param,klub_param,iznos_denari_param,income_img_path_param);
 END//
 DELIMITER ;
 
@@ -468,26 +462,30 @@ DELIMITER //
 CREATE PROCEDURE `_insert_natprevaruvanje`(
 	IN `kolo_id_param` TINYINT(2),
 	IN `datum_param` DATETIME,
-	IN `protivnik_param` VARCHAR(30),
-	IN `rezultat_param` VARCHAR(30),
-	IN `mesto_param` VARCHAR(50)
+	IN `protivnik_param` VARCHAR(50),
+	IN `rezultat_param` VARCHAR(50),
+	IN `mesto_param` VARCHAR(50),
+	IN `sostav_id_param` TINYINT(3),
+	IN `stadion_id_param` TINYINT(3),
+	IN `datum_id_param` DATE
 )
 BEGIN
-INSERT INTO natprevaruvanje(kolo_id,datum,protivnik,rezultat,mesto)
-VALUES(kolo_id_param,datum_param,protivnik_param,rezultat_param,mesto_param);
+INSERT INTO natprevaruvanje(kolo_id,datum,protivnik,rezultat,mesto,sostav_id,stadion_id,datum_id)
+VALUES(kolo_id_param,datum_param,protivnik_param,rezultat_param,mesto_param,sostav_id_param,stadion_id_param,datum_id_param);
 END//
 DELIMITER ;
 
 -- Dumping structure for procedure klub_fudbalski._insert_outcome
 DELIMITER //
 CREATE PROCEDURE `_insert_outcome`(
-	IN `outcome_id_param` TINYINT(2),
 	IN `klub_param` VARCHAR(50),
-	IN `iznos_denari_param` DECIMAL(20,6)
+	IN `iznos_denari_param` DECIMAL(20,1),
+	IN `dres_id_param` TINYINT,
+	IN `outcome_img_path_param` VARCHAR(255)
 )
 BEGIN
-INSERT INTO outcome(outcome_id,klub,iznos_denari)
-VALUES (outcome_id_param,klub_param,iznos_denari_param);
+INSERT INTO outcome(klub,iznos_denari,dres_id,outcome_img_path)
+VALUES (klub_param,iznos_denari_param,dres_id_param,outcome_img_path_param);
 END//
 DELIMITER ;
 
@@ -539,14 +537,13 @@ DELIMITER ;
 -- Dumping structure for procedure klub_fudbalski._insert_stadion
 DELIMITER //
 CREATE PROCEDURE `_insert_stadion`(
-	IN `stadion_id_param` TINYINT(2),
 	IN `ime_param` VARCHAR(30),
 	IN `adresa_param` VARCHAR(50),
 	IN `kapacitet_param` SMALLINT
 )
 BEGIN
-INSERT INTO stadion(stadion_id,ime,adresa,kapacitet)
-VALUES(stadion_id_param,ime_param,adresa_param,kapacitet_param);
+INSERT INTO stadion(ime,adresa,kapacitet)
+VALUES(ime_param,adresa_param,kapacitet_param);
 END//
 DELIMITER ;
 
@@ -567,8 +564,13 @@ DELIMITER ;
 DELIMITER //
 CREATE PROCEDURE `_select_igrachi`()
 BEGIN
-SELECT*
-FROM igrachi;
+SELECT *,income.ime as ime_income,income.prezime as prezime_income,
+income.pozicija as pozicija_income,income.godini as godini_income,
+igrachi.ime as ime_igrachi,igrachi.prezime as prezime_igrachi,igrachi.pozicija as pozicija_igrachi,
+igrachi.godini as godini_igrachi
+FROM igrachi
+LEFT JOIN income
+ON income.income_id=igrachi.income_id;
 END//
 DELIMITER ;
 
@@ -772,7 +774,9 @@ DELIMITER ;
 DELIMITER //
 CREATE PROCEDURE `_select_outcome`()
 BEGIN
-SELECT * FROM outcome;
+SELECT * FROM outcome
+INNER JOIN igrachi 
+ON igrachi.dres_id=outcome.dres_id;
 END//
 DELIMITER ;
 
@@ -884,6 +888,79 @@ WHERE igrachi.ime LIKE ime_param AND igrachi.prezime LIKE prezime_param;
 END//
 DELIMITER ;
 
+-- Dumping structure for procedure klub_fudbalski._select_sostav_natprevaruvanje
+DELIMITER //
+CREATE PROCEDURE `_select_sostav_natprevaruvanje`()
+BEGIN
+SELECT
+sostav.sostav_id,
+sostav.datum_sostav,
+concat(natprevaruvanje.protivnik," || ",natprevaruvanje.rezultat," || ",natprevaruvanje.mesto) AS natprevar,
+concat(igrachi2.dres_id,"||",igrachi2.ime," ",igrachi2.prezime) AS coach,
+concat(igrachi3.dres_id,"||",igrachi3.ime," ",igrachi3.prezime) AS goalkeeper,
+concat(igrachi4.dres_id,"||",igrachi4.ime," ",igrachi4.prezime) AS centre_back1,
+concat(igrachi5.dres_id,"||",igrachi5.ime," ",igrachi5.prezime) AS centre_back2,
+concat(igrachi6.dres_id,"||",igrachi6.ime," ",igrachi6.prezime) AS right_back,
+concat(igrachi7.dres_id,"||",igrachi7.ime," ",igrachi7.prezime) AS left_back,
+CONCAT(igrachi8.dres_id,"||",igrachi8.ime," ",igrachi8.prezime) AS defensive_midfielder,
+CONCAT(igrachi9.dres_id,"||",igrachi9.ime," ",igrachi9.prezime) AS center_midfielder,
+concat(igrachi10.dres_id,"||",igrachi10.ime," ",igrachi10.prezime) AS attacking_midfielder,
+concat(igrachi11.dres_id,"||",igrachi11.ime," ",igrachi11.prezime) AS right_forward,
+concat(igrachi12.dres_id,"||",igrachi12.ime," ",igrachi12.prezime) AS left_forward,
+concat(igrachi13.dres_id,"||",igrachi13.ime," ",igrachi13.prezime) AS center_forward,
+CONCAT(igrachi14.dres_id,"||",igrachi14.ime," ",igrachi14.prezime) AS reserve1,
+concat(igrachi15.dres_id,"||",igrachi15.ime," ",igrachi15.prezime) AS reserve2,
+concat(igrachi16.dres_id,"||",igrachi16.ime," ",igrachi16.prezime) AS reserve3,
+concat(igrachi17.dres_id,"||",igrachi17.ime," ",igrachi17.prezime) AS reserve4,
+concat(igrachi18.dres_id,"||",igrachi18.ime," ",igrachi18.prezime) AS reserve5,
+concat(igrachi19.dres_id,"||",igrachi19.ime," ",igrachi19.prezime) AS reserve6,
+concat(igrachi20.dres_id,"||",igrachi20.ime," ",igrachi20.prezime) AS reserve7
+FROM sostav
+#LEFT JOIN igrachi AS igrachi1
+       # ON igrachi1.dres_id=sostav.sostav_id
+        LEFT JOIN igrachi AS igrachi2
+        ON igrachi2.dres_id=sostav.coach
+        LEFT JOIN igrachi AS igrachi3
+        ON igrachi3.dres_id=sostav.goalkeeper
+        LEFT JOIN igrachi AS igrachi4
+        ON igrachi4.dres_id=sostav.centre_back1
+        LEFT JOIN igrachi AS igrachi5
+        ON igrachi5.dres_id=sostav.centre_back2
+        LEFT JOIN igrachi AS igrachi6
+        ON igrachi6.dres_id=sostav.right_back
+        LEFT JOIN igrachi AS igrachi7
+        ON igrachi7.dres_id=sostav.left_back
+        LEFT JOIN igrachi AS igrachi8
+        ON igrachi8.dres_id=sostav.defensive_midfielder
+        LEFT JOIN igrachi AS igrachi9
+        ON igrachi9.dres_id=sostav.center_midfielder
+        LEFT JOIN igrachi AS igrachi10
+        ON igrachi10.dres_id=sostav.attacking_midfielder
+        LEFT JOIN igrachi AS igrachi11
+        ON igrachi11.dres_id=sostav.right_forward
+        LEFT JOIN igrachi AS igrachi12
+        ON igrachi12.dres_id=sostav.left_forward
+        LEFT JOIN igrachi AS igrachi13
+        ON igrachi13.dres_id=sostav.center_forward
+        LEFT JOIN igrachi AS igrachi14
+        ON igrachi14.dres_id=sostav.reserve1
+        LEFT JOIN igrachi AS igrachi15
+        ON igrachi15.dres_id=sostav.reserve2
+        LEFT JOIN igrachi AS igrachi16
+        ON igrachi16.dres_id=sostav.reserve3
+        LEFT JOIN igrachi AS igrachi17
+        ON igrachi17.dres_id=sostav.reserve4
+        LEFT JOIN igrachi AS igrachi18
+        ON igrachi18.dres_id=sostav.reserve5
+        LEFT JOIN igrachi AS igrachi19
+        ON igrachi19.dres_id=sostav.reserve6
+        LEFT JOIN igrachi AS igrachi20
+        ON igrachi20.dres_id=sostav.reserve7
+        LEFT JOIN natprevaruvanje
+        ON natprevaruvanje.kolo_id=sostav.sostav_id;
+END//
+DELIMITER ;
+
 -- Dumping structure for procedure klub_fudbalski._select_sostav_natprevaruvanje_ekipa_datum_tocni
 DELIMITER //
 CREATE PROCEDURE `_select_sostav_natprevaruvanje_ekipa_datum_tocni`(
@@ -942,7 +1019,11 @@ DELIMITER ;
 DELIMITER //
 CREATE PROCEDURE `_select_uprava`()
 BEGIN
-SELECT* FROM uprava;
+select concat(igrachi.dres_id," || ",igrachi.ime," ",igrachi.prezime," || ",igrachi.pozicija," || ",igrachi.godini)AS dres_id,
+uprava.zalaganje,uprava.rabotna_ocenka
+FROM uprava
+inner JOIN igrachi
+ON igrachi.dres_id=uprava.dres_id;
 END//
 DELIMITER ;
 

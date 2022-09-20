@@ -1,6 +1,6 @@
 <div class="table-responsive myView">
     <h3 class="text-center">Публика</h3>
-    <table class="table table-striped text-center">
+    <table class="table text-center">
         <thead>
             <tr>
                 <th>Датум</th>
@@ -13,8 +13,8 @@
                 <th>
                     <input class="form-control fw-bold" type="number" name="searchByKartiRasprodadeni" id="searchByKartiRasprodadeni" ng-model="searchByKartiRasprodadeni" placeholder="Пребарај број на распродадени карти на натпреварот">
                 </th>
-                <th><i class="fa-solid fa-pen"></i>edit</th>
-                <th><i class="fa-solid fa-trash-can"></i>delete</th>
+                <th><i class="fa-solid fa-pen"></i>Измени</th>
+                <th><i class="fa-solid fa-trash-can"></i>Избриши</th>
             </tr>
         </thead>
         <tbody>
@@ -23,8 +23,8 @@
                 <td>{{publiki.domashna}}</td>
                 <td>{{publiki.gostinska}}</td>
                 <td>{{publiki.karti_rasprodadeni}}</td>
-                <td title="Edit"><i class="fa-solid fa-pen"></i></td>
-                <td title="Delete {{publiki.datum_id}}">
+                <td title="Измени"><i class="fa-solid fa-pen"></i></td>
+                <td title="Избриши {{publiki.datum_id}}">
                     <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal" ng-click="passPosition($index)"> <i class="fa-solid fa-trash-can"></i></button>
                 </td>
             </tr>

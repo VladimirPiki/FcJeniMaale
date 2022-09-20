@@ -22,6 +22,8 @@ class Igrachi
          private $plata_denari;
          
          private $income_id;
+
+         private $igrachi_img_path;
     
 
    
@@ -89,6 +91,15 @@ class Igrachi
             $this->income_id=$income_id;
         }
 
+        /**
+         * @param $igrachi_img_path
+         */
+        public function setIgrachiImgPath ($igrachi_img_path):void
+        {
+          
+            $this->igrachi_img_path=$igrachi_img_path;
+        }
+
     
         
         /**
@@ -152,6 +163,15 @@ class Igrachi
         {
             
             return $this->income_id;
+        }
+        
+        /**
+         * @return
+         */
+        public function getIgrachiImgPath()
+        {
+            
+            return $this->igrachi_img_path;
         }
 
 }

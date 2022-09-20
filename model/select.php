@@ -49,7 +49,8 @@
                 "ime_igrachi" => $row["ime_igrachi"],
                 "prezime_igrachi" => $row["prezime_igrachi"],
                 "pozicija_igrachi" => $row["pozicija_igrachi"],
-                "godini_igrachi" => $row ["godini_igrachi"]
+                "godini_igrachi" => $row ["godini_igrachi"],
+                "igrachi_img_path" => $row ["igrachi_img_path"]
             );
             }
 
@@ -149,7 +150,8 @@
                 "pozicija" => $row["pozicija"],
                 "godini" => $row["godini"],
                 "plata_denari" => $row["plata_denari"],
-                "income_id" => $row["income_id"]
+                "income_id" => $row["income_id"],
+                "outcome_img_path" => $row["outcome_img_path"]
                 );
             }
 

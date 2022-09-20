@@ -223,32 +223,31 @@
             <tr class="text-center">
                 <th>Составот на колото</th>
                 <th>
-                    <select class="form-control text-center" name="searchByDatum" id="searchByDatum" ng-model="searchByDatum">
-                        <option  value="">Датум</option>
-                        <option ng-repeat="natprevar in natprevaruvanje" value="{{natprevar.datum}}" >
+                    <select class="form-control text-center myDropdown" name="searchByDatum" id="searchByDatum" ng-model="searchByDatum">
+                        <option class="myDropdown" value="">Датум</option>
+                        <option class="myDropdown" ng-repeat="natprevar in natprevaruvanje" value="{{natprevar.datum}}" >
                         {{natprevar.datum}}
                         </option>
                     </select>
                 </th>
                 <th>
-                    natprevar
-                    <select class="form-control text-center" name="searchByNatprevar" id="searchByNatprevar" ng-model="searchByNatprevar">
-                        <option  value="">Натпревар</option>
-                        <option ng-repeat="natprevar in natprevaruvanje" value="{{natprevar.protivnik}}" >
+                    <select class="form-control text-center myDropdown" name="searchByNatprevar" id="searchByNatprevar" ng-model="searchByNatprevar">
+                        <option class="myDropdown"  value="">Натпревар</option>
+                        <option class="myDropdown" ng-repeat="natprevar in natprevaruvanje" value="{{natprevar.protivnik}}" >
                          {{natprevar.protivnik}} || {{natprevar.rezultat}} || {{natprevar.mesto}}
                         </option>
                     </select>
                 </th>
                 <th>
-                    <select class="form-control text-center" name="searchBySostav" id="searchBySostav" ng-model="searchBySostav">
-                        <option  value="">Состав</option>
-                        <option ng-repeat="sostavi in sostav" value="{{sostavi.sostav_id}}" >
+                    <select class="form-control text-center myDropdown" name="searchBySostav" id="searchBySostav" ng-model="searchBySostav">
+                        <option class="myDropdown" value="">Состав</option>
+                        <option class="myDropdown" ng-repeat="sostavi in sostav" value="{{sostavi.sostav_id}}" >
                             {{sostavi.sostav_id}} || {{sostavi.datum_sostav}}  || {{sostavi.natprevar}}
                         </option>
                     </select>
                 </th>
-                <th><i class="fa-solid fa-pen"></i>edit</th>
-                <th><i class="fa-solid fa-trash-can"></i>delete</th>
+                <th><i class="fa-solid fa-pen"></i>Измени</th>
+                <th><i class="fa-solid fa-trash-can"></i>Избриши</th>
             </tr>
         </thead>
         <tbody>

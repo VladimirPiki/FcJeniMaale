@@ -16,6 +16,8 @@ class Outcome
 
     private  $dres_id;
 
+    private $outcome_img_path;
+
 
 
     /**
@@ -90,4 +92,21 @@ class Outcome
         $this->dres_id=$dres_id;
     }
 
+    /**
+     * @return
+     */
+    public function getOutcomeImgPath() 
+    {
+       
+        return  $this->outcome_img_path;
+    }
+
+    /**
+     * @param  $outcome_img_path
+     */
+    public function setOutcomeImgPath( $outcome_img_path):void
+    {
+      
+        $this->outcome_img_path=$outcome_img_path;
+    }
 }

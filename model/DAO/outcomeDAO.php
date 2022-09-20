@@ -27,8 +27,9 @@ class OutcomeDAO extends Outcome
         $klub=parent::getKlub();
         $iznos_denari=parent::getIznosDenari();
         $dres_id=parent::getDresId();
+        $outcome_img_path=parent::getOutcomeImgPath();
 
-        $columns_value="'$klub',$iznos_denari,$dres_id";
+        $columns_value="'$klub',$iznos_denari,$dres_id,'$outcome_img_path'";
         $this->database ->callStoredProcedure("_insert_outcome",$columns_value);  
     }
 

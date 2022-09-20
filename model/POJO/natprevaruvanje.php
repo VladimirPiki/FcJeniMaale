@@ -6,34 +6,21 @@
  */
 
 class Natprevaruvanje
-{
-    
+{  
     private  $kolo_id;
-
     private  $datum;
-
     private  $protivnik;
-
     private  $rezultat;
-
     private  $mesto;
-
     private  $sostav_id;
-
     private  $stadion_id;
-
     private  $datum_id;
-
-
-
- 
 
     /**
      * @return 
      */
     public function getKoloId()
     {
-       
         return $this->kolo_id;
     }
 
@@ -42,7 +29,6 @@ class Natprevaruvanje
      */
     public function setKoloId( $kolo_id):void
     {
-      
         $this->kolo_id=$kolo_id;
     }
 
@@ -51,7 +37,6 @@ class Natprevaruvanje
      */
     public function getDatum()
     {
-     
         return $this->datum;
     }
 
@@ -60,7 +45,6 @@ class Natprevaruvanje
      */
     public function setDatum( $datum):void
     {
-     
         $this->datum=$datum;
     }
 
@@ -69,7 +53,6 @@ class Natprevaruvanje
      */
     public function getProtivnik() 
     {
-       
         return $this->protivnik;
     }
 
@@ -78,7 +61,6 @@ class Natprevaruvanje
      */
     public function setProtivnik( $protivnik):void
     {
-   
         $this->protivnik=$protivnik;
     }
 
@@ -87,7 +69,6 @@ class Natprevaruvanje
      */
     public function getRezultat()
     {
-        
         return $this->rezultat;
     }
 
@@ -96,7 +77,6 @@ class Natprevaruvanje
      */
     public function setRezultat( $rezultat):void
     {
-        
         $this->rezultat=$rezultat;
     }
 
@@ -105,7 +85,6 @@ class Natprevaruvanje
      */
     public function getMesto()
     {
-    
         return $this->mesto;
     }
 
@@ -114,7 +93,6 @@ class Natprevaruvanje
      */
     public function setMesto( $mesto):void
     {
-       
         $this->mesto=$mesto;
     }
 
@@ -123,7 +101,6 @@ class Natprevaruvanje
      */
     public function getSostavId()
     {
-       
         return $this->sostav_id;
     }
 
@@ -132,7 +109,6 @@ class Natprevaruvanje
      */
     public function setSostavId( $sostav_id):void
     {
-       
         $this->sostav_id=$sostav_id;
     }
 
@@ -141,7 +117,6 @@ class Natprevaruvanje
      */
     public function getStadionId() 
     {
-       
         return $this->stadion_id;
     }
 
@@ -150,7 +125,6 @@ class Natprevaruvanje
      */
     public function setStadionId( $stadion_id):void
     {
-       
         $this->stadion_id=$stadion_id;
     }
 
@@ -159,7 +133,6 @@ class Natprevaruvanje
      */
     public function getDatumId() 
     {
-      
         return $this->datum_id;
     }
 
@@ -168,8 +141,6 @@ class Natprevaruvanje
      */
     public function setDatumId( $datum_id):void
     {
-        
         $this->datum_id=$datum_id;
     }
-
 }

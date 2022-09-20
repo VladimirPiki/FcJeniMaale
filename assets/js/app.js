@@ -148,10 +148,10 @@ app.controller('myCtrl', function($scope,$http,$filter) {
     $scope.alert_success=false;
   }
 
-  $scope.function_igrachi=function(dres_id,ime,prezime,pozicija,godini,plata_denari,income_id)
+  $scope.function_igrachi=function(dres_id,ime,prezime,pozicija,godini,plata_denari,income_id,igrachi_img_path)
   {
     var objIgrachi=[];
-    objIgrachi.push({"dres_id":dres_id,"ime":ime,"prezime":prezime,"pozicija":pozicija,"godini":godini,"plata_denari":plata_denari,"income_id":income_id,"table_name":"igrachi"});
+    objIgrachi.push({"dres_id":dres_id,"ime":ime,"prezime":prezime,"pozicija":pozicija,"godini":godini,"plata_denari":plata_denari,"income_id":income_id,"igrachi_img_path":igrachi_img_path,"table_name":"igrachi"});
     console.log(objIgrachi);
     postData("insert",objIgrachi);
   }
@@ -173,10 +173,10 @@ app.controller('myCtrl', function($scope,$http,$filter) {
     postData("insert",objNatprevaruvanje);
   }
 
-  $scope.function_outcome=function(klub,iznos_denari,dres_id)
+  $scope.function_outcome=function(klub,iznos_denari,dres_id,outcome_img_path)
   {
     var objOutcome=[];
-    objOutcome.push({"klub":klub,"iznos_denari":iznos_denari,"dres_id":dres_id,"table_name":"outcome"});
+    objOutcome.push({"klub":klub,"iznos_denari":iznos_denari,"dres_id":dres_id,"outcome_img_path":outcome_img_path,"table_name":"outcome"});
     console.log(objOutcome);
     postData("insert",objOutcome);
   }

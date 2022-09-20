@@ -58,6 +58,10 @@ footer i{
 	background-color:#029934;
 	color: white;
 }
+.myBtn:hover{
+	background-color:#1C4A9F;
+	color: white;
+}
 .myBackgroundSostav{
 	background-image: url('../../uploads/Images/field6.jpg');
 	background-position: center;
@@ -76,25 +80,62 @@ footer i{
 	height: 90vh;
 }
 .myView{
-	background-image: url('../img/backgroundView.jpg');
+	background-image: url('../img/cover22.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	color: #1C4A9F;
 }
+.myViewIgrachi{
+	background-image: url('../img/IstutkanaHartija.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: #1C4A9F;
+}
+
 div input{
-	background-image: url('../img/cover22.jpg');
+	background-image: url('../img/IstutkanaHartija.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	font-weight: bold;
 	font-size: 20px;
 }
 div select{
-	background-image: url('../img/cover22.jpg');
+	background-image: url('../img/IstutkanaHartija.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
-.myTable{
+table{
+	color: #1C4A9F!important;
+}
+td{
 	color: #1C4A9F;
+	font-size: 20px;
+	font-weight: 900;
+	text-align: center;
+}
+th{
+	font-size: 17px;
+	font-weight: bold;
+}
+td:hover{
+	background-color: #029934;
+	color: white;
+}
+tr{
+	color: #1C4A9F;
+	text-align: center;
+}
+tr:hover{
+	background-color: #029934;
+	color: white;
+}
+h3:hover{
+	background-color: #029934;
+	color: white;
+}
+.myDropdown{
+	color: #1C4A9F;
+	font-weight: bold;
 }
 /**********Details************************/
 .myInputDetails{
@@ -103,4 +144,5 @@ div select{
 	color: #1C4A9F;
 	font-weight: bold;
 }
+
 
