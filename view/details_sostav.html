@@ -1,276 +1,281 @@
-<h3  class="text-center">Состав</h3>
+<div class="myViewCover22">
+    <h2 class="text-center">Состав</h2>
+    <div class="alert alert-success" ng-show="alert_success">Успешно ги внесовте податоците!</div>
+    <div class="alert alert-danger" ng-show="error_alert">Ве молиме пополнете го правилно формуларот!</div>
 
-<div class="alert alert-success" ng-show="alert_success">Успешно ги внесовте податоците!</div>
-<div class="alert alert-danger" ng-show="error_alert">Ве молиме пополнете го правилно формуларот!</div>
+    <form name="myForm">
+        <div class="mb-3">
+            <label for="sostav_id" class="form-label">Составот на колото</label>
+                <select class="form-control myInputDetails" id="sostav_id" name="sostav_id" ng-model="sostav_id">
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="natprevar in natprevaruvanje" value="{{natprevar.kolo_id}}" >
+                        {{natprevar.kolo_id}} коло || {{natprevar.protivnik}} || {{natprevar.rezultat}} || {{natprevar.mesto}}
+                    </option>
+                </select>
+        </div>  
 
-<form name="myForm">
-    <div class="mb-3">
-        <label for="sostav_id" class="form-label">sostav_id</label>
-            <select class="form-control" id="sostav_id" name="sostav_id" ng-model="sostav_id">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="natprevar in natprevaruvanje" value="{{natprevar.kolo_id}}" >
-                    {{natprevar.kolo_id}} коло || {{natprevar.protivnik}} || {{natprevar.rezultat}} || {{natprevar.mesto}}
-                </option>
-            </select>
-      </div>
-
-    <div class="mb-3">
-        <label for="datum_sostav" class="form-label">datum_sostav</label>
-        <span class="alert alert-danger" ng-show="myForm.datum_sostav.$invalid">Внесете го точниот датум и време!!!</span>
-            <select class="form-control" id="datum_sostav" name="datum_sostav" ng-model="datum_sostav.value" min="2001-01-01T00:00:00" max="2222-12-31T00:00:00" required>
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="natprevar in natprevaruvanje" value="{{natprevar.datum}}" >
-                {{natprevar.kolo_id}} коло || {{natprevar.datum}} || {{natprevar.protivnik}} || {{natprevar.rezultat}} || {{natprevar.mesto}}
-                </option>
-            </select>
-    </div>
-    <div class="mb-3">
-      <label for="coach" class="form-label">coach</label>
-      <span class="alert alert-danger" ng-show="myForm.coach.$invalid">Внесете најмалку со 1 бројка!!!</span>
-      
-        <input class="form-control" type="text" name="searchByCoach" id="searchByCoach" ng-model="searchByCoach" placeholder="Пребарај по позиција на играчот">
-
-        <select class="form-control" id="coach" name="coach" ng-model="coach">
-            <option  value="">Изберете опции</option>
-            <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByCoach}" value="{{igrac.dres_id}}" >
-                {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-            </option>   
-        </select>
-    </div>
-    <div class="mb-3">
-        <label for="goalkeeper" class="form-label">goalkeeper</label>
-        <span class="alert alert-danger" ng-show="myForm.goalkeeper.$invalid">Внесете најмалку со 1 бројка!!!</span>
+        <div class="mb-3">
+            <label for="datum_sostav" class="form-label">Датум на натпреварот</label>
+            <span class="alert alert-danger" ng-show="myForm.datum_sostav.$invalid">Внесете го точниот датум и време!!!</span>
+                <select class="form-control myInputDetails" id="datum_sostav" name="datum_sostav" ng-model="datum_sostav.value" min="2001-01-01T00:00:00" max="2222-12-31T00:00:00" required>
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="natprevar in natprevaruvanje" value="{{natprevar.datum}}" >
+                    {{natprevar.datum}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+        <label for="coach" class="form-label">Тренер</label>
+        <span class="alert alert-danger" ng-show="myForm.coach.$invalid">Внесете најмалку со 1 бројка!!!</span>
         
-        <input class="form-control" type="text" name="searchByGK" id="searchByGK" ng-model="searchByGK" placeholder="Пребарај по позиција на играчот">
+            <input class="form-control myInputDetails" type="text" name="searchByCoach" id="searchByCoach" ng-model="searchByCoach" placeholder="Пребарај по позиција на играчот">
 
-            <select class="form-control" id="goalkeeper" name="goalkeeper" ng-model="goalkeeper">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByGK}" value="{{igrac.dres_id}}" >
+            <select class="form-control myInputDetails" id="coach" name="coach" ng-model="coach">
+                <option class="text-light" value="">Изберете опции</option>
+                <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByCoach}" value="{{igrac.dres_id}}" >
                     {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
+                </option>   
             </select>
-    </div>
-    <div class="mb-3">
-        <label for="centre_back1" class="form-label">centre_back1</label>
-        <span class="alert alert-danger" ng-show="myForm.centre_back1.$invalid">Внесете најмалку со 1 бројка!!!</span>
+        </div>
+        <div class="mb-3">
+            <label for="goalkeeper" class="form-label">Голман</label>
+            <span class="alert alert-danger" ng-show="myForm.goalkeeper.$invalid">Внесете најмалку со 1 бројка!!!</span>
+            
+            <input class="form-control myInputDetails" type="text" name="searchByGK" id="searchByGK" ng-model="searchByGK" placeholder="Пребарај по позиција на играчот">
 
-        <input class="form-control" type="text" name="searchByCB" id="searchByCB" ng-model="searchByCB" placeholder="Пребарај по позиција на играчот">
+                <select class="form-control myInputDetails" id="goalkeeper" name="goalkeeper" ng-model="goalkeeper">
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByGK}" value="{{igrac.dres_id}}" >
+                        {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="centre_back1" class="form-label">Штопер</label>
+            <span class="alert alert-danger" ng-show="myForm.centre_back1.$invalid">Внесете најмалку со 1 бројка!!!</span>
 
-            <select class="form-control" id="centre_back1" name="centre_back1" ng-model="centre_back1">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByCB}" value="{{igrac.dres_id}}" >
+            <input class="form-control myInputDetails" type="text" name="searchByCB" id="searchByCB" ng-model="searchByCB" placeholder="Пребарај по позиција на играчот">
+
+                <select class="form-control myInputDetails" id="centre_back1" name="centre_back1" ng-model="centre_back1">
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByCB}" value="{{igrac.dres_id}}" >
+                        {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="centre_back2" class="form-label">Штопер</label>
+            <span class="alert alert-danger" ng-show="myForm.centre_back2.$invalid">Внесете најмалку со 1 бројка!!!</span>
+
+            <input class="form-control myInputDetails" type="text" name="searchByCB2" id="searchByCB2" ng-model="searchByCB2" placeholder="Пребарај по позиција на играчот">
+
+                <select class="form-control myInputDetails" id="centre_back2" name="centre_back2" ng-model="centre_back2">
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByCB2}" value="{{igrac.dres_id}}" >
+                        {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="right_back" class="form-label">Десен бек</label>
+            <span class="alert alert-danger" ng-show="myForm.right_back.$invalid">Внесете најмалку со 1 бројка!!!</span>
+
+            <input class="form-control myInputDetails" type="text" name="searchByRB" id="searchByRB" ng-model="searchByRB" placeholder="Пребарај по позиција на играчот">
+
+                <select class="form-control myInputDetails" id="right_back" name="right_back" ng-model="right_back">
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByRB}" value="{{igrac.dres_id}}" >
+                        {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="left_back" class="form-label">Лев бек</label>
+            <span class="alert alert-danger" ng-show="myForm.left_back.$invalid">Внесете најмалку со 1 бројка!!!</span>
+
+            <input class="form-control myInputDetails" type="text" name="searchByLB" id="searchByLB" ng-model="searchByLB" placeholder="Пребарај по позиција на играчот">
+
+                <select class="form-control myInputDetails" id="left_back" name="left_back" ng-model="left_back">
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByLB}" value="{{igrac.dres_id}}" >
+                        {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="defensive_midfielder" class="form-label">Заден везен</label>
+            <span class="alert alert-danger" ng-show="myForm.defensive_midfielder.$invalid">Внесете најмалку со 1 бројка!!!</span>
+
+            <input class="form-control myInputDetails" type="text" name="searchByDMF" id="searchByDMF" ng-model="searchByDMF" placeholder="Пребарај по позиција на играчот">
+
+                <select class="form-control myInputDetails" id="defensive_midfielder" name="defensive_midfielder" ng-model="defensive_midfielder">
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByDMF}" value="{{igrac.dres_id}}" >
+                        {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="center_midfielder" class="form-label">Везен</label>
+            <span class="alert alert-danger" ng-show="myForm.center_midfielder.$invalid">Внесете најмалку со 1 бројка!!!</span>
+
+            <input class="form-control myInputDetails" type="text" name="searchByCMF" id="searchByCMF" ng-model="searchByCMF" placeholder="Пребарај по позиција на играчот">
+
+                <select class="form-control myInputDetails" id="center_midfielder" name="center_midfielder" ng-model="center_midfielder">
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByCMF}" value="{{igrac.dres_id}}" >
+                        {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="attacking_midfielder" class="form-label">Полушпиц</label>
+            <span class="alert alert-danger" ng-show="myForm.attacking_midfielder.$invalid">Внесете најмалку со 1 бројка!!!</span>
+
+            <input class="form-control myInputDetails" type="text" name="searchByAMF" id="searchByAMF" ng-model="searchByAMF" placeholder="Пребарај по позиција на играчот">
+
+                <select class="form-control myInputDetails" id="attacking_midfielder" name="attacking_midfielder" ng-model="attacking_midfielder">
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByAMF}" value="{{igrac.dres_id}}" >
+                        {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="right_forward" class="form-label">Десно крило</label>
+            <span class="alert alert-danger" ng-show="myForm.right_forward.$invalid">Внесете најмалку со 1 бројка!!!</span>
+
+            <input class="form-control myInputDetails" type="text" name="searchByRWF" id="searchByRWF" ng-model="searchByRWF" placeholder="Пребарај по позиција на играчот">
+
+                <select class="form-control myInputDetails" id="right_forward" name="right_forward" ng-model="right_forward">
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByRWF}" value="{{igrac.dres_id}}" >
+                        {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="left_forward" class="form-label">Лево крило</label>
+            <span class="alert alert-danger" ng-show="myForm.left_forward.$invalid">Внесете најмалку со 1 бројка!!!</span>
+
+            <input class="form-control myInputDetails" type="text" name="searchByLWF" id="searchByLWF" ng-model="searchByLWF" placeholder="Пребарај по позиција на играчот">
+
+                <select class="form-control myInputDetails" id="left_forward" name="left_forward" ng-model="left_forward">
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByLWF}" value="{{igrac.dres_id}}" >
+                        {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="center_forward" class="form-label">Шпиц</label>
+            <span class="alert alert-danger" ng-show="myForm.center_forward.$invalid">Внесете најмалку со 1 бројка!!!</span>
+
+            <input class="form-control myInputDetails" type="text" name="searchByCF" id="searchByCF" ng-model="searchByCF" placeholder="Пребарај по позиција на играчот">
+
+                <select class="form-control myInputDetails" id="center_forward" name="center_forward" ng-model="center_forward">
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByCF}" value="{{igrac.dres_id}}" >
+                        {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="reserve1" class="form-label">Резерва 1</label>
+            <span class="alert alert-danger" ng-show="myForm.reserve1.$invalid">Внесете најмалку со 1 бројка!!!</span>
+
+            <input class="form-control myInputDetails" type="text" name="searchByReserve1" id="searchByReserve1" ng-model="searchByReserve1" placeholder="Пребарај по позиција на играчот">
+
+                <select class="form-control myInputDetails" id="reserve1" name="reserve1" ng-model="reserve1">
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByReserve1}" value="{{igrac.dres_id}}" >
+                        {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="reserve2" class="form-label">Резерва 2</label>
+            <span class="alert alert-danger" ng-show="myForm.reserve2.$invalid">Внесете најмалку со 1 бројка!!!</span>
+
+            <input class="form-control myInputDetails" type="text" name="searchByReserve2" id="searchByReserve2" ng-model="searchByReserve2" placeholder="Пребарај по позиција на играчот">
+
+                <select class="form-control myInputDetails" id="reserve2" name="reserve2" ng-model="reserve2">
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByReserve2}" value="{{igrac.dres_id}}" >
+                        {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="reserve3" class="form-label">Резерва 3</label>
+            <span class="alert alert-danger" ng-show="myForm.reserve3.$invalid">Внесете најмалку со 1 бројка!!!</span>
+
+            <input class="form-control myInputDetails" type="text" name="searchByReserve3" id="searchByReserve3" ng-model="searchByReserve3" placeholder="Пребарај по позиција на играчот">
+
+                <select class="form-control myInputDetails" id="reserve3" name="reserve3" ng-model="reserve3">
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByReserve3}" value="{{igrac.dres_id}}" >
+                        {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="reserve4" class="form-label">Резерва 4</label>
+            <span class="alert alert-danger" ng-show="myForm.reserve4.$invalid">Внесете најмалку со 1 бројка!!!</span>
+
+            <input class="form-control myInputDetails" type="text" name="searchByReserve4" id="searchByReserve4" ng-model="searchByReserve4" placeholder="Пребарај по позиција на играчот">
+
+                <select class="form-control myInputDetails" id="reserve4" name="reserve4" ng-model="reserve4">
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByReserve4}" value="{{igrac.dres_id}}" >
+                        {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="reserve5" class="form-label">Резерва 5</label>
+            <span class="alert alert-danger" ng-show="myForm.reserve5.$invalid">Внесете најмалку со 1 бројка!!!</span>
+
+            <input class="form-control myInputDetails" type="text" name="searchByReserve5" id="searchByReserve5" ng-model="searchByReserve5" placeholder="Пребарај по позиција на играчот">
+
+                <select class="form-control myInputDetails" id="reserve5" name="reserve5" ng-model="reserve5">
+                    <option class="text-light" value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByReserve5}" value="{{igrac.dres_id}}" >
+                        {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="reserve6" class="form-label">Резерва 6</label>
+            <span class="alert alert-danger" ng-show="myForm.reserve6.$invalid">Внесете најмалку со 1 бројка!!!</span>
+
+            <input class="form-control myInputDetails" type="text" name="searchByReserve6" id="searchByReserve6" ng-model="searchByReserve6" placeholder="Пребарај по позиција на играчот">
+
+                <select class="form-control myInputDetails" id="reserve6" name="reserve6" ng-model="reserve6">
+                    <option class="text-light"  value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByReserve6}" value="{{igrac.dres_id}}" >
+                        {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="reserve7" class="form-label">Резерва 7</label>
+            <span class="alert alert-danger" ng-show="myForm.reserve7.$invalid">Внесете најмалку со 1 бројка!!!</span>
+
+            <input class="form-control myInputDetails" type="text" name="searchByReserve7" id="searchByReserve7" ng-model="searchByReserve7" placeholder="Пребарај по позиција на играчот">
+
+                <select class="form-control myInputDetails" id="reserve7" name="reserve7" ng-model="reserve7">
+                    <option class="text-light"  value="">Изберете опции</option>
+                    <option class="text-light" ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByReserve7}" value="{{igrac.dres_id}}" >
                     {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
-            </select>
-    </div>
-    <div class="mb-3">
-        <label for="centre_back2" class="form-label">centre_back2</label>
-        <span class="alert alert-danger" ng-show="myForm.centre_back2.$invalid">Внесете најмалку со 1 бројка!!!</span>
-
-        <input class="form-control" type="text" name="searchByCB2" id="searchByCB2" ng-model="searchByCB2" placeholder="Пребарај по позиција на играчот">
-
-            <select class="form-control" id="centre_back2" name="centre_back2" ng-model="centre_back2">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByCB2}" value="{{igrac.dres_id}}" >
-                    {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
-            </select>
-    </div>
-    <div class="mb-3">
-        <label for="right_back" class="form-label">right_back</label>
-        <span class="alert alert-danger" ng-show="myForm.right_back.$invalid">Внесете најмалку со 1 бројка!!!</span>
-
-        <input class="form-control" type="text" name="searchByRB" id="searchByRB" ng-model="searchByRB" placeholder="Пребарај по позиција на играчот">
-
-            <select class="form-control" id="right_back" name="right_back" ng-model="right_back">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByRB}" value="{{igrac.dres_id}}" >
-                    {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
-            </select>
-    </div>
-    <div class="mb-3">
-        <label for="left_back" class="form-label">left_back</label>
-        <span class="alert alert-danger" ng-show="myForm.left_back.$invalid">Внесете најмалку со 1 бројка!!!</span>
-
-        <input class="form-control" type="text" name="searchByLB" id="searchByLB" ng-model="searchByLB" placeholder="Пребарај по позиција на играчот">
-
-            <select class="form-control" id="left_back" name="left_back" ng-model="left_back">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByLB}" value="{{igrac.dres_id}}" >
-                    {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
-            </select>
-    </div>
-    <div class="mb-3">
-        <label for="defensive_midfielder" class="form-label">defensive_midfielder</label>
-        <span class="alert alert-danger" ng-show="myForm.defensive_midfielder.$invalid">Внесете најмалку со 1 бројка!!!</span>
-
-        <input class="form-control" type="text" name="searchByDMF" id="searchByDMF" ng-model="searchByDMF" placeholder="Пребарај по позиција на играчот">
-
-            <select class="form-control" id="defensive_midfielder" name="defensive_midfielder" ng-model="defensive_midfielder">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByDMF}" value="{{igrac.dres_id}}" >
-                    {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
-            </select>
-      </div>
-      <div class="mb-3">
-        <label for="center_midfielder" class="form-label">center_midfielder</label>
-        <span class="alert alert-danger" ng-show="myForm.center_midfielder.$invalid">Внесете најмалку со 1 бројка!!!</span>
-
-        <input class="form-control" type="text" name="searchByCMF" id="searchByCMF" ng-model="searchByCMF" placeholder="Пребарај по позиција на играчот">
-
-            <select class="form-control" id="center_midfielder" name="center_midfielder" ng-model="center_midfielder">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByCMF}" value="{{igrac.dres_id}}" >
-                    {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
-            </select>
-      </div>
-      <div class="mb-3">
-          <label for="attacking_midfielder" class="form-label">attacking_midfielder</label>
-          <span class="alert alert-danger" ng-show="myForm.attacking_midfielder.$invalid">Внесете најмалку со 1 бројка!!!</span>
-
-          <input class="form-control" type="text" name="searchByAMF" id="searchByAMF" ng-model="searchByAMF" placeholder="Пребарај по позиција на играчот">
-
-            <select class="form-control" id="attacking_midfielder" name="attacking_midfielder" ng-model="attacking_midfielder">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByAMF}" value="{{igrac.dres_id}}" >
-                    {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
-            </select>
-      </div>
-      <div class="mb-3">
-          <label for="right_forward" class="form-label">right_forward</label>
-          <span class="alert alert-danger" ng-show="myForm.right_forward.$invalid">Внесете најмалку со 1 бројка!!!</span>
-
-          <input class="form-control" type="text" name="searchByRWF" id="searchByRWF" ng-model="searchByRWF" placeholder="Пребарај по позиција на играчот">
-
-            <select class="form-control" id="right_forward" name="right_forward" ng-model="right_forward">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByRWF}" value="{{igrac.dres_id}}" >
-                    {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
-            </select>
-      </div>
-      <div class="mb-3">
-          <label for="left_forward" class="form-label">left_forward</label>
-          <span class="alert alert-danger" ng-show="myForm.left_forward.$invalid">Внесете најмалку со 1 бројка!!!</span>
-
-          <input class="form-control" type="text" name="searchByLWF" id="searchByLWF" ng-model="searchByLWF" placeholder="Пребарај по позиција на играчот">
-
-            <select class="form-control" id="left_forward" name="left_forward" ng-model="left_forward">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByLWF}" value="{{igrac.dres_id}}" >
-                    {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
-            </select>
-      </div>
-      <div class="mb-3">
-          <label for="center_forward" class="form-label">center_forward</label>
-          <span class="alert alert-danger" ng-show="myForm.center_forward.$invalid">Внесете најмалку со 1 бројка!!!</span>
-
-          <input class="form-control" type="text" name="searchByCF" id="searchByCF" ng-model="searchByCF" placeholder="Пребарај по позиција на играчот">
-
-            <select class="form-control" id="center_forward" name="center_forward" ng-model="center_forward">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByCF}" value="{{igrac.dres_id}}" >
-                    {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
-            </select>
-      </div>
-      <div class="mb-3">
-          <label for="reserve1" class="form-label">reserve1</label>
-          <span class="alert alert-danger" ng-show="myForm.reserve1.$invalid">Внесете најмалку со 1 бројка!!!</span>
-
-          <input class="form-control" type="text" name="searchByReserve1" id="searchByReserve1" ng-model="searchByReserve1" placeholder="Пребарај по позиција на играчот">
-
-            <select class="form-control" id="reserve1" name="reserve1" ng-model="reserve1">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByReserve1}" value="{{igrac.dres_id}}" >
-                    {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
-            </select>
-      </div>
-      <div class="mb-3">
-        <label for="reserve2" class="form-label">reserve2</label>
-        <span class="alert alert-danger" ng-show="myForm.reserve2.$invalid">Внесете најмалку со 1 бројка!!!</span>
-
-        <input class="form-control" type="text" name="searchByReserve2" id="searchByReserve2" ng-model="searchByReserve2" placeholder="Пребарај по позиција на играчот">
-
-            <select class="form-control" id="reserve2" name="reserve2" ng-model="reserve2">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByReserve2}" value="{{igrac.dres_id}}" >
-                    {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
-            </select>
-      </div>
-      <div class="mb-3">
-          <label for="reserve3" class="form-label">reserve3</label>
-          <span class="alert alert-danger" ng-show="myForm.reserve3.$invalid">Внесете најмалку со 1 бројка!!!</span>
-
-          <input class="form-control" type="text" name="searchByReserve3" id="searchByReserve3" ng-model="searchByReserve3" placeholder="Пребарај по позиција на играчот">
-
-            <select class="form-control" id="reserve3" name="reserve3" ng-model="reserve3">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByReserve3}" value="{{igrac.dres_id}}" >
-                    {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
-            </select>
-      </div>
-      <div class="mb-3">
-          <label for="reserve4" class="form-label">reserve4</label>
-          <span class="alert alert-danger" ng-show="myForm.reserve4.$invalid">Внесете најмалку со 1 бројка!!!</span>
-
-          <input class="form-control" type="text" name="searchByReserve4" id="searchByReserve4" ng-model="searchByReserve4" placeholder="Пребарај по позиција на играчот">
-
-            <select class="form-control" id="reserve4" name="reserve4" ng-model="reserve4">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByReserve4}" value="{{igrac.dres_id}}" >
-                    {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
-            </select>
-      </div>
-      <div class="mb-3">
-          <label for="reserve5" class="form-label">reserve5</label>
-          <span class="alert alert-danger" ng-show="myForm.reserve5.$invalid">Внесете најмалку со 1 бројка!!!</span>
-
-          <input class="form-control" type="text" name="searchByReserve5" id="searchByReserve5" ng-model="searchByReserve5" placeholder="Пребарај по позиција на играчот">
-
-            <select class="form-control" id="reserve5" name="reserve5" ng-model="reserve5">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByReserve5}" value="{{igrac.dres_id}}" >
-                    {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
-            </select>
-      </div>
-      <div class="mb-3">
-          <label for="reserve6" class="form-label">reserve6</label>
-          <span class="alert alert-danger" ng-show="myForm.reserve6.$invalid">Внесете најмалку со 1 бројка!!!</span>
-
-          <input class="form-control" type="text" name="searchByReserve6" id="searchByReserve6" ng-model="searchByReserve6" placeholder="Пребарај по позиција на играчот">
-
-            <select class="form-control" id="reserve6" name="reserve6" ng-model="reserve6">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByReserve6}" value="{{igrac.dres_id}}" >
-                    {{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
-            </select>
-      </div>
-      <div class="mb-3">
-          <label for="reserve7" class="form-label">reserve7</label>
-          <span class="alert alert-danger" ng-show="myForm.reserve7.$invalid">Внесете најмалку со 1 бројка!!!</span>
-
-          <input class="form-control" type="text" name="searchByReserve7" id="searchByReserve7" ng-model="searchByReserve7" placeholder="Пребарај по позиција на играчот">
-
-            <select class="form-control" id="reserve7" name="reserve7" ng-model="reserve7">
-                <option  value="">Изберете опции</option>
-                <option ng-repeat="igrac in igrachi | filter:{pozicija_igrachi:searchByReserve7}" value="{{igrac.dres_id}}" >
-{{igrac.dres_id}}  ||   {{igrac.pozicija_igrachi}} || {{igrac.ime_igrachi}}  {{igrac.prezime_igrachi}} || {{igrac.godini_igrachi}}
-                </option>
-            </select>
-      </div>
-    <button type="button" class="btn btn-primary" ng-click="
-    (myForm.datum_sostav.$valid && myForm.coach.$valid && myForm.goalkeeper.$valid && myForm.centre_back1.$valid && myForm.centre_back2.$valid && myForm.right_back.$valid && myForm.left_back.$valid && myForm.defensive_midfielder.$valid && myForm.center_midfielder.$valid && myForm.attacking_midfielder.$valid && myForm.right_forward.$valid && myForm.center_forward.$valid && myForm.reserve1.$valid && myForm.reserve2.$valid && myForm.reserve3.$valid && myForm.reserve4.$valid && myForm.reserve5.$valid && myForm.reserve6.$valid && myForm.reserve7.$valid) ? function_sostav(sostav_id,datum_sostav.value,coach,goalkeeper,centre_back1,centre_back2,right_back,left_back,defensive_midfielder,center_midfielder,attacking_midfielder,right_forward,left_forward,center_forward,reserve1,reserve2,reserve3,reserve4,reserve5,reserve6,reserve7) : error()">Save</button>
-  </form>
+                    </option>
+                </select>
+        </div>
+        <div class="mb-3 fw-bold">
+            <label for="sostav_img_path" class="form-label">Слика</label>
+            <input type="text" class="form-control myInputDetails"  placeholder="Внесете слика од натпреварот"  id="sostav_img_path" name="sostav_img_path" ng-model="sostav_img_path">
+        </div>
+        <button type="button" class="btn myBtn mb-5" ng-click="
+        (myForm.datum_sostav.$valid && myForm.coach.$valid && myForm.goalkeeper.$valid && myForm.centre_back1.$valid && myForm.centre_back2.$valid && myForm.right_back.$valid && myForm.left_back.$valid && myForm.defensive_midfielder.$valid && myForm.center_midfielder.$valid && myForm.attacking_midfielder.$valid && myForm.right_forward.$valid && myForm.center_forward.$valid && myForm.reserve1.$valid && myForm.reserve2.$valid && myForm.reserve3.$valid && myForm.reserve4.$valid && myForm.reserve5.$valid && myForm.reserve6.$valid && myForm.reserve7.$valid) ? function_sostav(sostav_id,datum_sostav.value,coach,goalkeeper,centre_back1,centre_back2,right_back,left_back,defensive_midfielder,center_midfielder,attacking_midfielder,right_forward,left_forward,center_forward,reserve1,reserve2,reserve3,reserve4,reserve5,reserve6,reserve7,sostav_img_path) : error()">Save</button>
+    </form>
+</div>

@@ -24,6 +24,8 @@ html{
 body{
 	height: 100vh;
 	max-width:100%;
+	/*background-image:url('../img/cover22.jpg') ;*/
+	background-image:url('../img/IstutkanaHartija.jpg');
 }
 /****************First images in main**************************/
 .coverFirst{
@@ -42,6 +44,7 @@ footer{
 	background-repeat: no-repeat;
 	background-size: cover;
 	*/
+	/*margin-top:100vh;*/
 	background-color:#1C4A9F!important;
 	text-align: center;
 	color: #1C4A9F;
@@ -72,35 +75,11 @@ footer i{
 	background-color:red;
 	color: white;
 }
-.myStadion1{
-	background-image: url('../../uploads/Images/slika1.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 90vh;
-}
 .myViewCover22{
 	background-image: url('../img/cover22.jpg');
 	background-repeat: repeat;
 	color: #1C4A9F;
 }
-.myViewKojot{
-	background-image: url('../img/Kojot.png');
-	background-repeat: repeat;
-	color: #1C4A9F;
-}
-.myViewJeniMaaleLogo{
-	background-image: url('../img/JeniMaaleLogo.png');
-	background-size: 100% 100%;
-	background-repeat:no-repeat;
-	color: #1C4A9F;
-}
-.myViewProfilnaNova{
-	background-image: url('../img/profilna\ nova.jpg');
-	background-repeat: repeat;
-	color: #1C4A9F;
-}
-
 div input{
 	background-image: url('../img/IstutkanaHartija.jpg');
 	background-repeat: no-repeat;
@@ -152,10 +131,20 @@ h3:hover{
 }
 /**********Details************************/
 .myInputDetails{
-	background:white!important;
-	text-align: center!important;
+	background:#1C4A9F!important;
+	text-align: start!important;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+}
+.myViewProfilnaNova{
+	background-image: url('../img/profilna\ nova.jpg');
+	background-size: 100% 100%;
+	background-repeat:no-repeat;
 	color: #1C4A9F;
 	font-weight: bold;
+	font-size: 20px;
 }
-
-
+option{
+	color: white;
+}
