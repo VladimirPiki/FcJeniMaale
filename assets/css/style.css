@@ -1,11 +1,5 @@
 /*Style*/
 
-/******This is example*******/
-.bg-danger
-{
-	background-color:#3a3c31!important;
-	color:blue;
-}
 /*********For all*************/
 
 @font-face {
@@ -28,22 +22,19 @@ body{
 	background-image:url('../img/IstutkanaHartija.jpg');
 }
 /****************First images in main**************************/
+
 .coverFirst{
 	height: 100%;
 	width: 100%;
 }
 /*************Navbar***************************/
+
 .navbar{
 	background-color:#029934!important;
 }
 /************Footer************************/
+
 footer{
-	/*
-	background-image: url('../img/IstutkanaHartija.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	*/
 	/*margin-top:100vh;*/
 	background-color:#1C4A9F!important;
 	text-align: center;
