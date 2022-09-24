@@ -2,18 +2,14 @@
 
 /**
  * @author Vladimir Krstevski <vlade.piki23@hotmail.com>
- * @link 
+ * @link https://www.linkedin.com/in/vladimir-krstevski-6182aa24b/
  */
 
 require_once "POJO/income.php";
 class IncomeDAO extends Income
 {
-
     private $table_name="income";
-
     private $database = null;
-
-
 
     /**
      * @param mixed $objDB

@@ -2,35 +2,25 @@
 
 /**
  * @author Vladimir Krstevski <vlade.piki23@hotmail.com>
- * @link 
+ * @link https://www.linkedin.com/in/vladimir-krstevski-6182aa24b/
  */
 
 class Income
 {
-
-
     private  $income_id;
-
     private  $ime;
-
     private  $prezime;
-
     private  $pozicija;
-
     private  $godini;
-
     private  $klub;
-
     private  $iznos_denari;
-
     private $income_img_path;
 
     /**
      * @return 
      */
     public function getIncomeId()
-    {
-        
+    {       
         return $this->income_id;
     }
 
@@ -38,8 +28,7 @@ class Income
      * @param  $income_id
      */
     public function setIncomeId( $income_id):void
-    {
-       
+    {     
         $this->income_id=$income_id;
     }
 
@@ -47,8 +36,7 @@ class Income
      * @return 
      */
     public function getIme()
-    {
-        
+    {       
         return $this->ime;
     }
 
@@ -56,8 +44,7 @@ class Income
      * @param  $ime
      */
     public function setIme( $ime):void
-    {
-        
+    {       
         $this->ime=$ime;
     }
 
@@ -65,8 +52,7 @@ class Income
      * @return 
      */
     public function getPrezime() 
-    {
-        
+    {    
         return $this->prezime;
     }
 
@@ -74,8 +60,7 @@ class Income
      * @param  $prezime
      */
     public function setPrezime( $prezime):void
-    {
-        
+    {    
         $this->prezime=$prezime;
     }
 
@@ -83,8 +68,7 @@ class Income
      * @return
      */
     public function getPozicija()
-    {
-      
+    {    
         return $this->pozicija;
     }
 
@@ -92,8 +76,7 @@ class Income
      * @param  $pozicija
      */
     public function setPozicija( $pozicija):void
-    {
-     
+    { 
         $this->pozicija=$pozicija;
     }
 
@@ -101,8 +84,7 @@ class Income
      * @return 
      */
     public function getGodini() 
-    {
-       
+    {  
         return $this->godini;
     }
 
@@ -110,8 +92,7 @@ class Income
      * @param  $godini
      */
     public function setGodini( $godini):void
-    {
-        
+    {   
         $this->godini=$godini;
     }
 
@@ -119,8 +100,7 @@ class Income
      * @return 
      */
     public function getKlub() 
-    {
-       
+    {  
         return $this->klub;
     }
 
@@ -128,8 +108,7 @@ class Income
      * @param  $klub
      */
     public function setKlub( $klub):void
-    {
-        
+    {   
         $this->klub=$klub;
     }
 
@@ -137,8 +116,7 @@ class Income
      * @return 
      */
     public function getIznosDenari()
-    {
-        
+    {  
         return $this->iznos_denari;
     }
 
@@ -147,7 +125,6 @@ class Income
      */
     public function setIznosDenari( $iznos_denari):void
     {
-        
         $this->iznos_denari=$iznos_denari;
     }
 
@@ -167,3 +144,4 @@ class Income
         $this->income_img_path=$income_img_path;
     }
 }
+?>

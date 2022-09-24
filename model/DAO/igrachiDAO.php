@@ -2,14 +2,13 @@
 
 /**
  * @author Vladimir Krstevski <vlade.piki23@hotmail.com>
- * @link 
+ * @link https://www.linkedin.com/in/vladimir-krstevski-6182aa24b/
  */
 
 require_once "POJO/igrachi.php";
 
 class IgrachiDAO extends Igrachi
 {
-
     private $table_name="igrachi";
     private $database = null;
 

@@ -2,13 +2,12 @@
 
 /**
  * @author Vladimir Krstevski <vlade.piki23@hotmail.com>
- * @link 
+ * @link https://www.linkedin.com/in/vladimir-krstevski-6182aa24b/
  */
 
 require_once "POJO/sostav.php";
 class SostavDAO extends Sostav
 {
-    
      private $table_name="sostav";
      private $database = null;
     
@@ -20,7 +19,6 @@ class SostavDAO extends Sostav
          $this->database= $objDB;
      }
    
-
     /**
      * @return [type]
      */
@@ -48,7 +46,6 @@ class SostavDAO extends Sostav
         $reserve6=parent::getReserve6();
         $reserve7=parent::getReserve7();
         $sostav_img_path=parent::getSostavImgPath();
-
         $columns_value="$sostav_id,
                         '$datum_sostav',
                         $coach,
@@ -139,7 +136,6 @@ class SostavDAO extends Sostav
      */
     public function selectSostav(){
         return $this->database ->selectRowStoredProcedure("_select_sostav_natprevaruvanje");
-    }
-    
+    }   
 }
 ?>

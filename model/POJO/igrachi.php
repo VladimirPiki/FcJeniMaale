@@ -2,56 +2,41 @@
 
 /**
  * @author Vladimir Krstevski <vlade.piki23@hotmail.com>
- * @link 
+ * @link https://www.linkedin.com/in/vladimir-krstevski-6182aa24b/
  */
 
 class Igrachi
 {
-       
-
-         private $dres_id;
-
-         private $ime;
-
-         private $prezime;
-
-         private $pozicija;
-
-         private $godini;
-
-         private $plata_denari;
-         
-         private $income_id;
-
-         private $igrachi_img_path;
+    private $dres_id;
+    private $ime;
+    private $prezime;
+    private $pozicija;
+    private $godini;
+    private $plata_denari;
+    private $income_id;
+    private $igrachi_img_path;
     
-
-   
-
     /**
      * @param  $dres_id
      */
-        public function setDresId ($dres_id):void
-        {
-          
-            $this->dres_id=$dres_id;
-        }
+    public function setDresId ($dres_id):void
+    {
+        $this->dres_id=$dres_id;
+    }
         
-        /**
-         * @param $ime
-         */
-        public function setIme ($ime):void
-        {
-          
-            $this->ime=$ime;
-        }
+    /**
+    * @param $ime
+    */
+    public function setIme ($ime):void
+    {    
+        $this->ime=$ime;
+    }
 
         /**
          * @param $prezime
          */
         public function setPrezime($prezime):void
-        {
-          
+        {   
             $this->prezime=$prezime;
         }
         
@@ -59,8 +44,7 @@ class Igrachi
          * @param $pozicija
          */
         public function setPozicija ($pozicija):void
-        {
-            
+        {   
             $this->pozicija=$pozicija;
         }
 
@@ -68,8 +52,7 @@ class Igrachi
          * @param $godini
          */
         public function setGodini($godini):void
-        {
-           
+        {    
             $this->godini=$godini;
         }
         
@@ -77,8 +60,7 @@ class Igrachi
          * @param $plata_denari
          */
         public function setPlataDenari ($plata_denari):void
-        {
-           
+        {          
             $this->plata_denari=$plata_denari;
         }
 
@@ -86,28 +68,23 @@ class Igrachi
          * @param $income_id
          */
         public function setIncomeId ($income_id):void
-        {
-          
-            $this->income_id=$income_id;
+        {         
+           $this->income_id=$income_id;
         }
 
         /**
          * @param $igrachi_img_path
          */
         public function setIgrachiImgPath ($igrachi_img_path):void
-        {
-          
+        {       
             $this->igrachi_img_path=$igrachi_img_path;
         }
-
-    
-        
+       
         /**
          * @return
          */
         public function getDresId ()
-        {
-          
+        {      
             return $this->dres_id;
         }
 
@@ -115,8 +92,7 @@ class Igrachi
          * @return 
          */      
         public function getIme ()
-        {
-            
+        {       
             return $this->ime;
         }
 
@@ -124,8 +100,7 @@ class Igrachi
          * @return 
          */
         public function getPrezime()
-        {
-           
+        {       
             return $this->prezime;
         }
 
@@ -133,8 +108,7 @@ class Igrachi
          * @return 
          */
         public function getPozicija()
-        {
-           
+        {        
             return $this->pozicija;
         }
 
@@ -142,8 +116,7 @@ class Igrachi
          * @return 
          */
         public function getGodini()
-        {
-            
+        {         
             return $this->godini;
         }
 
@@ -151,8 +124,7 @@ class Igrachi
          * @return 
          */
         public function getPlataDenari()
-        {
-           
+        {        
             return $this->plata_denari;
         }
         
@@ -160,8 +132,7 @@ class Igrachi
          * @return
          */
         public function getIncomeId()
-        {
-            
+        {         
             return $this->income_id;
         }
         
@@ -169,10 +140,8 @@ class Igrachi
          * @return
          */
         public function getIgrachiImgPath()
-        {
-            
+        {           
             return $this->igrachi_img_path;
         }
-
 }
 ?>

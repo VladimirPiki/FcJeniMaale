@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * @author Vladimir Krstevski <vlade.piki23@hotmail.com>
+ * @link https://www.linkedin.com/in/vladimir-krstevski-6182aa24b/
+ */
+
 require_once "POJO/publika.php";
 class PublikaDAO extends Publika
 {

@@ -2,7 +2,7 @@
 
 /**
  * @author Vladimir Krstevski <vlade.piki23@hotmail.com>
- * @link 
+ * @link https://www.linkedin.com/in/vladimir-krstevski-6182aa24b/
  */
 
 require_once "POJO/natprevaruvanje.php";
@@ -77,7 +77,5 @@ class NatprevaruvanjeDAO extends Natprevaruvanje
       {
         return $this->database ->selectRowStoredProcedure("_select_natprevaruvanje");
       }
-
 }
-
 ?>

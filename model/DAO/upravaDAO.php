@@ -2,13 +2,12 @@
 
 /**
  * @author Vladimir Krstevski <vlade.piki23@hotmail.com>
- * @link 
+ * @link https://www.linkedin.com/in/vladimir-krstevski-6182aa24b/
  */
 
 require_once "POJO/uprava.php";
 class UpravaDAO extends Uprava
 {
-
      private $table_name="uprava";
      private $database = null;
 
@@ -20,7 +19,6 @@ class UpravaDAO extends Uprava
          $this->database= $objDB;
      }
 
-
     /**
      * @return [type]
      */
@@ -29,7 +27,6 @@ class UpravaDAO extends Uprava
         $dres_id=parent::getDresId();
         $zalaganje=parent::getZalaganje();
         $rabotna_ocenka=parent::getRabotnaOcenka();
-
         $columns_value="$dres_id,'$zalaganje',$rabotna_ocenka";
         $this->database ->callStoredProcedure("_insert_uprava",$columns_value);   
     }
@@ -52,9 +49,7 @@ class UpravaDAO extends Uprava
         $dres_id=parent::getDresId();
         $zalaganje=parent::getZalaganje();
         $rabotna_ocenka=parent::getRabotnaOcenka();
-
         $columns="zalaganje='$zalaganje',rabotna_ocenka=$rabotna_ocenka";
-
         $condition="dres_id=$dres_id";
         $this->database ->updateRow($this->table_name,$columns,$condition);  
     }

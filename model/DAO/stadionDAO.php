@@ -2,13 +2,12 @@
 
 /**
  * @author Vladimir Krstevski <vlade.piki23@hotmail.com>
- * @link 
+ * @link https://www.linkedin.com/in/vladimir-krstevski-6182aa24b/
  */
 
 require_once "POJO/stadion.php";
 class StadionDAO extends Stadion
 {
-
      private $table_name="stadion";
      private $database = null;
 
@@ -20,7 +19,6 @@ class StadionDAO extends Stadion
          $this->database= $objDB;
      }
    
-
     /**
      * @return [type]
      */
@@ -53,11 +51,8 @@ class StadionDAO extends Stadion
         $ime=parent::getIme();
         $adresa=parent::getAdresa();
         $kapacitet=parent::getKapacitet();
-
         $columns="ime='$ime',adresa='$adresa',kapacitet=$kapacitet";
-
         $condition="stadion_id=$stadion_id";
-
         $this->database->updateRow($this->table_name,$columns,$condition);
     }
 
