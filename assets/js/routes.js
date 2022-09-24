@@ -1,7 +1,11 @@
 app.config(function($routeProvider) {
   $routeProvider
-  .when("/home", {
-    templateUrl : "view/main.html",
+  .when("/", {
+    templateUrl : "view/home.html",
+	controller:"myCtrl"
+  })
+  .when("/main", {
+    templateUrl : "view/home.html",
 	controller:"myCtrl"
   })
   .when("/details_igrachi", {

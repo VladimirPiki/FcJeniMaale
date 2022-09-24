@@ -44,7 +44,6 @@
                 <th><i class="fa-solid fa-trash-can"></i>Избриши</th>
             </tr>
         </thead>
-
         <tbody>
             <tr class="text-center" ng-repeat="natprevar in natprevaruvanje | filter:{datum:searchByDatum,protivnik:searchByProtivnik,rezultat:searchByRezultat,mesto:searchByMesto,sostav_id:searchBySostavId,stadion_id:searchByStadionId,datum_id:searchByDatumId}">
                 <td>{{natprevar.kolo_id}}</td>
@@ -65,52 +64,37 @@
                 </td>
             </tr>
         </tbody>
-
     </table>
 </div>
-
 
 <!-- The Modal Delete-->
 <div class="modal" id="myModal">
     <div class="modal-dialog">
       <div class="modal-content">
-  
-        <!-- Modal Header -->
         <div class="modal-header myBtn">
           <h4 class="modal-title">Внимание!!!</h4>
           <i type="button" data-bs-dismiss="modal" class="fa-regular fa-rectangle-xmark fa-2x"></i>
         </div>
-  
-        <!-- Modal body -->
         <div class="modal-body myBtn">
             Дали сте сигурни дека сакате да го избришите натпреварот против {{natprevaruvanje[getIndex].protivnik}} на {{natprevaruvanje[getIndex].datum}}???
         </div>
-  
-        <!-- Modal footer -->
         <div class="modal-footer bg-light">
           <button type="button" class="btn myBtn" data-bs-dismiss="modal" ng-click="deleteRow('natprevaruvanje',natprevaruvanje[getIndex].kolo_id)">Да</button>
           <button type="button" class="btn myBtn" data-bs-dismiss="modal">Не</button> 
         </div>
-  
       </div>
     </div>
   </div>
 
-  <!-- The Modal Sostav ID-->
+  <!-- The Modal Sostav -->
 <div class="modal" id="myModalSostav">
     <div class="modal-dialog">
       <div class="modal-content">
-  
-        <!-- Modal Header -->
         <div class="modal-header myBtn">
           <h4 class="modal-title text-center">Составот против екипата на {{natprevaruvanje[getIndex].protivnik}} на {{natprevaruvanje[getIndex].datum}}</h4>
           <i type="button" data-bs-dismiss="modal" class="fa-regular fa-rectangle-xmark fa-2x"></i>
-          
         </div>
-  
-        <!-- Modal body -->
         <div class="modal-body myBtn myBackgroundSostav">
-
             <div class="row ">
                 <br>
                 <div class="col-12 text-center">
@@ -192,13 +176,9 @@
                 </div>
             </div>
         </div>
-        
-  
-        <!-- Modal footer -->
         <div class="modal-footer bg-light">
           <button type="button" class="btn myBtn" data-bs-dismiss="modal">Назад</button> 
         </div>
-  
       </div>
     </div>
   </div>
@@ -207,25 +187,18 @@
 <div class="modal" id="myModalPublika">
     <div class="modal-dialog">
       <div class="modal-content">
-  
-        <!-- Modal Header -->
         <div class="modal-header myBtn">
           <h4 class="modal-title">Детали за натпреварот на ден {{natprevaruvanje[getIndex].datum}}!!!</h4>
           <i type="button" data-bs-dismiss="modal" class="fa-regular fa-rectangle-xmark fa-2x"></i>
         </div>
-     
-        <!-- Modal body -->
         <div class="modal-body myBtn">
             На стадионот {{natprevaruvanje[getIndex].ime}} во {{natprevaruvanje[getIndex].mesto}} против екипата на {{natprevaruvanje[getIndex].protivnik}} кој заврши со 
             резултат {{natprevaruvanje[getIndex].rezultat}}.На натпреварот беа присутни {{natprevaruvanje[getIndex].domashna}} домашна публика и {{natprevaruvanje[getIndex].gostinska}} гостинска публика.
             Распродадени се {{natprevaruvanje[getIndex].karti_rasprodadeni}} карти.
         </div>
-
-        <!-- Modal footer -->
         <div class="modal-footer bg-light">
           <button type="button" class="btn myBtn" data-bs-dismiss="modal">Врати се назад</button> 
         </div>
-  
       </div>
     </div>
   </div>

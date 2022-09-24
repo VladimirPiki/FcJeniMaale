@@ -43,34 +43,24 @@
                     </td>
                 </tr>
             </tbody>
-    
         </table>
-    </div>
-    
-    
-    <!-- The Modal -->
+</div>
+
+<!-- The Modal -->
     <div class="modal" id="myModal">
         <div class="modal-dialog">
           <div class="modal-content">
-      
-            <!-- Modal Header -->
             <div class="modal-header myBtn">
               <h4 class="modal-title">Внимание!!!</h4>
               <i type="button" data-bs-dismiss="modal" class="fa-regular fa-rectangle-xmark fa-2x"></i>
             </div>
-      
-            <!-- Modal body -->
             <div class="modal-body myBtn">
                 Дали сте сигурни дека сакате да го избришите играчот {{income[getIndex].ime}} {{income[getIndex].prezime}}???
             </div>
-      
-            <!-- Modal footer -->
             <div class="modal-footer bg-light">
               <button type="button" class="btn myBtn" data-bs-dismiss="modal" ng-click="deleteRow('income',income[getIndex].income_id)">Да</button>
               <button type="button" class="btn myBtn" data-bs-dismiss="modal">Не</button>
-              
             </div>
-      
           </div>
         </div>
       </div>

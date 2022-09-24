@@ -9,7 +9,6 @@
 *{
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 }
 html{
 	font-family: Decima Nova;
@@ -21,21 +20,14 @@ body{
 	/*background-image:url('../img/cover22.jpg') ;*/
 	background-image:url('../img/IstutkanaHartija.jpg');
 }
-/****************First images in main**************************/
 
-.coverFirst{
-	height: 100%;
-	width: 100%;
-}
 /*************Navbar***************************/
-
 .navbar{
 	background-color:#029934!important;
 }
-/************Footer************************/
 
+/************Footer************************/
 footer{
-	/*margin-top:100vh;*/
 	background-color:#1C4A9F!important;
 	text-align: center;
 	color: #1C4A9F;
@@ -47,6 +39,7 @@ footer p{
 footer i{
 	color: #029934;
 }
+
 /*************View*********************/
 .myBtn{
 	background-color:#029934;
@@ -120,6 +113,7 @@ h3:hover{
 	height: 350px;
 	width: 300px;
 }
+
 /**********Details************************/
 .myInputDetails{
 	background:#1C4A9F!important;
@@ -138,4 +132,22 @@ h3:hover{
 }
 option{
 	color: white;
+}
+
+/*********home**********/
+.mojSlider{
+    padding: 0px !important;
+}
+.carouselSliki{
+	height: auto;
+	width: 100%;
+}
+.cardSliki{
+	height: 100%;
+	width: 100%;
+}
+.naslovRezultatiSostavi{
+	font-size: 35px;
+	font-weight: bolder;
+	color: #029934;
 }

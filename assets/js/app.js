@@ -167,8 +167,7 @@ app.controller('myCtrl', function($scope,$http,$filter) {
   $scope.function_natprevaruvanje=function(kolo_id,datum,protivnik,rezultat,mesto,sostav_id,stadion_id,datum_id)
   {
     var objNatprevaruvanje=[];
-    //datum treba da se konvertira vo format yyyy-mm-dd isto i za datum_id
-    objNatprevaruvanje.push({"kolo_id":kolo_id,"datum":datum,"protivnik":protivnik,"rezultat":rezultat,"mesto":mesto,"sostav_id":sostav_id,"stadion_id":stadion_id,"datum_id":datum_id,"income_img_path":income_img_path,"table_name":"natprevaruvanje"});
+    objNatprevaruvanje.push({"kolo_id":kolo_id,"datum":datum,"protivnik":protivnik,"rezultat":rezultat,"mesto":mesto,"sostav_id":sostav_id,"stadion_id":stadion_id,"datum_id":datum_id,"table_name":"natprevaruvanje"});
     console.log(objNatprevaruvanje);
     postData("insert",objNatprevaruvanje);
   }
@@ -215,7 +214,6 @@ app.controller('myCtrl', function($scope,$http,$filter) {
   }
 
   ///Delete functions
-
   $scope.getIndex=0;
   $scope.passPosition=function(position) // position=3
   {

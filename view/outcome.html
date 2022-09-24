@@ -23,7 +23,6 @@
                 <th><i class="fa-solid fa-trash-can"></i>Избриши</th>
             </tr>
         </thead>
-
         <tbody>
             <tr ng-repeat="outcomes in outcome | filter:{klub:searchByKlub,iznos_denari:searchByIznosDenari,dres_id:searchByDresId}">
                 <td><br>{{outcomes.outcome_id}}</td>
@@ -41,57 +40,21 @@
     </table>
 </div>
 
-
 <!-- The Modal -->
 <div class="modal" id="myModal">
     <div class="modal-dialog">
       <div class="modal-content">
-  
-        <!-- Modal Header -->
         <div class="modal-header myBtn">
           <h4 class="modal-title">Внимание!!!</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-  
-        <!-- Modal body -->
         <div class="modal-body myBtn">
             Дали сте сигурни дека сакате да го избришите играчот {{outcome[getIndex].ime}} {{outcome[getIndex].prezime}}???
         </div>
-  
-        <!-- Modal footer -->
         <div class="modal-footer bg-light">
           <button type="button" class="btn myBtn" data-bs-dismiss="modal" ng-click="deleteRow('outcome',outcome[getIndex].outcome_id)">Да</button>
           <button type="button" class="btn myBtn" data-bs-dismiss="modal">Не</button>
-          
         </div>
-  
       </div>
     </div>
-  </div>
-
-<!-- The Modal -->
-<div class="modal" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-  
-        <!-- Modal Header -->
-        <div class="modal-header bg-danger">
-          <h4 class="modal-title">Внимание!!!</h4>
-          <i type="button" data-bs-dismiss="modal" class="fa-regular fa-rectangle-xmark fa-2x"></i>
-        </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body bg-primary">
-            Дали сте сигурни дека сакате да го избришите играчот???
-        </div>
-  
-        <!-- Modal footer -->
-        <div class="modal-footer bg-light">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Да</button>
-          <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Не</button>
-          
-        </div>
-  
-      </div>
-    </div>
-  </div>
+</div>
