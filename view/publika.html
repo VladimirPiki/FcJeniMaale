@@ -13,16 +13,18 @@
                 <th>
                     <input class="form-control fw-bold" type="number" name="searchByKartiRasprodadeni" id="searchByKartiRasprodadeni" ng-model="searchByKartiRasprodadeni" placeholder="Распродадени карти на натпреварот">
                 </th>
+                <th></th>
                 <th><i class="fa-solid fa-pen"></i>Измени</th>
                 <th><i class="fa-solid fa-trash-can"></i>Избриши</th>
             </tr>
         </thead>
         <tbody>
             <tr ng-repeat="publiki in publika | filter:{domashna:searchByDomashna,gostinska:searchByGostinska,karti_rasprodadeni:searchByKartiRasprodadeni}">
-                <td>{{publiki.datum_id}}</td>
-                <td>{{publiki.domashna}}</td>
-                <td>{{publiki.gostinska}}</td>
-                <td>{{publiki.karti_rasprodadeni}}</td>
+                <td><br>{{publiki.datum_id}}</td>
+                <td><br>{{publiki.domashna}}</td>
+                <td><br>{{publiki.gostinska}}</td>
+                <td><br>{{publiki.karti_rasprodadeni}}</td>
+                <td><img class="rounded-circle" width="100" height="100" src="uploads/Images/publika/{{publiki.publika_img_path}}" alt="{{publiki.publika_img_path}}"></td>
                 <td title="Измени"><i class="fa-solid fa-pen"></i></td>
                 <td title="Избриши {{publiki.datum_id}}">
                     <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal" ng-click="passPosition($index)"> <i class="fa-solid fa-trash-can"></i></button>

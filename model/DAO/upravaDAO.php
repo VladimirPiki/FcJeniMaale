@@ -27,7 +27,8 @@ class UpravaDAO extends Uprava
         $dres_id=parent::getDresId();
         $zalaganje=parent::getZalaganje();
         $rabotna_ocenka=parent::getRabotnaOcenka();
-        $columns_value="$dres_id,'$zalaganje',$rabotna_ocenka";
+        $uprava_img_path=parent::getUpravaImgPath();
+        $columns_value="$dres_id,'$zalaganje',$rabotna_ocenka,'$uprava_img_path'";
         $this->database ->callStoredProcedure("_insert_uprava",$columns_value);   
     }
 

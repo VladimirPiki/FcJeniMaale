@@ -180,10 +180,10 @@ app.controller('myCtrl', function($scope,$http,$filter) {
     postData("insert",objOutcome);
   }
 
-  $scope.function_publika=function(datum_id,domashna,gostinska,karti_rasprodadeni)
+  $scope.function_publika=function(datum_id,domashna,gostinska,karti_rasprodadeni,publika_img_path)
   {
     var objPublika=[];
-    objPublika.push({"datum_id":datum_id,"domashna":domashna,"gostinska":gostinska,"karti_rasprodadeni":karti_rasprodadeni,"table_name":"publika"});
+    objPublika.push({"datum_id":datum_id,"domashna":domashna,"gostinska":gostinska,"karti_rasprodadeni":karti_rasprodadeni,"publika_img_path":publika_img_path,"table_name":"publika"});
     console.log(objPublika);
     postData("insert",objPublika);
   }
@@ -196,19 +196,19 @@ app.controller('myCtrl', function($scope,$http,$filter) {
     postData("insert",objSostav);
   }
 
-  $scope.function_stadion=function(ime,adresa,kapacitet)
+  $scope.function_stadion=function(ime,adresa,kapacitet,stadion_img_path)
   {
     var objStadion=[];
-    objStadion.push({"ime":ime,"adresa":adresa,"kapacitet":kapacitet,"table_name":"stadion"});
+    objStadion.push({"ime":ime,"adresa":adresa,"kapacitet":kapacitet,"stadion_img_path":stadion_img_path,"table_name":"stadion"});
     console.log(objStadion);
     postData("insert",objStadion);
   }
 
-  $scope.function_uprava=function(dres_id,zalaganje,rabotna_ocenka)
+  $scope.function_uprava=function(dres_id,zalaganje,rabotna_ocenka,uprava_img_path)
   {
     //console.log("controller "+zalaganje +" "+rabotna_ocenka);
     var objUprava=[];
-    objUprava.push({"dres_id":dres_id,"zalaganje":zalaganje,"rabotna_ocenka":rabotna_ocenka,"table_name":"uprava"});
+    objUprava.push({"dres_id":dres_id,"zalaganje":zalaganje,"rabotna_ocenka":rabotna_ocenka,"uprava_img_path":uprava_img_path,"table_name":"uprava"});
     console.log(objUprava);
     postData("insert",objUprava);
   }

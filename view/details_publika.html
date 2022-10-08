@@ -29,7 +29,11 @@
             <span class="alert alert-danger" ng-show="myForm.karti_rasprodadeni.$invalid">Внесете најмалку со 1 бројка!!!</span>
             <input type="number" class="form-control myInputDetails"  placeholder="Внесете го бројот распродадени карти на домашен терен"  id="karti_rasprodadeni" ng-minlength="1" name="karti_rasprodadeni" ng-model="karti_rasprodadeni">
         </div>
+        <div class="mb-3 fw-bold">
+          <label for="publika_img_path" class="form-label">Слика</label>
+          <input type="text" class="form-control myInputDetails"  placeholder="Внесете слика"  id="publika_img_path" name="publika_img_path" ng-model="publika_img_path">
+        </div>
         <button type="button" class="btn myBtn" ng-click="
-        (myForm.datum_id.$valid && myForm.domashna.$valid && myForm.gostinska.$valid && myForm.karti_rasprodadeni.$valid) ? function_publika(datum_id.value,domashna,gostinska,karti_rasprodadeni) : erorr()">Save</button>
+        (myForm.datum_id.$valid && myForm.domashna.$valid && myForm.gostinska.$valid && myForm.karti_rasprodadeni.$valid) ? function_publika(datum_id.value,domashna,gostinska,karti_rasprodadeni,publika_img_path) : erorr()">Save</button>
   </form>
 </div>

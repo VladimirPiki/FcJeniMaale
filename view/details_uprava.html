@@ -1,4 +1,4 @@
-<div class="myViewCover22">
+<div class="myViewProfilnaNova">
   <h3 class="text-center">
     Стручен штаб
   </h3>
@@ -10,7 +10,7 @@
   </div>
   <form name="myForm">
     <div class="mb-3">
-      <label for="dres_id" class="form-label">dres_id</label>
+      <label for="dres_id" class="form-label">Број на дрес</label>
       <span class="alert alert-danger" ng-show="myForm.dres_id.$invalid">Внесете име со најмалце 1 бројка!!!</span>
           <select class="form-control myInputDetails" id="dres_id" name="dres_id" ng-model="dres_id">
             <option class="text-light" value="">Изберете опции</option>
@@ -20,7 +20,7 @@
           </select>
     </div>
       <div class="mb-3">
-        <label for="zalaganje" class="form-label">zalaganje</label>
+        <label for="zalaganje" class="form-label">Залагањето за клубот</label>
         <select class="form-control myInputDetails" name="zalaganje" id="zalaganje" ng-model="zalaganje" placeholder="Внесете го залагањето на управата во клубот">
           <option value="">Изберете опции</option>
           <option name="zalaganje" id="zalaganje" ng-model="zalaganje">недоволно</option>
@@ -29,7 +29,7 @@
         </select>
       </div>
       <div class="mb-3">
-          <label for="rabotna_ocenka" class="form-label">rabotna_ocenka</label>
+          <label for="rabotna_ocenka" class="form-label">Работна оценка</label>
           <select class="form-control myInputDetails" name="rabotna_ocenka" id="rabotna_ocenka" ng-model="rabotna_ocenka" placeholder="несете ја работната оценка на управата во клубот">
             <option value="">Изберете опции</option>
             <option name="rabotna_ocenka" id="rabotna_ocenka" ng-model="rabotna_ocenka">1</option>
@@ -39,7 +39,11 @@
             <option name="rabotna_ocenka" id="rabotna_ocenka" ng-model="rabotna_ocenka">5</option>
           </select>
       </div>
+      <div class="mb-3 fw-bold">
+        <label for="uprava_img_path" class="form-label">Слика</label>
+        <input type="text" class="form-control myInputDetails"  placeholder="Внесете слика за членот на стручен штаб"  id="uprava_img_path" name="uprava_img_path" ng-model="uprava_img_path">
+      </div>
       <button type="button" class="btn myBtn mb-5" ng-click="
-      (myForm.dres_id.$valid && myForm.zalaganje.$valid && myForm.rabotna_ocenka.$valid) ? function_uprava(dres_id,zalaganje,rabotna_ocenka) : erorr()">Save</button>
+      (myForm.dres_id.$valid && myForm.zalaganje.$valid && myForm.rabotna_ocenka.$valid) ? function_uprava(dres_id,zalaganje,rabotna_ocenka,uprava_img_path) : erorr()">Save</button>
     </form>
 </div>

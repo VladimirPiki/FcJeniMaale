@@ -7,10 +7,11 @@
 
 class Stadion
 { 
-    private $stadion_id;
+    private  $stadion_id;
     private  $ime;
     private  $adresa;
     private  $kapacitet;
+    private  $stadion_img_path;
  
     /**
      * @return string
@@ -76,5 +77,22 @@ class Stadion
         $this->kapacitet=$kapacitet;
     }
 
+    /**
+     * @return [type]
+     */
+    public function getStadionImgPath()
+    {
+        return $this->stadion_img_path;
+    }
+
+    /**
+     * @param mixed $stadion_img_path
+     * 
+     * @return [type]
+     */
+    public function setStadionImgPath($stadion_img_path)
+    {
+        $this->stadion_img_path=$stadion_img_path;
+    }
 }
 ?>

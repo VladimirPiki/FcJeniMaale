@@ -15,12 +15,15 @@ html{
 	font-size: 17px;
 }
 body{
-	height: 100vh;
-	max-width:100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 	/*background-image:url('../img/cover22.jpg') ;*/
 	background-image:url('../img/IstutkanaHartija.jpg');
 }
-
+article {
+    margin: auto 0;
+}
 /*************Navbar***************************/
 .navbar{
 	background-color:#029934!important;
@@ -28,6 +31,7 @@ body{
 
 /************Footer************************/
 footer{
+	margin-top: auto;
 	background-color:#1C4A9F!important;
 	text-align: center;
 	color: #1C4A9F;
@@ -39,7 +43,6 @@ footer p{
 footer i{
 	color: #029934;
 }
-
 /*************View*********************/
 .myBtn{
 	background-color:#029934;
@@ -60,8 +63,11 @@ footer i{
 	color: white;
 }
 .myViewCover22{
-	background-image: url('../img/cover22.jpg');
-	background-repeat: repeat;
+	background-image: url('../img/JeniMaaleLogo.png');
+	background-attachment: fixed;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
 	color: #1C4A9F;
 }
 div input{
@@ -123,9 +129,11 @@ h3:hover{
 	font-size: 18px;
 }
 .myViewProfilnaNova{
-	background-image: url('../img/profilna\ nova.jpg');
-	background-size: 100% 100%;
-	background-repeat:no-repeat;
+	background-image: url('../img/Kojot.png');
+	background-attachment: fixed;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
 	color: #1C4A9F;
 	font-weight: bold;
 	font-size: 20px;
@@ -135,6 +143,18 @@ option{
 }
 
 /*********home**********/
+.topImages{
+	background-image: url('../img/blueCover.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	text-align: center;
+	color: #029934;
+	font-weight: bold;
+	font-size: 20px;
+}
+
 .mojSlider{
     padding: 0px !important;
 }
@@ -150,4 +170,35 @@ option{
 	font-size: 35px;
 	font-weight: bolder;
 	color: #029934;
+}
+
+/*********Media query*******************/
+@media only screen and (max-width: 1300px) {
+
+	.topImages{
+		background-image: url('../img/Kojot.png');
+		background-attachment: fixed;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	/*
+	footer{
+		position: sticky;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+	}
+	*/
+}
+/*
+@media only screen and (min-width: 600px) and (max-width:1280px) {
+	footer{
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+	}
 }

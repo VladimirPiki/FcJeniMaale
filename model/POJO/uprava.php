@@ -10,6 +10,7 @@ class Uprava
     private  $dres_id;
     private  $zalaganje;
     private  $rabotna_ocenka;
+    private  $uprava_img_path;
 
 
     /**
@@ -58,6 +59,24 @@ class Uprava
     public function setRabotnaOcenka( $rabotna_ocenka):void
     {   
         $this->rabotna_ocenka=$rabotna_ocenka;
+    }
+
+    /**
+     * @return [type]
+     */
+    public function getUpravaImgPath()
+    {
+        return $this->uprava_img_path;
+    }
+
+    /**
+     * @param mixed $uprava_img_path
+     * 
+     * @return [type]
+     */
+    public function setUpravaImgPath($uprava_img_path)
+    {
+        $this->uprava_img_path=$uprava_img_path;
     }
 }
 ?>

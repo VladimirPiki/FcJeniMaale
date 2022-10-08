@@ -4,6 +4,7 @@
         <thead>
             <tr class="text-center">
                 <th>Стадион</th>
+                <th></th>
                 <th>
                     <input class="form-control text-center fw-bold" type="text" name="searchByIme" id="searchByIme" ng-model="searchByIme" placeholder="Пребарај по име на стадионот">
                 </th>
@@ -19,10 +20,11 @@
         </thead>
         <tbody class="text-center">
             <tr ng-repeat="stadioni in stadion | filter:{ime:searchByIme,adresa:searchByAdresa,kapacitet:searchByKapacitet}">
-                <td>{{stadioni.stadion_id}}</td>
-                <td>{{stadioni.ime}}</td>
-                <td>{{stadioni.adresa}}</td>
-                <td>{{stadioni.kapacitet}}</td>
+                <td><br>{{stadioni.stadion_id}}</td>
+                <td><img class="rounded-circle" width="100" height="100" src="uploads/Images/stadion/{{stadioni.stadion_img_path}}" alt="{{stadioni.stadion_img_path}}"></td>
+                <td><br>{{stadioni.ime}}</td>
+                <td><br>{{stadioni.adresa}}</td>
+                <td> <br>{{stadioni.kapacitet}}</td>
                 <td title="Edit"><i class="fa-solid fa-pen"></i></td>
                 <td title="Delete {{stadioni.stadion_id}} {{stadioni.ime}}">
                     <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal" ng-click="passPosition($index)"> <i class="fa-solid fa-trash-can"></i></button>

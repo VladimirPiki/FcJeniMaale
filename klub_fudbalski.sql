@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `igrachi` (
   CONSTRAINT `FK_income_igrachi` FOREIGN KEY (`income_id`) REFERENCES `income` (`income_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=utf8;
 
--- Dumping data for table klub_fudbalski.igrachi: ~38 rows (approximately)
+-- Dumping data for table klub_fudbalski.igrachi: ~37 rows (approximately)
 INSERT INTO `igrachi` (`dres_id`, `ime`, `prezime`, `pozicija`, `godini`, `plata_denari`, `income_id`, `igrachi_img_path`) VALUES
 	(1, 'Александар', 'Димовски', 'Голман', '1997', 100000.0, 0, 'golman.jpg'),
 	(2, 'Благојче', 'Петревски', 'Одбрана', '1995', 64000.0, 0, 'dugal.jpg'),
@@ -121,30 +121,31 @@ CREATE TABLE IF NOT EXISTS `natprevaruvanje` (
   CONSTRAINT `FK_stadion` FOREIGN KEY (`stadion_id`) REFERENCES `stadion` (`stadion_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
--- Dumping data for table klub_fudbalski.natprevaruvanje: ~22 rows (approximately)
+-- Dumping data for table klub_fudbalski.natprevaruvanje: ~23 rows (approximately)
 INSERT INTO `natprevaruvanje` (`kolo_id`, `datum`, `protivnik`, `rezultat`, `mesto`, `sostav_id`, `stadion_id`, `datum_id`) VALUES
 	(1, '2021-08-19 17:00:00', 'Фк Работнички', 'Пораз-3:1', 'Охрид', 1, 13, '2021-08-19'),
-	(2, '2021-10-02 15:30:00', 'Фк Пелагонија Д', 'Победа-0:3', 'Добромири', 2, 2, '2021-10-02'),
-	(3, '2021-10-09 15:00:00', 'Фк Младост', 'Победа-0:1', 'Дедебалци', 3, 3, '2021-10-09'),
+	(2, '2021-10-02 15:30:00', 'Фк Пелагонија Д', 'Победа-0:3', 'с.Добромири', 2, 2, '2021-10-02'),
+	(3, '2021-10-09 15:00:00', 'Фк Младост', 'Победа-0:1', 'с.Дедебалци', 3, 3, '2021-10-09'),
 	(4, '2021-10-16 15:00:00', 'Фк Црна Река', 'Победа-2:0', 'Горно Оризари', 4, 1, '2021-10-16'),
-	(5, '2021-10-23 14:30:00', 'Фк Чагор', 'Нерешено-0:0', 'Лопатица', 5, 4, '2021-10-23'),
+	(5, '2021-10-23 14:30:00', 'Фк Чагор', 'Нерешено-0:0', 'с.Лопатица', 5, 4, '2021-10-23'),
 	(6, '2021-10-30 14:00:00', 'Фк Светлост', 'Победа-2:0', 'Горно Оризари', 6, 1, '2021-10-30'),
-	(7, '2021-11-06 13:00:00', 'Фк Пелагонија Т', 'Победа-0:5', 'Трап', 7, 5, '2021-11-06'),
+	(7, '2021-11-06 13:00:00', 'Фк Пелагонија Т', 'Победа-0:5', 'с.Трап', 7, 5, '2021-11-06'),
 	(8, '2021-11-13 13:00:00', 'Фк Олд Бојс', 'Нерешено-0:0', 'Горно Оризари', 8, 1, '2021-11-13'),
-	(9, '2021-11-21 13:00:00', 'Фк Пелистер ТМ', 'Победа-3:8', 'Трново', 9, 6, '2021-11-21'),
+	(9, '2021-11-21 13:00:00', 'Фк Пелистер ТМ', 'Победа-3:8', 'с.Трново', 9, 6, '2021-11-21'),
 	(10, '2021-11-27 13:00:00', 'Фк КСК', 'Нерешено-1:1', 'Горно Оризари', 10, 1, '2021-11-27'),
-	(11, '2022-04-03 10:00:00', 'Фк Пелагонија Д', 'Нерешено-0:0', 'Горно Оризари', 11, 1, '2022-04-03'),
+	(11, '2022-04-03 10:00:00', 'Фк Пелагонија Д', 'Нерешено-2:2', 'Горно Оризари', 11, 1, '2022-04-03'),
 	(12, '2022-04-10 10:00:00', 'Фк Младост', 'Нерешено-1:1', 'Горно Оризари', 12, 1, '2022-04-10'),
-	(13, '2022-04-17 10:00:00', 'Фк Црна Река', 'Пораз-2:1', 'Чарлија', 13, 7, '2022-04-17'),
+	(13, '2022-04-17 10:00:00', 'Фк Црна Река', 'Пораз-2:1', 'с.Чарлија', 13, 7, '2022-04-17'),
 	(14, '2022-04-23 16:30:00', 'Фк Чагор', 'Победа-3:2', 'Горно Оризари', 14, 1, '2022-04-23'),
-	(15, '2022-05-02 10:30:00', 'Фк Светлост', 'Победа-1:3', 'Кукуречани', 15, 8, '2022-05-02'),
+	(15, '2022-05-02 10:30:00', 'Фк Светлост', 'Победа-1:3', 'с.Кукуречани', 15, 8, '2022-05-02'),
 	(16, '2022-05-08 10:30:00', 'Фк Пелагонија Т', 'Победа-3:1', 'Горно Оризари', 16, 1, '2022-05-08'),
-	(17, '2022-05-15 10:00:00', 'Фк Олд Бојс', 'Нерешено-0:0', 'Поешево', 17, 9, '2022-05-15'),
+	(17, '2022-05-15 10:00:00', 'Фк Олд Бојс', 'Нерешено-0:0', 'с.Поешево', 17, 9, '2022-05-15'),
 	(18, '2022-05-22 16:30:00', 'Фк Пелистер ТМ', 'Победа-4:1', 'Горно Оризари', 18, 1, '2022-05-22'),
-	(19, '2022-05-24 10:00:00', 'Фк КСК', 'Победа-2:0', 'Крклино', 19, 10, '2022-05-24'),
+	(19, '2022-05-24 10:00:00', 'Фк КСК', 'Победа-1:0', 'с.Крклино', 19, 10, '2022-05-24'),
 	(20, '2022-06-01 17:00:00', 'Фк Победа И', 'Победа-(Пенали5:4)1:1', 'Горно Оризари', 20, 1, '2022-06-01'),
-	(21, '2022-06-08 17:00:00', 'Фк Кравари', 'Пораз-(Пенали6:5)1:1', 'Кравари', 21, 11, '2022-06-08'),
-	(22, '2022-09-04 10:00:00', 'Фк Поешево', 'Нерешено-1:1', 'Кукуречани', 22, 12, '2022-09-04');
+	(21, '2022-06-08 17:00:00', 'Фк Кравари', 'Пораз-(Пенали6:5)1:1', 'с.Кравари', 21, 11, '2022-06-08'),
+	(22, '2022-09-04 10:00:00', 'Фк Поешево', 'Нерешено-1:1', 'с.Кукуречани', 22, 12, '2022-09-04'),
+	(23, '2022-09-11 10:00:00', 'Фк КСК', 'Победа-1:3', 'с.Кукуречани', 23, 12, '2022-09-11');
 
 -- Dumping structure for table klub_fudbalski.outcome
 CREATE TABLE IF NOT EXISTS `outcome` (
@@ -173,36 +174,39 @@ CREATE TABLE IF NOT EXISTS `publika` (
   `domashna` smallint(5) unsigned DEFAULT NULL,
   `gostinska` smallint(5) unsigned DEFAULT NULL,
   `karti_rasprodadeni` smallint(5) unsigned DEFAULT NULL,
+  `publika_img_path` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`datum_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table klub_fudbalski.publika: ~25 rows (approximately)
-INSERT INTO `publika` (`datum_id`, `domashna`, `gostinska`, `karti_rasprodadeni`) VALUES
-	('2021-08-19', 5078, 124, 5078),
-	('2021-10-02', 1000, 20, 0),
-	('2021-10-09', 870, 211, 800),
-	('2021-10-16', 1430, 0, 1400),
-	('2021-10-23', 2230, 140, 0),
-	('2021-10-30', 3330, 120, 0),
-	('2021-11-06', 4000, 100, 0),
-	('2021-11-13', 2000, 200, 2000),
-	('2021-11-21', 2630, 149, 0),
-	('2021-11-27', 650, 40, 600),
-	('2022-03-06', 200, 0, 200),
-	('2022-03-13', 1630, 89, 0),
-	('2022-03-20', 540, 0, 500),
-	('2022-04-03', 1000, 80, 900),
-	('2022-04-10', 2000, 120, 0),
-	('2022-04-17', 1590, 450, 1500),
-	('2022-04-23', 2100, 220, 0),
-	('2022-05-02', 1250, 34, 1177),
-	('2022-05-08', 10, 10, 10),
-	('2022-05-15', 2497, 674, 1567),
-	('2022-05-22', 550, 100, 0),
-	('2022-05-24', 1880, 0, 0),
-	('2022-06-01', 790, 50, 700),
-	('2022-06-08', 1000, 50, 0),
-	('2022-09-04', 4000, 58, 4000);
+-- Dumping data for table klub_fudbalski.publika: ~27 rows (approximately)
+INSERT INTO `publika` (`datum_id`, `domashna`, `gostinska`, `karti_rasprodadeni`, `publika_img_path`) VALUES
+	('2021-08-19', 5078, 124, 5078, 'dres4.jpg'),
+	('2021-10-02', 1000, 20, 0, 'dres4.jpg'),
+	('2021-10-09', 870, 211, 800, 'dres4.jpg'),
+	('2021-10-16', 1430, 0, 1400, 'dres4.jpg'),
+	('2021-10-23', 2230, 140, 0, 'dres4.jpg'),
+	('2021-10-30', 3330, 120, 0, 'dres4.jpg'),
+	('2021-11-06', 4000, 100, 0, 'dres4.jpg'),
+	('2021-11-13', 2000, 200, 2000, 'dres4.jpg'),
+	('2021-11-21', 2630, 149, 0, 'dres4.jpg'),
+	('2021-11-27', 650, 40, 600, 'dres4.jpg'),
+	('2022-03-06', 200, 0, 200, 'dres4.jpg'),
+	('2022-03-13', 1630, 89, 0, 'dres4.jpg'),
+	('2022-03-20', 540, 0, 500, 'dres4.jpg'),
+	('2022-04-03', 1000, 80, 900, 'dres4.jpg'),
+	('2022-04-10', 2000, 120, 0, 'dres4.jpg'),
+	('2022-04-17', 1590, 450, 1500, 'dres4.jpg'),
+	('2022-04-23', 2100, 220, 0, 'dres4.jpg'),
+	('2022-05-02', 1250, 34, 1177, 'dres4.jpg'),
+	('2022-05-08', 10, 10, 10, 'dres4.jpg'),
+	('2022-05-15', 2497, 674, 1567, 'dres4.jpg'),
+	('2022-05-22', 550, 100, 0, 'dres4.jpg'),
+	('2022-05-24', 1880, 0, 0, 'dres4.jpg'),
+	('2022-06-01', 790, 50, 700, 'dres4.jpg'),
+	('2022-06-08', 1000, 50, 0, 'dres4.jpg'),
+	('2022-09-04', 4000, 58, 4000, 'dres4.jpg'),
+	('2022-09-11', 1000, 50, 0, 'dres4.jpg'),
+	('2022-09-25', 4000, 300, 0, 'dres4.jpg');
 
 -- Dumping structure for table klub_fudbalski.sostav
 CREATE TABLE IF NOT EXISTS `sostav` (
@@ -270,30 +274,31 @@ CREATE TABLE IF NOT EXISTS `sostav` (
   CONSTRAINT `Right-Forward` FOREIGN KEY (`right_forward`) REFERENCES `igrachi` (`dres_id`) ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
--- Dumping data for table klub_fudbalski.sostav: ~22 rows (approximately)
+-- Dumping data for table klub_fudbalski.sostav: ~23 rows (approximately)
 INSERT INTO `sostav` (`sostav_id`, `datum_sostav`, `coach`, `goalkeeper`, `centre_back1`, `centre_back2`, `right_back`, `left_back`, `defensive_midfielder`, `center_midfielder`, `attacking_midfielder`, `right_forward`, `left_forward`, `center_forward`, `reserve1`, `reserve2`, `reserve3`, `reserve4`, `reserve5`, `reserve6`, `reserve7`, `sostav_img_path`) VALUES
 	(1, '2021-08-19 17:00:00', 27, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo1.jpg'),
-	(2, '2021-09-12 17:00:00', 27, 1, 2, 5, 15, 3, 6, 7, 8, 11, 10, 9, 19, 14, 4, 17, 20, 21, 23, 'kolo2.jpg'),
-	(3, '2021-09-19 16:00:00', 27, 12, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo3.jpg'),
-	(4, '2021-09-26 16:00:00', 27, 12, 22, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo4.jpg'),
-	(5, '2021-10-03 15:00:00', 27, 1, 2, 5, 4, 13, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo5.jpg'),
-	(6, '2021-10-10 15:00:00', 27, 1, 2, 5, 4, 3, 6, 7, 8, 11, 21, 9, 19, 14, 15, 17, 20, 10, 23, 'kolo6.jpg'),
-	(7, '2021-10-17 14:00:00', 27, 1, 2, 14, 4, 3, 6, 7, 8, 11, 10, 9, 19, 5, 15, 17, 20, 21, 23, 'kolo7.jpg'),
-	(8, '2021-10-24 13:30:00', 27, 1, 22, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo8.jpg'),
-	(9, '2021-10-31 13:30:00', 27, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo9.jpg'),
-	(10, '2022-02-27 13:00:00', 27, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo10.jpg'),
-	(11, '2022-03-06 14:00:00', 27, 12, 2, 14, 4, 13, 6, 7, 8, 11, 21, 9, 19, 5, 15, 17, 20, 10, 23, 'kolo11.jpg'),
-	(12, '2022-03-13 14:30:00', 27, 12, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo12.jpg'),
-	(13, '2022-03-20 15:00:00', 27, 1, 2, 5, 15, 3, 6, 7, 8, 11, 10, 9, 19, 14, 4, 17, 20, 21, 23, 'kolo13.jpg'),
-	(14, '2022-03-27 15:00:00', 27, 1, 2, 14, 4, 3, 6, 7, 8, 11, 10, 9, 19, 5, 15, 17, 20, 21, 23, 'kolo14.jpg'),
-	(15, '2022-04-03 15:30:00', 27, 1, 22, 5, 4, 3, 6, 7, 8, 11, 21, 9, 19, 14, 15, 17, 20, 10, 23, 'kolo15.jpg'),
-	(16, '2022-04-10 16:00:00', 27, 1, 22, 14, 4, 13, 6, 7, 8, 11, 10, 9, 19, 5, 15, 17, 20, 21, 23, 'kolo16.jpg'),
-	(17, '2022-04-17 16:00:00', 27, 19, 2, 5, 4, 3, 6, 7, 8, 11, 21, 9, 1, 14, 15, 17, 20, 10, 23, 'kolo17.jpg'),
-	(18, '2022-04-24 16:00:00', 27, 12, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo18.jpg'),
-	(19, '2022-05-01 17:00:00', 69, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo19.jpg'),
-	(20, '2022-05-15 17:00:00', 69, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo20.jpg'),
-	(21, '2022-09-03 10:00:00', 93, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 12, 13, 14, 15, 16, 17, 18, 'kolo21.jpg'),
-	(22, '2022-09-11 22:00:00', 8, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 12, 13, 14, 15, 16, 17, 18, 'kolo22.jpg');
+	(2, '2021-10-02 15:30:00', 27, 1, 2, 5, 15, 3, 6, 7, 8, 11, 10, 9, 19, 14, 4, 17, 20, 21, 23, 'kolo2.jpg'),
+	(3, '2021-10-09 15:00:00', 27, 12, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo3.jpg'),
+	(4, '2021-10-16 15:00:00', 27, 12, 22, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo4.jpg'),
+	(5, '2021-10-23 14:30:00', 27, 1, 2, 5, 4, 13, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo5.jpg'),
+	(6, '2021-10-30 14:00:00', 27, 1, 2, 5, 4, 3, 6, 7, 8, 11, 21, 9, 19, 14, 15, 17, 20, 10, 23, 'kolo6.jpg'),
+	(7, '2021-11-06 13:00:00', 27, 1, 2, 14, 4, 3, 6, 7, 8, 11, 10, 9, 19, 5, 15, 17, 20, 21, 23, 'kolo7.jpg'),
+	(8, '2021-11-13 13:00:00', 27, 1, 22, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo8.jpg'),
+	(9, '2021-11-21 13:00:00', 27, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo9.jpg'),
+	(10, '2021-11-27 13:00:00', 27, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo10.jpg'),
+	(11, '2022-04-03 10:00:00', 27, 12, 2, 14, 4, 13, 6, 7, 8, 11, 21, 9, 19, 5, 15, 17, 20, 10, 23, 'kolo11.jpg'),
+	(12, '2022-04-10 10:00:00', 27, 12, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo12.jpg'),
+	(13, '2022-04-17 10:00:00', 27, 1, 2, 5, 15, 3, 6, 7, 8, 11, 10, 9, 19, 14, 4, 17, 20, 21, 23, 'kolo13.jpg'),
+	(14, '2022-04-23 16:30:00', 27, 1, 2, 14, 4, 3, 6, 7, 8, 11, 10, 9, 19, 5, 15, 17, 20, 21, 23, 'kolo14.jpg'),
+	(15, '2022-05-02 10:30:00', 27, 1, 22, 5, 4, 3, 6, 7, 8, 11, 21, 9, 19, 14, 15, 17, 20, 10, 23, 'kolo15.jpg'),
+	(16, '2022-05-08 10:30:00', 27, 1, 22, 14, 4, 13, 6, 7, 8, 11, 10, 9, 19, 5, 15, 17, 20, 21, 23, 'kolo16.jpg'),
+	(17, '2022-05-15 10:00:00', 27, 19, 2, 5, 4, 3, 6, 7, 8, 11, 21, 9, 1, 14, 15, 17, 20, 10, 23, 'kolo17.jpg'),
+	(18, '2022-05-22 16:30:00', 27, 12, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo18.jpg'),
+	(19, '2022-05-24 10:00:00', 69, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo19.jpg'),
+	(20, '2022-06-01 17:00:00', 69, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 19, 14, 15, 17, 20, 21, 23, 'kolo20.jpg'),
+	(21, '2022-06-08 17:00:00', 93, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 12, 13, 14, 15, 16, 17, 18, 'kolo21.jpg'),
+	(22, '2022-09-04 10:00:00', 8, 1, 2, 5, 4, 3, 6, 7, 8, 11, 10, 9, 12, 13, 14, 15, 16, 17, 18, 'kolo22.jpg'),
+	(23, '2022-09-11 10:00:00', 8, 12, 5, 14, 15, 4, 6, 17, 8, 11, 18, 20, 2, 1, 3, 7, 9, 13, 16, 'kolo23.jpg');
 
 -- Dumping structure for table klub_fudbalski.stadion
 CREATE TABLE IF NOT EXISTS `stadion` (
@@ -301,44 +306,48 @@ CREATE TABLE IF NOT EXISTS `stadion` (
   `ime` varchar(30) NOT NULL,
   `adresa` varchar(50) NOT NULL,
   `kapacitet` smallint(5) unsigned NOT NULL,
+  `stadion_img_path` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`stadion_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=89 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=90 DEFAULT CHARSET=utf8;
 
--- Dumping data for table klub_fudbalski.stadion: ~13 rows (approximately)
-INSERT INTO `stadion` (`stadion_id`, `ime`, `adresa`, `kapacitet`) VALUES
-	(1, 'Кајнак Арена', 'Горно Оризари', 7000),
-	(2, 'Стадион Добромири', 'Добромири', 5000),
-	(3, 'Стадион Дедебалци', 'Дедебалци', 2980),
-	(4, 'Стадион Лопатица', 'Лопатица', 1564),
-	(5, 'Стадион Трап', 'Трап', 635),
-	(6, 'Стадион Трново', 'Трново', 295),
-	(7, 'Стадион Чарлија', 'Чарлија', 5000),
-	(8, 'Стадион Кукуречани', 'Кукуречани', 4000),
-	(9, 'Стадион Поешево', 'Поешево', 4400),
-	(10, 'Стадион Крклино', 'Крклино', 2500),
-	(11, 'Стадион Кравари', 'Кравари', 6900),
-	(12, 'Којот Арена', 'Кукуречани', 2200),
-	(13, 'Билјанини Извори', 'Кеј Македонија', 2500);
+-- Dumping data for table klub_fudbalski.stadion: ~14 rows (approximately)
+INSERT INTO `stadion` (`stadion_id`, `ime`, `adresa`, `kapacitet`, `stadion_img_path`) VALUES
+	(1, 'Кајнак Арена', 'Горно Оризари', 7000, 'slikaStadion100.jpg'),
+	(2, 'Стадион Добромири', 'с.Добромири', 5000, 'slikaStadion2.jpg'),
+	(3, 'Стадион Дедебалци', 'с.Дедебалци', 2980, 'slikaStadion1.jpg'),
+	(4, 'Стадион Лопатица', 'с.Лопатица', 1564, 'slikaStadion3.jpg'),
+	(5, 'Стадион Трап', 'с.Трап', 635, 'slikaStadion3.jpg'),
+	(6, 'Стадион Трново', 'с.Трново', 295, 'slikaStadion3.jpg'),
+	(7, 'Стадион Чарлија', 'с.Чарлија', 5000, 'slikaStadion3.jpg'),
+	(8, 'Стадион Кукуречани', 'с.Кукуречани', 4000, 'slikaStadion3.jpg'),
+	(9, 'Стадион Поешево', 'с.Поешево', 4400, 'slikaStadion3.jpg'),
+	(10, 'Стадион Крклино', 'с.Крклино', 2500, 'slikaStadion3.jpg'),
+	(11, 'Стадион Кравари', 'с.Кравари', 6900, 'slikaStadion3.jpg'),
+	(12, 'Којот Арена', 'с.Кукуречани', 2200, 'slikaStadion3.jpg'),
+	(13, 'Билјанини Извори', 'Кеј Македонија, Охрид', 2500, 'slikaStadion13.jpg'),
+	(14, 'Стадион Логоварди', 'с.Логоварди', 5000, 'slikaStadion3.jpg');
 
 -- Dumping structure for table klub_fudbalski.uprava
 CREATE TABLE IF NOT EXISTS `uprava` (
   `dres_id` tinyint(2) unsigned NOT NULL AUTO_INCREMENT,
   `zalaganje` enum('недоволно','доволно','истакнато') DEFAULT NULL,
   `rabotna_ocenka` enum('1','2','3','4','5') DEFAULT NULL,
+  `uprava_img_path` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`dres_id`),
   KEY `FK_uprava` (`dres_id`),
   CONSTRAINT `FK_uprava` FOREIGN KEY (`dres_id`) REFERENCES `igrachi` (`dres_id`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=92 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8;
 
--- Dumping data for table klub_fudbalski.uprava: ~7 rows (approximately)
-INSERT INTO `uprava` (`dres_id`, `zalaganje`, `rabotna_ocenka`) VALUES
-	(8, 'истакнато', '5'),
-	(24, 'доволно', '3'),
-	(25, 'истакнато', '5'),
-	(26, 'истакнато', '4'),
-	(27, 'недоволно', '1'),
-	(28, 'доволно', '3'),
-	(69, 'недоволно', '1');
+-- Dumping data for table klub_fudbalski.uprava: ~8 rows (approximately)
+INSERT INTO `uprava` (`dres_id`, `zalaganje`, `rabotna_ocenka`, `uprava_img_path`) VALUES
+	(8, 'истакнато', '5', 'dres5.jpg'),
+	(24, 'доволно', '3', 'dres5.jpg'),
+	(25, 'истакнато', '5', 'dres5.jpg'),
+	(26, 'истакнато', '4', 'dres5.jpg'),
+	(27, 'недоволно', '1', 'dres5.jpg'),
+	(28, 'доволно', '3', 'dres5.jpg'),
+	(69, 'недоволно', '1', 'dres5.jpg'),
+	(93, 'истакнато', '4', 'dres5.jpg');
 
 -- Dumping structure for procedure klub_fudbalski._delete_igrachi
 DELIMITER //
@@ -501,11 +510,12 @@ CREATE PROCEDURE `_insert_publika`(
 	IN `datum_id_param` DATE,
 	IN `domashna_param` SMALLINT,
 	IN `gostinska_param` SMALLINT,
-	IN `karti_rasprodadeni_param` SMALLINT
+	IN `karti_rasprodadeni_param` SMALLINT,
+	IN `publika_img_path_param` VARCHAR(255)
 )
 BEGIN
-INSERT INTO publika(datum_id,domashna,gostinska,karti_rasprodadeni)
-VALUES (datum_id_param,domashna_param,gostinska_param,karti_rasprodadeni_param);
+INSERT INTO publika(datum_id,domashna,gostinska,karti_rasprodadeni,publika_img_path)
+VALUES (datum_id_param,domashna_param,gostinska_param,karti_rasprodadeni_param,publika_img_path_param);
 END//
 DELIMITER ;
 
@@ -546,11 +556,12 @@ DELIMITER //
 CREATE PROCEDURE `_insert_stadion`(
 	IN `ime_param` VARCHAR(30),
 	IN `adresa_param` VARCHAR(50),
-	IN `kapacitet_param` SMALLINT
+	IN `kapacitet_param` SMALLINT,
+	IN `stadion_img_path_param` VARCHAR(255)
 )
 BEGIN
-INSERT INTO stadion(ime,adresa,kapacitet)
-VALUES(ime_param,adresa_param,kapacitet_param);
+INSERT INTO stadion(ime,adresa,kapacitet,stadion_img_path)
+VALUES(ime_param,adresa_param,kapacitet_param,stadion_img_path_param);
 END//
 DELIMITER ;
 
@@ -559,11 +570,12 @@ DELIMITER //
 CREATE PROCEDURE `_insert_uprava`(
 	IN `dres_id_param` TINYINT(2),
 	IN `zalaganje_param` ENUM('недоволно','доволно','истакнато'),
-	IN `rabotna_ocenka_param` ENUM('1','2','3','4','5')
+	IN `rabotna_ocenka_param` ENUM('1','2','3','4','5'),
+	IN `uprava_img_path_param` VARCHAR(255)
 )
 BEGIN
-INSERT INTO uprava (dres_id,zalaganje,rabotna_ocenka)
-VALUES(dres_id_param,zalaganje_param,rabotna_ocenka_param);
+INSERT INTO uprava (dres_id,zalaganje,rabotna_ocenka,uprava_img_path)
+VALUES(dres_id_param,zalaganje_param,rabotna_ocenka_param,uprava_img_path_param);
 END//
 DELIMITER ;
 
@@ -1035,7 +1047,7 @@ CREATE PROCEDURE `_select_uprava`()
 BEGIN
 select concat(igrachi.dres_id," || ",igrachi.ime," ",igrachi.prezime," || ",igrachi.pozicija," || ",igrachi.godini)AS dres_id,
 igrachi.dres_id AS dresBroj,
-uprava.zalaganje,uprava.rabotna_ocenka
+uprava.zalaganje,uprava.rabotna_ocenka,uprava.uprava_img_path
 FROM uprava
 inner JOIN igrachi
 ON igrachi.dres_id=uprava.dres_id;

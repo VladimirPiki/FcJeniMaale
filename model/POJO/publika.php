@@ -11,6 +11,7 @@ class Publika
     private  $domashna;
     private  $gostinska;
     private  $karti_rasprodadeni;
+    private  $publika_img_path;
 
     /**
      * @return
@@ -75,6 +76,24 @@ class Publika
     {
      
         $this->karti_rasprodadeni=$karti_rasprodadeni;
+    }
+
+    /**
+     * @return [type]
+     */
+    public function getPublikaImgPath()
+    {
+        return $this->publika_img_path;
+    }
+
+    /**
+     * @param mixed $publika_img_path
+     * 
+     * @return [type]
+     */
+    public function setPublikaImgPath($publika_img_path)
+    {
+        $this->publika_img_path=$publika_img_path;
     }
 }
 ?>

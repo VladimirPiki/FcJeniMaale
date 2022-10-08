@@ -106,7 +106,7 @@ switch($table_name)
         $objPublika ->setDomashna($data[0]->domashna);
         $objPublika ->setGostinska($data[0]->gostinska);
         $objPublika ->setKartiRasprodadeni($data[0]->karti_rasprodadeni);
-
+        $objPublika ->setPublikaImgPath($data[0]->publika_img_path);
         //DAO
         $objPublika ->insertPublika();
     break;
@@ -154,6 +154,7 @@ switch($table_name)
             $objStadion ->setIme($data[0]->ime);
             $objStadion ->setAdresa($data[0]->adresa);
             $objStadion ->setKapacitet($data[0]->kapacitet);
+            $objStadion ->setStadionImgPath($data[0]->stadion_img_path);
             //DAO
             $objStadion ->insertStadion();
     break;
@@ -166,6 +167,7 @@ switch($table_name)
             $objUprava ->setDresId($data[0]->dres_id);
             $objUprava ->setZalaganje($data[0]->zalaganje);
             $objUprava ->setRabotnaOcenka($data[0]->rabotna_ocenka);
+            $objUprava ->setUpravaImgPath($data[0]->uprava_img_path);
             //DAO
             $objUprava -> insertUprava();
     break;

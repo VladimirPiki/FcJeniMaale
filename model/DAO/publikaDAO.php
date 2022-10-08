@@ -30,8 +30,8 @@ class PublikaDAO extends Publika
         $domashna=parent::getDomashna();
         $gostinska=parent::getGostinska();
         $karti_rasprodadeni=parent::getKartiRasprodadeni();
-
-        $columns_value="'$datum_id',$domashna,$gostinska,$karti_rasprodadeni";
+        $publika_img_path=parent::getPublikaImgPath();
+        $columns_value="'$datum_id',$domashna,$gostinska,$karti_rasprodadeni,'$publika_img_path'";
         $this->database ->callStoredProcedure("_insert_publika",$columns_value);
      }
 

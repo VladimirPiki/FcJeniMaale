@@ -27,8 +27,8 @@ class StadionDAO extends Stadion
         $ime=parent::getIme();
         $adresa=parent::getAdresa();
         $kapacitet=parent::getKapacitet();
-
-        $columns_value="'$ime','$adresa',$kapacitet";
+        $stadion_img_path=parent::getStadionImgPath();
+        $columns_value="'$ime','$adresa',$kapacitet,'$stadion_img_path'";
         $this->database ->callStoredProcedure("_insert_stadion",$columns_value);   
     }
 

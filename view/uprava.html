@@ -6,6 +6,7 @@
                 <th>
                     Број на дрес во стручен штаб
                 </th>
+                <th></th>
                 <th>
                     <select class="form-control text-center myDropdown" name="searchByZalaganje" id="searchByZalaganje" ng-model="searchByZalaganje">
                         <option class="myDropdown" value="">Залагање во клубот</option>
@@ -30,9 +31,10 @@
         </thead>
         <tbody>
             <tr class="text-center" ng-repeat="upravi in uprava | filter:{zalaganje:searchByZalaganje,rabotna_ocenka:searchByRabotnaOcenka}">
-                <td class="text-start">{{upravi.dres_id}}</td>
-                <td>{{upravi.zalaganje}}</td>
-                <td>{{upravi.rabotna_ocenka}}</td>
+                <td class="text-start"><br>{{upravi.dres_id}}</td>
+                <td><img class="rounded-circle" width="100" height="100" src="uploads/Images/uprava/{{upravi.uprava_img_path}}" alt="{{upravi.uprava_img_path}}"></td>
+                <td><br>{{upravi.zalaganje}}</td>
+                <td><br>{{upravi.rabotna_ocenka}}</td>
                 <td title="Измени "><i class="fa-solid fa-pen"></i></td>
                 <td title="Избриши {{upravi.dres_id}} {{upravi.zalaganje}}">
                     <button type="button" class="btn myBtn" data-bs-toggle="modal" data-bs-target="#myModal" ng-click="passPosition($index)"> <i class="fa-solid fa-trash-can"></i></button>

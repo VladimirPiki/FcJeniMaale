@@ -171,7 +171,8 @@
                 "datum_id" => $row["datum_id"],
                 "domashna" => $row["domashna"],
                 "gostinska" => $row["gostinska"],
-                "karti_rasprodadeni" => $row["karti_rasprodadeni"]
+                "karti_rasprodadeni" => $row["karti_rasprodadeni"],
+                "publika_img_path" => $row ["publika_img_path"]
             );
             }
 
@@ -230,7 +231,8 @@
                 "stadion_id" => $row["stadion_id"],
                 "ime" => $row["ime"],
                 "adresa" => $row["adresa"],
-                "kapacitet" => $row["kapacitet"]
+                "kapacitet" => $row["kapacitet"],
+                "stadion_img_path" => $row ["stadion_img_path"]
             );
             }
         break;
@@ -248,7 +250,8 @@
                 $data[]=array(
                     "dres_id" => $row["dres_id"],
                     "zalaganje" => $row["zalaganje"],
-                    "rabotna_ocenka" => $row["rabotna_ocenka"]
+                    "rabotna_ocenka" => $row["rabotna_ocenka"],
+                    "uprava_img_path" => $row ["uprava_img_path"]
             );
             }
         break;
